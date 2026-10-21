@@ -404,6 +404,21 @@ contract ChogTwainTest is Test {
         }
     }
 
+    function test_noteIsStoredForBothWalkers() public {
+        uint256 w = _pair(7, 0);
+        vm.prank(lena);
+        twain.showUp(w, bytes28("landed in Leipzig"));
+        _day();
+        vm.prank(arjun);
+        twain.showUp(w, bytes28("first chai"));
+        (bytes28 a, uint32 da) = twain.noteOf(w * 2);
+        (bytes28 b, uint32 db) = twain.noteOf(w * 2 + 1);
+        assertEq(a, bytes28("landed in Leipzig"));
+        assertEq(da, 1);
+        assertEq(b, bytes28("first chai"));
+        assertEq(db, 2);
+    }
+
     function test_cancelByOpener() public {
         uint256 w = _open(lena, 1, 7, PLEDGE);
         assertEq(twain.activeWalkOf(1), w);

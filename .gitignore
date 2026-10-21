@@ -10,3 +10,10 @@ contracts/out/
 contracts/cache/
 playwright-report/
 test-results/
+
+data/fetch.log
+data/fetch.err
+.env.local
+public/data/
+src/data/chogs.json
+public/paper-grain.png

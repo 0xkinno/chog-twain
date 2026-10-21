@@ -91,6 +91,13 @@ contract ChogTwain {
     mapping(address => uint32[]) internal _walksOf;
     mapping(address => uint256) public claimable; // settled $CHOG pledges waiting to be claimed
     mapping(uint256 => uint256) public cheers;
+    /// @dev Latest note each person left with an "I'm here" (key = walkId * 2 + (isA ? 0 : 1)). Stored so a browser can
+    ///      show notes from a view call; the full history is in the ShowedUp events (Monad public RPCs cap log ranges).
+    struct Note {
+        bytes28 text;
+        uint32 day;
+    }
+    mapping(uint256 => Note) public noteOf;
     mapping(uint256 => uint256) public stepsOnDay; // heartbeat: together-steps per day
 
     // Open walks, listable in one call. Monad public RPCs return logs only 100 blocks per call.
@@ -296,6 +303,7 @@ contract ChogTwain {
         unchecked {
             totalShowUps++;
         }
+        if (note != bytes28(0)) noteOf[walkId * 2 + (isA ? 0 : 1)] = Note(note, w.curDay);
         emit ShowedUp(walkId, msg.sender, w.curDay, note);
         if (w.aIn && w.bIn && !w.stepped) _step(walkId, w);
     }
