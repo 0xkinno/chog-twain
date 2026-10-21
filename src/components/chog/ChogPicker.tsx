@@ -56,7 +56,7 @@ export function ChogPicker({ value, onChange, facing, title = "Pick a Chog" }: {
       </div>
       {held.data && held.data.length > 0 && <p className="notice ok" data-testid="held-note">You hold {held.data.length} Chog{held.data.length > 1 ? "s" : ""}. They are listed first. You never need one to walk.</p>}
       {list.length === 0 && <p className="notice warn">No Chog matches these filters.</p>}
-      <div className="pick-grid" role="list">
+      <div className="pick-grid">
         {final.map((c) => <PickTile key={c.id} c={c} selected={value === c.id} busy={(act[c.id] ?? 0) !== 0} yours={heldSet.has(c.id)} onPick={() => onChange(c.id)} />)}
       </div>
       {shown < list.length && <button ref={more} className="btn btn-ghost" onClick={() => setShown((s) => s + PAGE)}>Show more</button>}
@@ -68,7 +68,7 @@ export function ChogPicker({ value, onChange, facing, title = "Pick a Chog" }: {
 function PickTile({ c, selected, busy, yours, onPick }: { c: ChogRow; selected: boolean; busy: boolean; yours: boolean; onPick: () => void }) {
   const tone = c.gaze === 1 ? "left" : c.gaze === 2 ? "right" : "front";
   return (
-    <button className="pick" role="listitem" aria-pressed={selected} disabled={busy} onClick={onPick} data-token={c.id} data-gaze={gazeName(c.gaze)} aria-label={`${chogLabel(c.id)}, looks ${gazeName(c.gaze).toLowerCase()}${busy ? ", walking now" : ""}`}>
+    <button className="pick" aria-pressed={selected} disabled={busy} onClick={onPick} data-token={c.id} data-gaze={gazeName(c.gaze)} aria-label={`${chogLabel(c.id)}, looks ${gazeName(c.gaze).toLowerCase()}${busy ? ", walking now" : ""}`}>
       {yours && <span className="tag ok pick-badge mono">Yours</span>}
       <ChogImg id={c.id} />
       <span className="meta"><span className="mono">#{c.art}</span><span className={`tag ${tone} mono`}>{gazeName(c.gaze)}</span></span>

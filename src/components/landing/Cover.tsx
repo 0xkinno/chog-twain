@@ -22,7 +22,9 @@ export function Cover() {
     return sceneFor({ walk: w.walks[1], gazeA: GAZES[HERO.left], gazeB: GAZES[HERO.right], traitsA: traits(HERO.left), traitsB: traits(HERO.right), day: w.day, viewer: "0xaaa" });
   }, []);
   return (
-    <section className="wrap" style={{ paddingTop: 110, paddingBottom: 40 }} aria-labelledby="hero">
+    <section className="cover" aria-labelledby="hero">
+      <div className="cover-bg" aria-hidden />
+      <div className="wrap" style={{ paddingTop: 110, paddingBottom: 40 }}>
       <FolioLine extra="THE TRAVEL ISSUE" />
       <div className="stack" style={{ ["--gap" as string]: "18px", marginTop: 18 }}>
         <h1 id="hero" className="display sticker-type" style={{ fontSize: "clamp(3rem, 7.2vw, 7rem)", lineHeight: 1, maxWidth: 1150 }}>
@@ -40,6 +42,7 @@ export function Cover() {
       <div style={{ marginTop: 34 }}>
         <Spread scene={scene} label="Two Chogs facing each other across a magazine spread, three of seven steps walked" />
         <p className="mono muted" style={{ textAlign: "center" }}>An example walk: token {HERO.left} looks left, token {HERO.right} looks right. Illustration, not a live walk.</p>
+      </div>
       </div>
     </section>
   );

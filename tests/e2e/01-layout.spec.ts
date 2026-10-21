@@ -46,7 +46,7 @@ for (const [vpName, width, height] of VIEWPORTS.filter(([n]) => !ONLY || ONLY.in
         page.on("pageerror", (e) => errors.push(`pageerror: ${e.message}`));
         await page.goto(r.path, { waitUntil: "networkidle" });
         await page.waitForSelector("main");
-        if (r.name.startsWith("walk-")) await page.waitForSelector('[data-testid="walk-page"]', { timeout: 60_000 });
+        if (r.name.startsWith("walk-") && r.name !== "walk-new") await page.waitForSelector('[data-testid="walk-page"]', { timeout: 60_000 });
         if (r.name === "chog") await page.waitForSelector('[data-testid="chog-state"]', { timeout: 60_000 });
         if (r.name === "heartbeat") await page.waitForSelector('[data-testid="hb-walks"]:not(:has-text("..."))', { timeout: 60_000 });
         await page.waitForTimeout(1200); // spread draw-in

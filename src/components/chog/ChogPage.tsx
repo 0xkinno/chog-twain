@@ -50,7 +50,7 @@ export function ChogPage({ id }: { id: number }) {
               <GlowCard className="flat stack" style={{ ["--gap" as string]: "10px" }}>
                 <h3>Friend Book {st.data ? `(${st.data.met} met)` : ""}</h3>
                 {book.isLoading ? <p className="mono muted">Reading...</p> : (book.data ?? []).length === 0 ? <p className="muted" data-testid="book-empty">Nobody has met this Chog yet. Its first meeting will be written here forever.</p> :
-                  <div className="table-scroll"><table className="table" data-testid="book"><thead><tr><th>Walk</th><th>Met with</th><th>Days</th><th>Distance</th></tr></thead><tbody>
+                  <div className="table-scroll" tabIndex={0} role="region" aria-label="Scrollable table"><table className="table" data-testid="book"><thead><tr><th>Walk</th><th>Met with</th><th>Days</th><th>Distance</th></tr></thead><tbody>
                     {(book.data ?? []).map((w) => { const other = w.chogA === id ? w.chogB : w.chogA; return <tr key={w.id}><td><Link href={`/w/${w.id}`} style={{ textDecoration: "underline" }}>#{w.id}</Link></td><td><Link href={`/chog/${other}`} style={{ textDecoration: "underline" }}>{chogLabel(other)}</Link></td><td className="mono">{w.steps}</td><td className="mono">{w.distance}</td></tr>; })}
                   </tbody></table></div>}
               </GlowCard>

@@ -122,7 +122,7 @@ export function Spread({ scene, orientation = "auto", postmark, stepSignal = 0, 
         )}
 
         {/* footprints */}
-        <g aria-label={`${scene.walked} of ${n} steps walked`}>
+        <g role="img" aria-label={`${scene.walked} of ${n} steps walked`}>
           {Array.from({ length: n }, (_, k) => {
             const pt = lane(k);
             const isFilled = k < fromLeft || k >= n - fromRight;

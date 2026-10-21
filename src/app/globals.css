@@ -234,3 +234,19 @@ img { max-width: 100%; }
 @keyframes shimmer { 0%,100% { opacity: .55; } 50% { opacity: 1; } }
 .stamp svg { display: block; filter: drop-shadow(0 6px 10px rgba(35,22,77,.18)); }
 @media (max-width: 860px) { .page .grid[style*="1.6fr"] { grid-template-columns: 1fr !important; } .page .grid[style*="380px"] { grid-template-columns: 1fr !important; } }
+/* ------------------------------------------------------------------ cover backdrop (paper-cut valley, supplied art) */
+.cover { position: relative; isolation: isolate; }
+.cover-bg {
+  position: absolute; z-index: -1; top: 0; left: 50%; transform: translateX(-50%);
+  width: 100vw; height: min(1180px, 130vw);
+  background: url("/cover/valley.webp") center 22% / cover no-repeat;
+  -webkit-mask-image: linear-gradient(#000 0 62%, transparent 100%); mask-image: linear-gradient(#000 0 62%, transparent 100%);
+}
+.cover-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(251,249,255,.82) 0, rgba(251,249,255,.55) 38%, rgba(251,249,255,0) 68%); }
+@media (max-width: 720px) {
+  .cover-bg { background-image: url("/cover/valley-1200.webp"); height: 150vw; background-position: 60% 20%; }
+  .cover-bg::after { background: linear-gradient(180deg, rgba(251,249,255,.78) 0, rgba(251,249,255,.4) 55%, rgba(251,249,255,0) 100%); }
+}
+.pick .meta { flex-wrap: wrap; row-gap: 2px; }
+.pick .meta .mono, .pick .meta .tag { font-size: .66rem; letter-spacing: .04em; }
+.pick .meta .tag { padding: 2px 6px; }

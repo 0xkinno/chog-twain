@@ -55,7 +55,7 @@ export function ScrollMeet() {
               {lantern && !met && <div style={{ position: "absolute", left: "50%", top: 0, transform: "translateX(-50%)", filter: "drop-shadow(0 0 18px #ffd86b)" }}><LanternIcon width={44} height={56} /></div>}
               {met && <motion.div initial={{ scale: 2.4, rotate: -20, opacity: 0 }} animate={{ scale: 1, rotate: -12, opacity: 0.92 }} transition={{ type: "spring", stiffness: 260, damping: 16 }} style={{ position: "absolute", left: "50%", top: -10, marginLeft: -80, color: "#c0366c" }}><Postmark text="Chog Twain · Day 9 · Met" size={160} /></motion.div>}
             </div>
-            <div className="row" style={{ justifyContent: "center", gap: 6, flexWrap: "nowrap", overflowX: "auto" }} aria-label={`${walked} of ${STEPS} footprints filled`} data-testid="scroll-prints">
+            <div className="row" style={{ justifyContent: "center", gap: 6, flexWrap: "nowrap", overflowX: "auto" }} role="img" aria-label={`${walked} of ${STEPS} footprints filled`} data-testid="scroll-prints">
               {Array.from({ length: STEPS }, (_, i) => (
                 <svg key={i} viewBox="-12 -14 24 28" width="26" height="30" aria-hidden><g fill={i < walked ? "#23164d" : "none"} stroke={i < walked ? "none" : "rgba(35,22,77,.45)"} strokeWidth="2" strokeDasharray={i < walked ? undefined : "3 4"}><ellipse cx="0" cy="3" rx="5.2" ry="7.2" /><circle cx="-4.6" cy="-8.2" r="1.9" /><circle cx="-1.4" cy="-10.4" r="1.9" /><circle cx="2" cy="-10.4" r="1.9" /><circle cx="5" cy="-8.2" r="1.7" /></g></svg>
               ))}

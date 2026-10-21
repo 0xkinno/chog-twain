@@ -53,7 +53,7 @@ export function ProofPage({ facts }: { facts: Facts | null }) {
       <GlowCard className="flat stack" data-testid="proof-addresses">
         <h2 style={{ fontSize: "1.6rem" }}>Addresses</h2>
         {!DEPLOYED && <div className="notice warn">No ChogTwain address is set in this build, so the first two rows are empty. Nothing here is faked.</div>}
-        <div className="table-scroll"><table className="table"><thead><tr><th>Contract</th><th>Address</th><th>Links</th></tr></thead><tbody>
+        <div className="table-scroll" tabIndex={0} role="region" aria-label="Scrollable table"><table className="table"><thead><tr><th>Contract</th><th>Address</th><th>Links</th></tr></thead><tbody>
           {row("ChogTwain (immutable, no admin)", TWAIN)}{row("TwainPostcard (soulbound)", POSTCARD)}{row("Chog Genesis (read only)", CHOG_GENESIS)}{row("$CHOG", CHOG_TOKEN)}
         </tbody></table></div>
         <p className="mono muted">Network: {ACTIVE_CHAIN.name} ({ACTIVE_CHAIN.id}) {"\u00b7"} Gaze root: {facts?.gaze?.root ?? "not generated"}</p>
@@ -61,7 +61,7 @@ export function ProofPage({ facts }: { facts: Facts | null }) {
 
       <GlowCard className="flat stack" data-testid="proof-invariants">
         <h2 style={{ fontSize: "1.6rem" }}>Invariants and the tests that guard them</h2>
-        <div className="table-scroll"><table className="table"><thead><tr><th>ID</th><th>Invariant</th><th>Enforced in</th><th>Tests</th></tr></thead><tbody>
+        <div className="table-scroll" tabIndex={0} role="region" aria-label="Scrollable table"><table className="table"><thead><tr><th>ID</th><th>Invariant</th><th>Enforced in</th><th>Tests</th></tr></thead><tbody>
           {INVARIANTS.map(([id, t, e, tests]) => <tr key={id}><td className="mono">{id}</td><td>{t}</td><td className="mono">{e}</td><td className="mono" style={{ fontSize: ".8rem" }}>{tests}</td></tr>)}
         </tbody></table></div>
         <p className="mono muted">Foundry: {facts?.tests?.forge ? `${facts.tests.forge.passed} passing, ${facts.tests.forge.failed} failing` : "n/a"} {"\u00b7"} Vitest: {facts?.tests?.vitest ? `${facts.tests.vitest.passed} passing` : "n/a"} {"\u00b7"} fuzz runs: {facts?.tests?.fuzzRuns ?? "n/a"} {"\u00b7"} 18 shared scenarios run against the contract and the TypeScript engine</p>
@@ -75,7 +75,7 @@ export function ProofPage({ facts }: { facts: Facts | null }) {
       <GlowCard className="flat stack" data-testid="proof-breaks">
         <h2 style={{ fontSize: "1.6rem" }}>Break campaign</h2>
         {facts?.breakCampaign?.length ? (
-          <div className="table-scroll"><table className="table"><thead><tr><th>Guard</th><th>Reverted transaction</th></tr></thead><tbody>{facts.breakCampaign.map((b) => <tr key={b.hash}><td>{b.error}</td><td><a className="mono" href={explorerTx(b.hash)} rel="noopener" target="_blank">{b.hash.slice(0, 18)}...</a></td></tr>)}</tbody></table></div>
+          <div className="table-scroll" tabIndex={0} role="region" aria-label="Scrollable table"><table className="table"><thead><tr><th>Guard</th><th>Reverted transaction</th></tr></thead><tbody>{facts.breakCampaign.map((b) => <tr key={b.hash}><td>{b.error}</td><td><a className="mono" href={explorerTx(b.hash)} rel="noopener" target="_blank">{b.hash.slice(0, 18)}...</a></td></tr>)}</tbody></table></div>
         ) : <p className="muted">Deliberately reverted mainnet transactions, one per guard (NotWalker, AlreadyToday, BadProof, SelfWalk, NotFacing, ChogBusy, InviteExpired), are linked here once the contract is live and Kinnoski approves the campaign. None are listed yet.</p>}
       </GlowCard>
 
