@@ -392,6 +392,191 @@ contract ChogTwainTest is Test {
         assertTrue(bytes(postcard.tokenURI(1)).length > 100);
     }
 
+    // ---------------------------------------------------------------- Phase 2 additions
+
+    function _meet7() internal returns (uint256 w) {
+        w = _pair(7, 0);
+        _in(lena, w);
+        for (uint256 i = 1; i < 7; i++) {
+            _day();
+            _in(lena, w);
+            _in(arjun, w);
+        }
+    }
+
+    function test_cancelByOpener() public {
+        uint256 w = _open(lena, 1, 7, PLEDGE);
+        assertEq(twain.activeWalkOf(1), w);
+        vm.prank(lena);
+        twain.cancel(w);
+        assertEq(twain.walk(w).status, twain.CANCELLED());
+        assertEq(twain.activeWalkOf(1), 0);
+        assertEq(twain.claimable(lena), PLEDGE);
+        assertEq(twain.openWalks().length, 0);
+    }
+
+    function test_cancelByStrangerBeforeExpiryReverts() public {
+        uint256 w = _open(lena, 1, 7, 0);
+        vm.prank(stranger);
+        vm.expectRevert(ChogTwain.StillOpen.selector);
+        twain.cancel(w);
+    }
+
+    function test_joinAfterCancelReverts() public {
+        uint256 w = _open(lena, 1, 7, 0);
+        vm.prank(lena);
+        twain.cancel(w);
+        bytes32[] memory p = tree.proof(2);
+        vm.prank(arjun);
+        vm.expectRevert(ChogTwain.NotOpen.selector);
+        twain.join(w, 2, R, p);
+    }
+
+    function test_claimTwiceReverts() public {
+        uint256 w = _open(lena, 1, 7, PLEDGE);
+        vm.prank(lena);
+        twain.cancel(w);
+        vm.prank(lena);
+        twain.claim();
+        vm.prank(lena);
+        vm.expectRevert(ChogTwain.NothingToClaim.selector);
+        twain.claim();
+    }
+
+    function test_leaveBeforeAnyMiss() public {
+        uint256 w = _pair(7, PLEDGE);
+        vm.prank(arjun);
+        twain.leave(w);
+        assertEq(twain.walk(w).status, twain.APART());
+        assertEq(twain.claimable(lena), PLEDGE * 2, "the leaver forfeits the whole pledge");
+        assertEq(twain.claimable(arjun), 0);
+        assertEq(twain.activeWalkOf(1), 0);
+        assertEq(twain.activeWalkOf(2), 0);
+    }
+
+    function test_bothMissNoForfeit() public {
+        uint256 w = _pair(7, PLEDGE);
+        _in(lena, w); // day 1 step, gap 6
+        _day();
+        _day(); // day 2 nobody came
+        _in(lena, w); // closes day 2 as a miss for both
+        ChogTwain.Walk memory x = twain.walk(w);
+        assertEq(x.gap, 7);
+        assertEq(x.forfeitA, 0);
+        assertEq(x.forfeitB, 0);
+        assertEq(x.missesA, 1);
+        assertEq(x.missesB, 1);
+    }
+
+    function test_distance30() public {
+        uint256 w = _pair(30, 0);
+        _in(lena, w);
+        for (uint256 i = 1; i < 30; i++) {
+            _day();
+            _in(lena, w);
+            _in(arjun, w);
+        }
+        ChogTwain.Walk memory x = twain.walk(w);
+        assertEq(x.status, twain.MET());
+        assertEq(x.steps, 30);
+        assertEq(x.distance, 30);
+    }
+
+    function test_badDistanceReverts() public {
+        bytes32[] memory p = tree.proof(1);
+        vm.prank(lena);
+        vm.expectRevert(ChogTwain.BadDistance.selector);
+        twain.open(1, L, p, 8, 0, address(0));
+    }
+
+    function test_metChogCanWalkAgain() public {
+        _meet7();
+        assertEq(twain.activeWalkOf(1), 0);
+        uint256 w2 = _open(lena, 1, 14, 0);
+        _join(fan, w2, 4);
+        assertEq(twain.walk(w2).status, twain.WALKING());
+        assertEq(twain.metCount(1), 1);
+        assertEq(twain.friendBook(1)[0], 1);
+    }
+
+    function test_afterMeetingShowUpReverts() public {
+        uint256 w = _meet7();
+        vm.prank(lena);
+        vm.expectRevert(ChogTwain.NotWalking.selector);
+        twain.showUp(w, bytes28(0));
+    }
+
+    function test_postcardTokenURIDecodes() public {
+        uint256 w = _meet7();
+        string memory uri = postcard.tokenURI(1);
+        string memory prefix = "data:application/json;base64,";
+        bytes memory b = bytes(uri);
+        assertEq(string(_slice(b, 0, bytes(prefix).length)), prefix);
+        string memory json = string(_b64decode(_slice(b, bytes(prefix).length, b.length)));
+        assertTrue(_contains(json, '"name":"Chog 1 met Chog 2"'));
+        assertTrue(_contains(json, '"trait_type":"Walk","value":1}'));
+        assertTrue(_contains(json, '"trait_type":"Distance","value":7}'));
+        assertTrue(_contains(json, '"trait_type":"Keeper seal","value":"No"'));
+        assertTrue(_contains(json, "data:image/svg+xml;base64,"));
+        assertEq(w, 1);
+        // the second postcard is the friend's view of the same walk
+        string memory json2 = string(_b64decode(_slice(bytes(postcard.tokenURI(2)), bytes(prefix).length, bytes(postcard.tokenURI(2)).length)));
+        assertTrue(_contains(json2, '"name":"Chog 2 met Chog 1"'));
+    }
+
+    /// @dev I14: Chog Genesis is only ever read. The only call on it in src/ is ownerOf.
+    function test_noNftWrites() public view {
+        string memory src = vm.readFile("src/ChogTwain.sol");
+        assertEq(_count(src, "CHOG."), _count(src, "CHOG.ownerOf("), "only ownerOf is called on Chog Genesis");
+        assertEq(_count(src, "interface IChogGenesis {\n    function ownerOf(uint256 tokenId) external view returns (address);\n}"), 1);
+        assertEq(_count(src, "approve("), 0, "no NFT approvals");
+        assertEq(_count(src, "safeTransferFrom"), 0, "no NFT custody");
+    }
+
+    // ---------------------------------------------------------------- string helpers
+
+    function _slice(bytes memory b, uint256 from, uint256 to) internal pure returns (bytes memory r) {
+        r = new bytes(to - from);
+        for (uint256 i; i < r.length; i++) r[i] = b[from + i];
+    }
+
+    function _count(string memory hay, string memory needle) internal pure returns (uint256 n) {
+        bytes memory h = bytes(hay);
+        bytes memory nd = bytes(needle);
+        if (nd.length == 0 || h.length < nd.length) return 0;
+        for (uint256 i; i <= h.length - nd.length; i++) {
+            bool ok = true;
+            for (uint256 j; j < nd.length; j++) {
+                if (h[i + j] != nd[j]) {
+                    ok = false;
+                    break;
+                }
+            }
+            if (ok) n++;
+        }
+    }
+
+    function _contains(string memory hay, string memory needle) internal pure returns (bool) {
+        return _count(hay, needle) > 0;
+    }
+
+    function _b64decode(bytes memory d) internal pure returns (bytes memory out) {
+        bytes memory tbl = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+        uint8[256] memory idx;
+        for (uint256 i; i < 64; i++) idx[uint8(tbl[i])] = uint8(i);
+        uint256 pad;
+        if (d.length > 0 && d[d.length - 1] == "=") pad++;
+        if (d.length > 1 && d[d.length - 2] == "=") pad++;
+        out = new bytes((d.length / 4) * 3 - pad);
+        uint256 o;
+        for (uint256 i; i < d.length; i += 4) {
+            uint256 n = (uint256(idx[uint8(d[i])]) << 18) | (uint256(idx[uint8(d[i + 1])]) << 12)
+                | (uint256(idx[uint8(d[i + 2])]) << 6) | uint256(idx[uint8(d[i + 3])]);
+            if (o < out.length) out[o++] = bytes1(uint8(n >> 16));
+            if (o < out.length) out[o++] = bytes1(uint8(n >> 8));
+            if (o < out.length) out[o++] = bytes1(uint8(n));
+        }
+    }
     // ---------------------------------------------------------------- fuzz
 
     /// @dev Over any attendance and lantern pattern: steps never exceed together-days, the gap stays in

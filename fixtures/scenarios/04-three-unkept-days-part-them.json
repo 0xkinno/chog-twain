@@ -1,0 +1,77 @@
+{
+ "name": "04-three-unkept-days-part-them",
+ "about": "Three unkept days in a row end the walk: Apart, both Chogs free, pledges settled with the slices.",
+ "count": 5,
+ "steps": [
+  {
+   "op": "open",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 1,
+   "distance": 7,
+   "pledge": 700,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "join",
+   "who": "arjun",
+   "walkId": 1,
+   "chog": 2,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "showUp",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "days",
+   "who": "",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 4,
+   "err": ""
+  },
+  {
+   "op": "showUp",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  }
+ ],
+ "expect": {
+  "status": 4,
+  "gap": 7,
+  "steps": 1,
+  "lanterns": 0,
+  "lanternsUsed": 0,
+  "missStreak": 3,
+  "forfeitA": 0,
+  "forfeitB": 0,
+  "claimLena": 700,
+  "claimArjun": 700,
+  "burned": 0,
+  "meetings": 0,
+  "postcards": 0
+ }
+}

@@ -1,4 +1,4 @@
-﻿# Rules extract
+# Rules extract
 
 Source: https://chogathon.chog.xyz, fetched 2026-10-21. The fetch tool returned a close paraphrase, not verbatim
 text, so this file is a faithful summary. Re-copy verbatim by hand before submitting (open item, see PROGRESS.md).

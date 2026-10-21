@@ -1,0 +1,55 @@
+{
+ "name": "10-only-facing-chogs-meet",
+ "about": "Chog 3 also looks left, so it cannot join Chog 1 (NotFacing). The 1:1 (Chog 6) can.",
+ "count": 3,
+ "steps": [
+  {
+   "op": "open",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 1,
+   "distance": 7,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "join",
+   "who": "arjun",
+   "walkId": 1,
+   "chog": 3,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": "NotFacing"
+  },
+  {
+   "op": "join",
+   "who": "arjun",
+   "walkId": 1,
+   "chog": 6,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  }
+ ],
+ "expect": {
+  "status": 2,
+  "gap": 7,
+  "steps": 0,
+  "lanterns": 0,
+  "lanternsUsed": 0,
+  "missStreak": 0,
+  "forfeitA": 0,
+  "forfeitB": 0,
+  "claimLena": 0,
+  "claimArjun": 0,
+  "burned": 0,
+  "meetings": 0,
+  "postcards": 0
+ }
+}

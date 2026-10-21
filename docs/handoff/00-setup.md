@@ -1,4 +1,4 @@
-﻿# Handoff 00: setup and authorship
+# Handoff 00: setup and authorship
 
 Done: repo initialised at the CHOG_TWAIN folder root; kit copied in; git identity 0xkinno; hooks path `.githooks`;
 Foundry 1.8.5 installed to `%USERPROFILE%\.foundry\bin` (sha256 checked); `forge test` = 24 passing; study repos

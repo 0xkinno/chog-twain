@@ -1,0 +1,55 @@
+{
+ "name": "11-a-chog-walks-with-one-pair-at-a-time",
+ "about": "Chog 1 is busy: a second open with it reverts with ChogBusy.",
+ "count": 3,
+ "steps": [
+  {
+   "op": "open",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 1,
+   "distance": 7,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "join",
+   "who": "arjun",
+   "walkId": 1,
+   "chog": 2,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "open",
+   "who": "fan",
+   "walkId": 1,
+   "chog": 1,
+   "distance": 7,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": "ChogBusy"
+  }
+ ],
+ "expect": {
+  "status": 2,
+  "gap": 7,
+  "steps": 0,
+  "lanterns": 0,
+  "lanternsUsed": 0,
+  "missStreak": 0,
+  "forfeitA": 0,
+  "forfeitB": 0,
+  "claimLena": 0,
+  "claimArjun": 0,
+  "burned": 0,
+  "meetings": 0,
+  "postcards": 0
+ }
+}

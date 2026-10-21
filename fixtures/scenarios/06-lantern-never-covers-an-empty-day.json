@@ -1,0 +1,88 @@
+{
+ "name": "06-lantern-never-covers-an-empty-day",
+ "about": "Nobody came on day 2, so the stored lantern stays and the gap drifts.",
+ "count": 6,
+ "steps": [
+  {
+   "op": "open",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 1,
+   "distance": 7,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "join",
+   "who": "arjun",
+   "walkId": 1,
+   "chog": 2,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "showUp",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "light",
+   "who": "fan",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "days",
+   "who": "",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 2,
+   "err": ""
+  },
+  {
+   "op": "showUp",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  }
+ ],
+ "expect": {
+  "status": 2,
+  "gap": 7,
+  "steps": 1,
+  "lanterns": 1,
+  "lanternsUsed": 0,
+  "missStreak": 1,
+  "forfeitA": 0,
+  "forfeitB": 0,
+  "claimLena": 0,
+  "claimArjun": 0,
+  "burned": 100,
+  "meetings": 0,
+  "postcards": 0
+ }
+}

@@ -1,0 +1,55 @@
+{
+ "name": "08-leave-forfeits-the-whole-pledge",
+ "about": "Walking away ends the walk now; the leaver's whole pledge goes to the friend.",
+ "count": 3,
+ "steps": [
+  {
+   "op": "open",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 1,
+   "distance": 7,
+   "pledge": 700,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "join",
+   "who": "arjun",
+   "walkId": 1,
+   "chog": 2,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "leave",
+   "who": "arjun",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  }
+ ],
+ "expect": {
+  "status": 4,
+  "gap": 7,
+  "steps": 0,
+  "lanterns": 0,
+  "lanternsUsed": 0,
+  "missStreak": 0,
+  "forfeitA": 0,
+  "forfeitB": 700,
+  "claimLena": 1400,
+  "claimArjun": 0,
+  "burned": 0,
+  "meetings": 0,
+  "postcards": 0
+ }
+}

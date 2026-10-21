@@ -1,0 +1,88 @@
+{
+ "name": "07-lanterns-cap-at-three",
+ "about": "A fourth lantern reverts with LanternsFull.",
+ "count": 6,
+ "steps": [
+  {
+   "op": "open",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 1,
+   "distance": 7,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "join",
+   "who": "arjun",
+   "walkId": 1,
+   "chog": 2,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "light",
+   "who": "fan",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "light",
+   "who": "fan",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "light",
+   "who": "fan",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "light",
+   "who": "fan",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": "LanternsFull"
+  }
+ ],
+ "expect": {
+  "status": 2,
+  "gap": 7,
+  "steps": 0,
+  "lanterns": 3,
+  "lanternsUsed": 0,
+  "missStreak": 0,
+  "forfeitA": 0,
+  "forfeitB": 0,
+  "claimLena": 0,
+  "claimArjun": 0,
+  "burned": 300,
+  "meetings": 0,
+  "postcards": 0
+ }
+}

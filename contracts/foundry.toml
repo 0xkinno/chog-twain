@@ -12,6 +12,8 @@ remappings = [
   "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
 ]
 
+fs_permissions = [{ access = "read", path = "./src" }, { access = "read", path = "../fixtures" }, { access = "read", path = "../data" }]
+
 [fuzz]
 runs = 512
 

@@ -1,0 +1,44 @@
+{
+ "name": "12-one-wallet-cannot-walk-with-itself",
+ "about": "The opener cannot join their own walk.",
+ "count": 2,
+ "steps": [
+  {
+   "op": "open",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 1,
+   "distance": 7,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "join",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 2,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": "SelfWalk"
+  }
+ ],
+ "expect": {
+  "status": 1,
+  "gap": 7,
+  "steps": 0,
+  "lanterns": 0,
+  "lanternsUsed": 0,
+  "missStreak": 0,
+  "forfeitA": 0,
+  "forfeitB": 0,
+  "claimLena": 0,
+  "claimArjun": 0,
+  "burned": 0,
+  "meetings": 0,
+  "postcards": 0
+ }
+}

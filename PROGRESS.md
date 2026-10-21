@@ -1,4 +1,4 @@
-﻿# Progress
+# Progress
 
 Updated at the end of every phase. Handoff notes per phase live in `docs/handoff/`.
 

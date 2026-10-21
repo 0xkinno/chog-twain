@@ -1,0 +1,253 @@
+{
+ "name": "01-seven-days-meet",
+ "about": "Seven days in which both show up make a meeting; pledges come back whole; two postcards print.",
+ "count": 21,
+ "steps": [
+  {
+   "op": "open",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 1,
+   "distance": 7,
+   "pledge": 700,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "join",
+   "who": "arjun",
+   "walkId": 1,
+   "chog": 2,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "showUp",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "days",
+   "who": "",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "showUp",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "showUp",
+   "who": "arjun",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "days",
+   "who": "",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "showUp",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "showUp",
+   "who": "arjun",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "days",
+   "who": "",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "showUp",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "showUp",
+   "who": "arjun",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "days",
+   "who": "",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "showUp",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "showUp",
+   "who": "arjun",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "days",
+   "who": "",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "showUp",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "showUp",
+   "who": "arjun",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "days",
+   "who": "",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "showUp",
+   "who": "lena",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  },
+  {
+   "op": "showUp",
+   "who": "arjun",
+   "walkId": 1,
+   "chog": 0,
+   "distance": 0,
+   "pledge": 0,
+   "invitee": "",
+   "n": 1,
+   "err": ""
+  }
+ ],
+ "expect": {
+  "status": 3,
+  "gap": 0,
+  "steps": 7,
+  "lanterns": 0,
+  "lanternsUsed": 0,
+  "missStreak": 0,
+  "forfeitA": 0,
+  "forfeitB": 0,
+  "claimLena": 700,
+  "claimArjun": 700,
+  "burned": 0,
+  "meetings": 1,
+  "postcards": 2
+ }
+}
