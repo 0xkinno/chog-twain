@@ -1,0 +1,50 @@
+[
+ {
+  "error": "NotWalker",
+  "hash": "0x18db38c5c2ac943473e54a38cfa7efea0881af0709cf207edcbba36e9f0a4b63",
+  "status": "reverted",
+  "block": 115438884,
+  "note": "a fan (C) shows up on a walk that is not theirs",
+  "simulated": "NotWalker"
+ },
+ {
+  "error": "AlreadyToday",
+  "hash": "0x6e634e54bbf98dcdc4a4391b3ecf79e940c5d7cd02328ebf28736ead8e8f369f",
+  "status": "reverted",
+  "block": 115438894,
+  "note": "A shows up a second time on the same UTC day",
+  "simulated": "AlreadyToday"
+ },
+ {
+  "error": "SelfWalk",
+  "hash": "0x6f495175b2d6bc67f62646a977f826be9c20d08f5c6d89a5ea8f03802a1408ce",
+  "status": "reverted",
+  "block": 115438902,
+  "note": "A tries to join the walk A opened",
+  "simulated": "SelfWalk"
+ },
+ {
+  "error": "NotFacing",
+  "hash": "0x9a79a893c4bb1368267b17975b3388f497d7344db1543f5f099b103bfdd1e97c",
+  "status": "reverted",
+  "block": 115438911,
+  "note": "B joins walk 2 (token 2 looks left) with another left-looking Chog",
+  "simulated": "NotFacing"
+ },
+ {
+  "error": "BadProof",
+  "hash": "0x24b233585583022d3d52c3f6c645e6a5937d19247d9d8ef22022dd66a19efcbd",
+  "status": "reverted",
+  "block": 115438920,
+  "note": "A opens with token 32 claiming it looks right (it looks left), with the real proof",
+  "simulated": "BadProof"
+ },
+ {
+  "error": "ChogBusy",
+  "hash": "0xcca65711900312b30f9a9121c7763a86440c0066c3f33b5cddb047c76bdce6e1",
+  "status": "reverted",
+  "block": 115438928,
+  "note": "C tries to open a walk with token 1, which is walking in walk 1",
+  "simulated": "ChogBusy"
+ }
+]

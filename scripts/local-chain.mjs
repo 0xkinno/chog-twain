@@ -24,7 +24,7 @@ const KEYS = [
   "0x2a871d0798f97d79848a013d4936a73bf4cc922c825d33c1cf7073dff6d409c6",
 ];
 
-const anvil = spawn(bin("anvil"), ["--port", "8545", "--chain-id", "31337", "--block-time", "1", "--hardfork", "cancun"], { stdio: "inherit" });
+const anvil = spawn(bin("anvil"), ["--port", "8545", "--chain-id", "31337", ...(process.env.BLOCK_TIME === "0" ? [] : ["--block-time", process.env.BLOCK_TIME ?? "1"]), "--hardfork", "cancun"], { stdio: "inherit" });
 process.on("SIGINT", () => (anvil.kill(), process.exit(0)));
 const rpc = async (method, params = []) =>
   (await (await fetch("http://127.0.0.1:8545", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ jsonrpc: "2.0", id: 1, method, params }) })).json()).result;

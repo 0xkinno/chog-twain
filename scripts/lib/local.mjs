@@ -28,7 +28,7 @@ export const gaze = () => JSON.parse(readFileSync("data/gaze.json", "utf8"));
 
 export function clients() {
   const e = env();
-  const pc = createPublicClient({ chain, transport: http(RPC) });
+  const pc = createPublicClient({ chain, transport: http(RPC), pollingInterval: 100 });
   const accounts = KEYS.map((k) => privateKeyToAccount(k));
   const wcs = accounts.map((a) => createWalletClient({ account: a, chain, transport: http(RPC) }));
   return { pc, accounts, wcs, TWAIN: e.NEXT_PUBLIC_TWAIN, TOKEN: e.NEXT_PUBLIC_CHOG_TOKEN, GENESIS: e.NEXT_PUBLIC_CHOG_GENESIS };

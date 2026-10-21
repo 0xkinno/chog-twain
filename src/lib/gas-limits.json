@@ -1,1 +1,15 @@
-{"open":420000,"join":420000,"showUp":150000,"showUpMeet":520000,"leave":300000,"cancel":150000,"poke":200000,"light":150000,"cheer":80000,"claim":100000,"setHome":90000,"approve":80000,"measured":"placeholder until scripts/gas-table.mjs runs"}
+{
+ "open": 370000,
+ "join": 223000,
+ "showUp": 108000,
+ "cheer": 60000,
+ "light": 85000,
+ "setHome": 65000,
+ "leave": 109000,
+ "cancel": 83000,
+ "claim": 44000,
+ "poke": 44000,
+ "showUpMeet": 421000,
+ "approve": 58000,
+ "measured": "local anvil (EVM gas does not depend on the chain), 20 calls per function, two wallets, 2026-10-21T21:54:22.972Z"
+}

@@ -20,3 +20,5 @@ public/paper-grain.png
 .env.e2e
 tests/e2e/.seed.json
 docs/screenshots/matrix/
+.vercel
+.env*

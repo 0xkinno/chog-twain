@@ -28,8 +28,10 @@ export type ErrorName =
   | "AlreadyToday" | "LanternsFull" | "StillOpen" | "TransferFailed" | "NothingToClaim";
 
 export class EngineError extends Error {
-  constructor(public readonly name_: ErrorName) {
+  readonly name_: ErrorName;
+  constructor(name_: ErrorName) {
     super(name_);
+    this.name_ = name_;
     this.name = "EngineError";
   }
 }

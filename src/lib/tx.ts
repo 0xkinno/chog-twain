@@ -36,7 +36,13 @@ export async function runTx(t: TxArgs): Promise<{ hash: Hash; block: bigint; rec
   const { publicClient: pc, walletClient: wc } = t;
   try {
     t.onStage({ stage: "simulating" });
-    const gas = gasFor(t.gasKey);
+    // the measured limit is the floor; if this chain prices an access higher than the local EVM, the live estimate wins
+    let gas = gasFor(t.gasKey);
+    try {
+      const est = await pc.estimateContractGas({ account: t.account, address: t.address, abi: t.abi, functionName: t.functionName, args: t.args as never } as never);
+      const padded = (est * 125n) / 100n;
+      if (padded > gas) gas = padded;
+    } catch { /* simulation below reports the revert as a sentence */ }
     const { request } = await pc.simulateContract({
       account: t.account, address: t.address, abi: t.abi, functionName: t.functionName, args: t.args as never, gas, chain: ACTIVE_CHAIN,
     } as never);

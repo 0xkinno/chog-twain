@@ -1,0 +1,159 @@
+{
+ "gas": {
+  "chain": "local anvil",
+  "at": "2026-10-21T21:54:22.975Z",
+  "table": [
+   {
+    "fn": "approve",
+    "calls": 20,
+    "minGas": 28857,
+    "maxGas": 45957,
+    "limit": 58000
+   },
+   {
+    "fn": "cancel",
+    "calls": 20,
+    "minGas": 52165,
+    "maxGas": 65845,
+    "limit": 83000
+   },
+   {
+    "fn": "cheer",
+    "calls": 20,
+    "minGas": 47472,
+    "maxGas": 47472,
+    "limit": 60000
+   },
+   {
+    "fn": "claim",
+    "calls": 20,
+    "minGas": 34972,
+    "maxGas": 34972,
+    "limit": 44000
+   },
+   {
+    "fn": "join",
+    "calls": 20,
+    "minGas": 144080,
+    "maxGas": 178349,
+    "limit": 223000
+   },
+   {
+    "fn": "leave",
+    "calls": 20,
+    "minGas": 35917,
+    "maxGas": 86708,
+    "limit": 109000
+   },
+   {
+    "fn": "light",
+    "calls": 20,
+    "minGas": 50625,
+    "maxGas": 67725,
+    "limit": 85000
+   },
+   {
+    "fn": "open",
+    "calls": 20,
+    "minGas": 219969,
+    "maxGas": 295408,
+    "limit": 370000
+   },
+   {
+    "fn": "poke",
+    "calls": 20,
+    "minGas": 35110,
+    "maxGas": 35110,
+    "limit": 44000
+   },
+   {
+    "fn": "setHome",
+    "calls": 20,
+    "minGas": 31632,
+    "maxGas": 51544,
+    "limit": 65000
+   },
+   {
+    "fn": "showUp",
+    "calls": 20,
+    "minGas": 69004,
+    "maxGas": 86104,
+    "limit": 108000
+   },
+   {
+    "fn": "showUpMeet",
+    "calls": 20,
+    "minGas": 285180,
+    "maxGas": 336480,
+    "limit": 421000
+   }
+  ]
+ },
+ "latency": {
+  "chain": "Monad mainnet",
+  "samples": 20,
+  "proposedMedianMs": 1171,
+  "finalMedianMs": 2013,
+  "proposedMs": [
+   1687,
+   1150,
+   1664,
+   1038,
+   1170,
+   1142,
+   1101,
+   1029,
+   1092,
+   1224,
+   1171,
+   1121,
+   1649,
+   1481,
+   1772,
+   1837,
+   1144,
+   1536,
+   1180,
+   1116
+  ],
+  "finalMs": [
+   1931,
+   2240,
+   1897,
+   1919,
+   2100,
+   2013,
+   1943,
+   1874,
+   1945,
+   2107,
+   2030,
+   1933,
+   1870,
+   2347,
+   2018,
+   2048,
+   2004,
+   2666,
+   2040,
+   1970
+  ],
+  "fn": "cheer"
+ },
+ "d7": {
+  "chain": "Monad mainnet",
+  "gasPriceWei": "102000000000",
+  "estimate": 42739,
+  "generousLimit": {
+   "gasLimit": 85478,
+   "gasUsed": 85478,
+   "feeMon": 0.008718756
+  },
+  "tightLimit": {
+   "gasLimit": 60000,
+   "gasUsed": 60000,
+   "feeMon": 0.00612
+  },
+  "note": "Monad charges gas_limit x price, so the fee follows the limit, not gasUsed."
+ }
+}
