@@ -25,7 +25,7 @@ export function NavCapsule() {
           <img src="/brand/mark.svg" alt="" width={30} height={30} />
           <span className="nav-items">Chog Twain</span>
         </Link>
-        <span className="nav-items" style={{ display: "contents" }}>
+        <span className="nav-links">
           {ITEMS.map(([label, href]) => {
             const active = isActive(path, href);
             return (

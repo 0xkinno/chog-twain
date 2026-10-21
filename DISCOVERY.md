@@ -1,0 +1,31 @@
+# Discovery
+
+Every row was run by us on 21 Oct 2026 (UTC) with the command shown, against `https://rpc.monad.xyz` unless stated.
+A fact not verified by a command we ran is marked **UNKNOWN**. Nothing here is copied from another builder.
+
+| # | Fact | Status | Command and real output |
+|---|---|---|---|
+| D1 | Chog Genesis `0xc96d31F8626c6D03Fae5dCD3d61e3FB9F4a73763` (chain 143) is plain ERC-721, not enumerable | **VERIFIED** | `cast call <CHOG> "supportsInterface(bytes4)(bool)" <id>`: `0x780e9d63` (Enumerable) = `false`; `0x80ac58cd` (ERC-721) = `true`; `0x49064906` (ERC-4906) = `false`; `0x2a55205a` (ERC-2981) = `true` |
+| D2 | Gaze split Left / Right / Front | **VERIFIED** (rebuilt by us) | `npm run fetch:collection && npm run build:gaze` read all 1,969 `tokenURI`s through Multicall3 at block 115,395,963, fetched every metadata JSON from IPFS and hashed the raw bytes. Result: 650 Left, 1,309 Right, 10 Front (the ten 1:1s carry only `Base` and `Tier`), root `0x7cb42ed24f612763f141f9b02c56a637e2cd3f7fcdcb23dea68dc50e7b1d63e4`. Max simultaneous walks 660, right-facers always waiting 649. Our root equals the root of the public snapshot the kit was built from, so two independent reads agree. |
+| D3 | Token id is not the artwork number | **VERIFIED** | `cast call <CHOG> "tokenURI(uint256)(string)" 846` returns `ipfs://bafybeid4y.../338.json`, whose name is "CHOG #338". Every label in the app shows both: "Token 846 · CHOG #338". |
+| D4 | `Side: Left` means the face points to the viewer's left | **OBSERVED, moderate confidence** | Contact sheet of 5 Left and 4 Right artworks (`reference/d4/sheet.png`, not committed). Right-facers show the spiked back of the head on the left of the frame and the face turned right; Left-facers carry the face to the left half of the frame (Left-1, Left-15) with two ambiguous cases (Left-2, Left-8). The semantics are not inverted, so the composition follows the instruction (right-facer on the left page). If a holder shows it is inverted, only `scene.ts` `pages()` flips; contract values never change. |
+| D5 | Public RPC log range and block time | **VERIFIED** | `cast logs --from-block (h-500) --to-block h --address <CHOG>` returns `HTTP error 413 ... eth_getLogs is limited to a 100 range`. `cast block` timestamps 50 blocks apart differ by 15 s, so 300 ms per block and 288,000 blocks per day. |
+| D6 | `latest` = Proposed, `safe` = Voted, `finalized` = Finalized | **PARTLY VERIFIED** | 20 polls of `latest`, `safe`, `finalized`: the three tags answer from different load-balanced nodes, so a single reading can show `safe` or `finalized` ahead of `latest` by 1 to 7 blocks (gaps seen: -1/-4 ... -5/-7). Consequence for the UI: the two-stage postmark compares the finalized block with the block of the receipt, never with a `latest` read taken earlier. |
+| D7 | Monad charges `gas_limit x price`, not gas used | **UNKNOWN until the mainnet deploy** | Needs one `showUp` with a wallet default limit and one with our tight limit on mainnet. Gas price observed now: 102 gwei (`cast gas-price`). The app always sends a tight explicit limit from `src/lib/gas-limits.json`. Results will be recorded in `docs/measurements.json` and `EVIDENCE.md`. |
+| D8 | Storage priced per 128-slot page (MIP-8) | **UNKNOWN until testnet** | `contracts/src/ablation/ChogTwainLoose.sol` (same daily rules, every walk field in its own mapping) and the deploy script are written. A local EVM does not model MIP-8 page pricing, so the comparison needs Monad testnet gas and will be published whatever it shows. |
+| D9 | Multicall3 on 143 | **VERIFIED** | `cast code 0xcA11bde05977b3631167028862bE2a173976CA11` returns 3,808 bytes of code. |
+| D10 | $CHOG `0x350035555E10d9AfAF1566AaebfCeD5BA6C27777` | **VERIFIED** (permit not exercised) | `decimals()` = 18, `symbol()` = "CHOG", `name()` = "Chog", `totalSupply()` = 999,999,989 tokens, `DOMAIN_SEPARATOR()` = `0x5e3d...f11c`, `nonces(address)` answers, so EIP-2612 permit is almost certainly present. We still use an exact `approve` (works in every wallet). Live price: about US$0.0015 (nad.fun pool, US$95K liquidity, DexScreener). |
+| D11 | Testnet 10143 and mainnet 143 | **VERIFIED** | `cast chain-id --rpc-url https://testnet-rpc.monad.xyz` = 10143; mainnet = 143. |
+| D12 | viem ships `monad` and `monadTestnet` | **VERIFIED, partly** | In viem 2.38.6: `monad` = `false`, `monadTestnet` = `true`. We define chain 143 ourselves with `defineChain` (`src/lib/chains.ts`). |
+| D13 | Fuzz finding: a meeting takes at least N steps | **VERIFIED by us** | `testFuzz_meetingNeedsRealDays` (512 runs) and the TypeScript twin (300 random attendance runs in `packages/rules/test/engine.test.ts`) both assert `steps >= distance` on every meeting and `steps <= together-days` always. Scenario `16-drift-makes-a-meeting-take-more-than-n-steps` shows a distance 7 walk meeting at 8 steps. |
+
+## What we recorded that the kit did not ask for
+
+- `eth_getLogs` over one block is enough to verify a claimed meeting block, which is how `/api/card/[walkId]?b=` proves the block number on the meeting card without scanning (`verifyMeetBlock` in `src/lib/twain.ts`).
+- Public IPFS gateways rate-limit hard (HTTP 429 and timeouts while fetching 1,969 metadata files). The collection script now uses 3 workers, 8 retry rounds over 6 gateways, and resumes from a local cache.
+- The first screens ship a small set of artwork inside the app (`public/art`, 55 files), so a gateway outage cannot blank the landing page. Every other Chog comes from `/api/art/[tokenId]` with gateway fallback and a designed "art is resting" tile on total failure.
+- Name search: GitHub search for "chog twain", "chog-twain" and "chogtwain" returns only our own repository. X search is not available to us without a login: **UNKNOWN**. `chogtwain.vercel.app` answered 404 (unclaimed) when checked.
+
+## The discovery, stated plainly
+
+Every Chog already looks at someone. Its face points left, right, or straight out of the frame, and the collection is lopsided: about two right-facers for every left-facer. If two Chogs must face each other to meet, at most 660 walks can run at once and 649 right-facing Chogs are always waiting for a partner. The trait nobody used becomes the rule of the whole world, and it lives in IPFS metadata, not on-chain, so the contract is shown a Merkle proof of it.

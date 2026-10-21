@@ -89,7 +89,7 @@ export function Spread({ scene, orientation = "auto", postmark, stepSignal = 0, 
     : `M ${mid.x} ${mid.y - 18} C ${mid.x + 34} ${mid.y + 26} ${mid.x + 34} ${mid.y - 26} ${mid.x} ${mid.y + 18}`;
 
   return (
-    <div className="spread-wrap" data-testid="spread" data-state={scene.state} data-gap={scene.gap} data-walked={scene.walked}>
+    <div className="spread-wrap" data-avoid data-testid="spread" data-state={scene.state} data-gap={scene.gap} data-walked={scene.walked}>
       <svg className="spread-svg" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={label ?? scene.caption} data-orientation={o}>
         <defs>
           <linearGradient id={`pl${uid}`} x1="0" y1="0" x2={land ? "1" : "0"} y2={land ? "0" : "1"}>

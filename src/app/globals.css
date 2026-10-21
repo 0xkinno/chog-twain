@@ -68,9 +68,11 @@ img { max-width: 100%; }
 .nav-active { position: absolute; inset: 4px; border-radius: 10px; background: #fff; box-shadow: var(--glow); }
 .nav-label { position: relative; }
 .nav-wallet { margin-left: 6px; }
+.nav-links { display: contents; }
+.footer a { display: block; width: fit-content; padding: 2px 0; }
 .dock { display: none; }
 
-@media (max-width: 960px) { .nav-items { display: none; } .nav-capsule { gap: 6px; } }
+@media (max-width: 960px) { .nav-items, .nav-links { display: none; } .nav-capsule { gap: 6px; } }
 @media (max-width: 720px) {
   .dock {
     display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px;

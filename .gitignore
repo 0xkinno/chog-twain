@@ -17,3 +17,6 @@ data/fetch.err
 public/data/
 src/data/chogs.json
 public/paper-grain.png
+.env.e2e
+tests/e2e/.seed.json
+docs/screenshots/matrix/

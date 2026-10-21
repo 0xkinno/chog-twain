@@ -24,7 +24,7 @@ export function Cover() {
   return (
     <section className="wrap" style={{ paddingTop: 110, paddingBottom: 40 }} aria-labelledby="hero">
       <FolioLine extra="THE TRAVEL ISSUE" />
-      <div className="stack" style={{ ["--gap" as string]: "18px", marginTop: 18 }} data-avoid>
+      <div className="stack" style={{ ["--gap" as string]: "18px", marginTop: 18 }}>
         <h1 id="hero" className="display sticker-type" style={{ fontSize: "clamp(3rem, 7.2vw, 7rem)", lineHeight: 1, maxWidth: 1150 }}>
           Every Chog is looking at <span style={{ color: "var(--hood)" }}>someone.</span>
         </h1>

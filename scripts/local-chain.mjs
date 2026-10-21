@@ -1,5 +1,5 @@
 // Starts a local anvil chain (31337), puts Multicall3 at its canonical address, deploys ChogTwain with mocks
-// for Chog Genesis and $CHOG using OUR gaze root, and writes .env.local so `npm run dev` talks to it.
+// for Chog Genesis and $CHOG using OUR gaze root, and writes .env.e2e (tests/e2e builds the app with it).
 // Playwright uses this to exercise every real transaction path without spending real MON.
 // Usage: node scripts/local-chain.mjs   (leave running; Ctrl+C stops anvil)
 import { spawn, execFileSync } from "node:child_process";
@@ -41,7 +41,7 @@ const out = execFileSync(bin("forge"), ["script", "script/DeployLocal.s.sol", "-
 const pick = (k) => out.match(new RegExp(`${k}\\s+(0x[0-9a-fA-F]{40})`))[1];
 const epoch = out.match(/EPOCH\s+(\d+)/)[1];
 const blk = parseInt(await rpc("eth_blockNumber"), 16);
-writeFileSync(".env.local", [
+writeFileSync(".env.e2e", [
   "NEXT_PUBLIC_CHAIN=local",
   "NEXT_PUBLIC_MONAD_RPC=http://127.0.0.1:8545",
   `NEXT_PUBLIC_TWAIN=${pick("TWAIN")}`,
@@ -53,6 +53,6 @@ writeFileSync(".env.local", [
   "NEXT_PUBLIC_SITE_URL=http://localhost:3000",
   "",
 ].join("\n"));
-console.log(`local chain ready at block ${blk}; .env.local written (epoch ${epoch})`);
+console.log(`local chain ready at block ${blk}; .env.e2e written (epoch ${epoch})`);
 console.log("accounts:", KEYS.map((k, i) => i).join(","), "(anvil dev accounts, 1,000,000 mock $CHOG each; account 9 holds Chogs 1..24)");
 await new Promise(() => {});

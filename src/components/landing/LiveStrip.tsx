@@ -24,7 +24,7 @@ export function LiveStrip() {
     </div>
   );
   return (
-    <div className="row" style={{ gap: 28 }} data-testid="live-strip" aria-label="Live from the contract">
+    <div className="row" style={{ gap: 28 }} data-avoid data-testid="live-strip" aria-label="Live from the contract">
       {cell("Steps today", q.data ? num(q.data.today) : undefined)}
       {cell("Steps taken", c ? num(c.totalSteps) : undefined)}
       {cell("Meetings", c ? num(c.meetings) : undefined)}
