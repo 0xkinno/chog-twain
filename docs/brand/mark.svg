@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Chog Twain mark: two Chog heads looking at each other">
+  <rect width="128" height="128" rx="30" fill="#fbf9ff"/>
+  <rect x="4" y="4" width="120" height="120" rx="27" fill="none" stroke="#6c4ab6" stroke-width="3" stroke-dasharray="9 7"/>
+  <!-- left Chog, looks right -->
+  <path d="M20 70 L16 48 L30 56 L32 38 L44 52 L56 46 Q66 52 66 70 Q66 90 44 90 Q20 90 20 70 Z" fill="#6c4ab6" stroke="#23164d" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M34 66 Q34 52 50 52 Q64 54 64 70 Q64 86 48 86 Q34 86 34 66 Z" fill="#f6e9c7" stroke="#23164d" stroke-width="3"/>
+  <circle cx="54" cy="66" r="5" fill="#23164d"/><circle cx="56" cy="64" r="1.7" fill="#fff"/>
+  <circle cx="46" cy="76" r="4" fill="#ff7aa8" opacity=".8"/>
+  <!-- right Chog, looks left -->
+  <path d="M108 70 L112 48 L98 56 L96 38 L84 52 L72 46 Q62 52 62 70 Q62 90 84 90 Q108 90 108 70 Z" fill="#836ef9" stroke="#23164d" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M94 66 Q94 52 78 52 Q64 54 64 70 Q64 86 80 86 Q94 86 94 66 Z" fill="#f6e9c7" stroke="#23164d" stroke-width="3"/>
+  <circle cx="74" cy="66" r="5" fill="#23164d"/><circle cx="72" cy="64" r="1.7" fill="#fff"/>
+  <circle cx="82" cy="76" r="4" fill="#ff7aa8" opacity=".8"/>
+  <!-- gaze line, a small w -->
+  <path d="M59 66 Q61 74 64 66 Q67 74 69 66" fill="none" stroke="#ff7aa8" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 6"/>
+  <!-- footprints -->
+  <g fill="#23164d" opacity=".75"><ellipse cx="42" cy="106" rx="4" ry="5.5"/><ellipse cx="56" cy="110" rx="4" ry="5.5"/><ellipse cx="72" cy="110" rx="4" ry="5.5" opacity=".45"/><ellipse cx="86" cy="106" rx="4" ry="5.5" opacity=".45"/></g>
+</svg>
