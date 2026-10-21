@@ -1,0 +1,11 @@
+{
+  "root": "0x7cb42ed24f612763f141f9b02c56a637e2cd3f7fcdcb23dea68dc50e7b1d63e4",
+  "tokens": 1969,
+  "left": 650,
+  "right": 1309,
+  "front": 10,
+  "maxSimultaneousWalks": 660,
+  "rightAlwaysWaiting": 649,
+  "source": "data/collection.json",
+  "builtAt": "2026-10-21T18:23:12.358Z"
+}

@@ -14,6 +14,8 @@ const GATEWAYS = [
   "https://ipfs.io/ipfs/",
   "https://dweb.link/ipfs/",
   "https://gateway.pinata.cloud/ipfs/",
+  "https://4everland.io/ipfs/",
+  "https://gateway.ipfs.io/ipfs/",
 ];
 
 const chain = {
@@ -47,14 +49,18 @@ async function tokenURIs() {
 async function fetchIpfs(uri) {
   const path = uri.replace(/^ipfs:\/\//, "");
   let last;
-  for (const g of GATEWAYS) {
-    try {
-      const res = await fetch(g + path, { signal: AbortSignal.timeout(15000) });
-      if (!res.ok) throw new Error(`${res.status}`);
-      return Buffer.from(await res.arrayBuffer());
-    } catch (e) {
-      last = e;
+  // three rounds over every gateway: public gateways drop requests now and then
+  for (let round = 0; round < 8; round++) {
+    for (const g of GATEWAYS) {
+      try {
+        const res = await fetch(g + path, { signal: AbortSignal.timeout(15000) });
+        if (!res.ok) throw new Error(`${res.status}`);
+        return Buffer.from(await res.arrayBuffer());
+      } catch (e) {
+        last = e;
+      }
     }
+    await new Promise((r) => setTimeout(r, 2500 * (round + 1)));
   }
   throw new Error(`all gateways failed for ${uri}: ${last}`);
 }
@@ -64,10 +70,27 @@ const uris = await tokenURIs();
 mkdirSync("data", { recursive: true });
 const cachePath = "data/.metadata-cache.json";
 const cache = existsSync(cachePath) ? JSON.parse(readFileSync(cachePath, "utf8")) : {};
+// fill the cache 3 at a time (the cache is keyed by tokenURI and the raw bytes are hashed below)
+const todo = Array.from({ length: SUPPLY }, (_, i) => uris[i + 1]).filter((u) => !cache[u]);
+let done = 0;
+async function worker() {
+  while (todo.length) {
+    const uri = todo.pop();
+    cache[uri] = (await fetchIpfs(uri)).toString("base64");
+    if (++done % 100 === 0) {
+      writeFileSync(cachePath, JSON.stringify(cache));
+      console.log(`fetched ${Object.keys(cache).length}/${SUPPLY}`);
+    }
+  }
+}
+try {
+  await Promise.all(Array.from({ length: 3 }, worker));
+} finally {
+  writeFileSync(cachePath, JSON.stringify(cache));
+}
 const tokens = {};
 for (let id = 1; id <= SUPPLY; id++) {
   const uri = uris[id];
-  if (!cache[uri]) cache[uri] = (await fetchIpfs(uri)).toString("base64");
   const raw = Buffer.from(cache[uri], "base64");
   const meta = JSON.parse(raw.toString("utf8"));
   const attrs = Object.fromEntries((meta.attributes ?? []).map((a) => [a.trait_type, String(a.value)]));

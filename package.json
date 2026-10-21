@@ -1,14 +1,56 @@
 {
-  "name": "chog-twain-kit",
+  "name": "chog-twain",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
+  "description": "Every Chog is looking at someone. Two people, two Chogs that face each other, one step closer on every day you both show up.",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
   "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:contracts": "cd contracts && forge test",
+    "test:e2e": "playwright test",
     "fetch:collection": "node scripts/fetch-collection.mjs",
     "build:gaze": "node scripts/build-gaze.mjs",
-    "facts": "node scripts/facts.mjs"
+    "gen:compat": "node scripts/gen-compat-test.mjs",
+    "gen:scenarios": "node scripts/gen-scenarios.mjs",
+    "gen:assets": "node scripts/gen-assets.mjs",
+    "gas": "node scripts/gas-table.mjs",
+    "facts": "node scripts/facts.mjs",
+    "readme": "node scripts/render-readme.mjs",
+    "verify": "node scripts/verify.mjs",
+    "break": "node scripts/break-campaign.mjs",
+    "check:copy": "node scripts/check-copy.mjs",
+    "check:nft": "node scripts/check-no-nft-writes.mjs",
+    "chain:local": "node scripts/local-chain.mjs"
   },
   "dependencies": {
     "@openzeppelin/merkle-tree": "1.0.8",
-    "viem": "2.38.6"
+    "@tanstack/react-query": "5.104.1",
+    "lenis": "1.3.26",
+    "motion": "12.43.0",
+    "next": "15.5.27",
+    "qrcode": "1.5.4",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "viem": "2.38.6",
+    "wagmi": "2.19.5"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.63.0",
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "22.20.5",
+    "@types/qrcode": "1.5.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "sharp": "0.34.5",
+    "tailwindcss": "4.3.3",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7"
   }
 }
