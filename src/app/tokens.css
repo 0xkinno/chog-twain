@@ -1,0 +1,11 @@
+:root {
+  --paper: #fbf9ff; --paper-2: #f3eefe; --card: #ffffff;
+  --ink: #23164d; --ink-2: #4b3d7a;
+  --hood: #6c4ab6; --monad: #836ef9; --pink: #ff7aa8; --cream: #f6e9c7; --gold: #ffbf3c; --mint: #3fbf8f;
+  --line: rgba(35,22,77,.10);
+  --glow: 0 0 0 1px rgba(131,110,249,.45), 0 8px 30px -6px rgba(131,110,249,.55), 0 0 60px -10px rgba(255,122,168,.35);
+  --lift: 0 1px 0 rgba(35,22,77,.06), 0 10px 30px -12px rgba(35,22,77,.25);
+  --r-card: 22px; --r-capsule: 14px; --r-stamp: 6px;
+  --grain: url("/paper-grain.png");
+}
+/* Light only: this is a paper product. Do not auto-darken. */

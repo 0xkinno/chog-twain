@@ -1,0 +1,5 @@
+// Same layout as TwainPostcard._svg in the contract (used for the Demo and the landing example).
+
+export function postcardSvg(my: number, their: number, distance: number, walkId: number, day: number): string {
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect width="600" height="400" rx="24" fill="#fbf9ff"/><rect x="16" y="16" width="568" height="368" rx="16" fill="none" stroke="#6c4ab6" stroke-width="3" stroke-dasharray="10 8"/><text x="300" y="120" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="30" fill="#23164d">They met.</text><text x="300" y="200" text-anchor="middle" font-family="Verdana,sans-serif" font-weight="bold" font-size="40" fill="#6c4ab6">#${my}  &#8644;  #${their}</text><text x="300" y="260" text-anchor="middle" font-family="monospace" font-size="18" fill="#4b3d7a">${distance} DAYS  /  WALK ${walkId}  /  DAY ${day}</text><circle cx="500" cy="320" r="44" fill="none" stroke="#ff7aa8" stroke-width="3"/><text x="500" y="326" text-anchor="middle" font-family="monospace" font-size="14" fill="#ff7aa8">CHOG TWAIN</text></svg>`;
+}
