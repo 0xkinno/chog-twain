@@ -1,0 +1,12 @@
+#!/bin/sh
+# Refuses to commit unless the author is 0xkinno.
+NAME="$(git config user.name)"
+if [ "$NAME" != "0xkinno" ]; then
+  echo "pre-commit: git user.name is '$NAME'. Run: git config user.name 0xkinno" >&2
+  exit 1
+fi
+if git config user.email | grep -qiE 'anthropic|claude'; then
+  echo "pre-commit: author email must be your own GitHub email." >&2
+  exit 1
+fi
+exit 0

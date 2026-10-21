@@ -1,0 +1,12 @@
+node_modules/
+.next/
+.vercel/
+.env
+.env.*
+!.env.example
+reference/
+data/.metadata-cache.json
+contracts/out/
+contracts/cache/
+playwright-report/
+test-results/

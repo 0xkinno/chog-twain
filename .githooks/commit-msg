@@ -1,0 +1,5 @@
+#!/bin/sh
+# Strips any AI attribution trailer before the commit is written.
+MSG="$1"
+grep -viE '^\s*(co-authored-by:.*(claude|anthropic)|claude-session:|.*generated with.*claude code)' "$MSG" > "$MSG.tmp" && mv "$MSG.tmp" "$MSG"
+exit 0

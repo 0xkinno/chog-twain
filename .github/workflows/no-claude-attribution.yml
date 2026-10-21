@@ -1,0 +1,70 @@
+name: Block Claude attribution
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  push:
+    branches: ["**"]
+
+permissions:
+  contents: read
+
+jobs:
+  no-claude-attribution:
+    name: no-claude-attribution
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reject Claude authors and trailers
+        env:
+          EVENT: ${{ github.event_name }}
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          PR_HEAD: ${{ github.event.pull_request.head.sha }}
+          PUSH_BEFORE: ${{ github.event.before }}
+          PUSH_AFTER: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import os, re, subprocess, sys
+
+          if os.environ["EVENT"] == "pull_request":
+              base, head = os.environ["PR_BASE"], os.environ["PR_HEAD"]
+          else:
+              base, head = os.environ["PUSH_BEFORE"], os.environ["PUSH_AFTER"]
+
+          zero = "0" * 40
+          rng = head if (not base or base == zero) else f"{base}..{head}"
+          commits = subprocess.check_output(["git", "rev-list", rng], text=True).split()
+
+          bad_id = re.compile(r"claude|anthropic|noreply@anthropic\.com", re.I)
+          bad_msg = re.compile(
+              r"(?im)^\s*(?:co-authored-by:.*(?:claude|anthropic)"
+              r"|claude-session:.*"
+              r"|.*generated with.*claude code)"
+          )
+
+          failed = False
+          for sha in commits:
+              raw = subprocess.check_output(
+                  ["git", "show", "-s", "--format=%an%n%ae%n%cn%n%ce%n%B", sha],
+                  text=True, errors="replace",
+              )
+              parts = raw.split("\n", 4)
+              if len(parts) < 5:
+                  continue
+              author, author_email, committer, committer_email, message = parts
+              identity = " ".join([author, author_email, committer, committer_email])
+              if bad_id.search(identity) or bad_msg.search(message):
+                  print(f"FAIL: {sha} contains Claude/Anthropic identity or commit attribution.")
+                  failed = True
+              if author != "0xkinno":
+                  print(f"FAIL: {sha} author is '{author}', expected 0xkinno.")
+                  failed = True
+
+          if failed:
+              print("Remove the attribution and push corrected commits.")
+              sys.exit(1)
+          print(f"PASS: {len(commits)} commit(s), no Claude attribution, all authored by 0xkinno.")
+          PY

@@ -1,0 +1,14 @@
+{
+  "name": "chog-twain-kit",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch:collection": "node scripts/fetch-collection.mjs",
+    "build:gaze": "node scripts/build-gaze.mjs",
+    "facts": "node scripts/facts.mjs"
+  },
+  "dependencies": {
+    "@openzeppelin/merkle-tree": "1.0.8",
+    "viem": "2.38.6"
+  }
+}
