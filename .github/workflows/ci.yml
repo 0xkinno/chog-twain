@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  rules-and-copy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: npm install --legacy-peer-deps
+      - run: npm run check:copy
+      - run: npm run check:nft
+      - run: npm test
+      - run: npx tsc --noEmit
+      - name: README facts are in sync (CI fails on diff)
+        run: |
+          node scripts/render-readme.mjs
+          git diff --exit-code README.md PROOF.md
+
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: foundry-rs/foundry-toolchain@v1
+        with: { version: v1.8.5 }
+      - run: forge test -vv
+        working-directory: contracts

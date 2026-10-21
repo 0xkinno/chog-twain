@@ -1,5 +1,6 @@
 import type { BrowserContext } from "@playwright/test";
 import { privateKeyToAccount } from "viem/accounts";
+import { createWalletClient, defineChain, http, type Hex } from "viem";
 
 // anvil dev keys (public, local chain only). Index 9 holds Chogs 1..24 in the local deploy.
 export const KEYS = [
@@ -62,4 +63,47 @@ export async function installWallet(context: BrowserContext, index: number, rpc 
     },
     { address, rpc },
   );
+}
+/**
+ * A wallet backed by a real private key, signing in Node and sending to a real RPC (used against Monad mainnet with the
+ * Chog Twain test wallets). The page sees a normal EIP-6963 provider.
+ */
+export async function installKeyWallet(context: BrowserContext, privateKey: Hex, rpc = "https://rpc.monad.xyz", chainId = 143) {
+  const account = privateKeyToAccount(privateKey);
+  const chain = defineChain({ id: chainId, name: "Monad", nativeCurrency: { name: "Monad", symbol: "MON", decimals: 18 }, rpcUrls: { default: { http: [rpc] } } });
+  const wc = createWalletClient({ account, chain, transport: http(rpc) });
+  await context.exposeFunction("__twSend", async (tx: { to: Hex; data?: Hex; value?: Hex; gas?: Hex }) =>
+    wc.sendTransaction({ to: tx.to, data: tx.data, value: tx.value ? BigInt(tx.value) : undefined, gas: tx.gas ? BigInt(tx.gas) : undefined, account, chain }),
+  );
+  await context.addInitScript(
+    ({ address, rpc, chainHex }) => {
+      let connected = false;
+      const call = async (method: string, params: unknown[] = []) => {
+        const r = await fetch(rpc, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ jsonrpc: "2.0", id: Date.now(), method, params }) });
+        const j = await r.json();
+        if (j.error) { const e = new Error(j.error.message) as Error & { code?: number }; e.code = j.error.code; throw e; }
+        return j.result;
+      };
+      const provider = {
+        request: async ({ method, params }: { method: string; params?: unknown[] }) => {
+          switch (method) {
+            case "eth_requestAccounts": connected = true; sessionStorage.setItem("tw-connected", "1"); return [address];
+            case "eth_accounts": return connected || sessionStorage.getItem("tw-connected") ? [address] : [];
+            case "eth_chainId": return chainHex;
+            case "net_version": return String(parseInt(chainHex, 16));
+            case "wallet_switchEthereumChain": case "wallet_addEthereumChain": return null;
+            case "eth_sendTransaction": return (window as unknown as { __twSend: (t: unknown) => Promise<string> }).__twSend((params as unknown[])[0]);
+            default: return call(method, params ?? []);
+          }
+        },
+        on: () => {}, removeListener: () => {},
+      };
+      const info = { uuid: "00000000-0000-4000-8000-000000000002", name: "Test Wallet", icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzgzNmVmOSIvPjwvc3ZnPg==", rdns: "app.chogtwain.keywallet" };
+      const announce = () => window.dispatchEvent(new CustomEvent("eip6963:announceProvider", { detail: Object.freeze({ info, provider }) }));
+      window.addEventListener("eip6963:requestProvider", announce);
+      announce();
+    },
+    { address: account.address, rpc, chainHex: "0x" + chainId.toString(16) },
+  );
+  return account.address;
 }

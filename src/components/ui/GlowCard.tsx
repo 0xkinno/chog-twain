@@ -1,9 +1,12 @@
 "use client";
-import type { ReactNode, CSSProperties } from "react";
+import type { ReactNode, CSSProperties, HTMLAttributes } from "react";
 
-export function GlowCard({ children, className = "", style, as: Tag = "div" }: { children: ReactNode; className?: string; style?: CSSProperties; as?: "div" | "section" | "article" | "li" }) {
+type Props = HTMLAttributes<HTMLElement> & { children: ReactNode; className?: string; style?: CSSProperties; as?: "div" | "section" | "article" | "li" } & { [k: `data-${string}`]: string | boolean | undefined };
+
+export function GlowCard({ children, className = "", style, as: Tag = "div", ...rest }: Props) {
   return (
     <Tag
+      {...rest}
       className={`glow-card ${className}`}
       style={style}
       onPointerMove={(e: React.PointerEvent<HTMLElement>) => {

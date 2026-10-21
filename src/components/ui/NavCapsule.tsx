@@ -23,7 +23,7 @@ export function NavCapsule() {
         <Link href="/" className="nav-brand" aria-label="Chog Twain home">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/brand/mark.svg" alt="" width={30} height={30} />
-          <span className="nav-items">Chog Twain</span>
+          <span className="nav-brand-text">Chog Twain</span>
         </Link>
         <span className="nav-links">
           {ITEMS.map(([label, href]) => {

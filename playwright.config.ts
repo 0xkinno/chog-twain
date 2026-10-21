@@ -9,6 +9,6 @@ export default defineConfig({
   fullyParallel: false,
   retries: 0,
   reporter: [["list"], ["json", { outputFile: "test-results/results.json" }]],
-  use: { baseURL: `http://localhost:${port}`, trace: "retain-on-failure", ...devices["Desktop Chrome"] },
+  use: { baseURL: process.env.E2E_BASE_URL ?? `http://localhost:${port}`, trace: "retain-on-failure", ...devices["Desktop Chrome"] },
   projects: [{ name: "chromium", use: { browserName: "chromium" } }],
 });

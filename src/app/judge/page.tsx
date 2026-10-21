@@ -3,7 +3,7 @@ import Link from "next/link";
 import { GlowCard } from "@/components/ui/GlowCard";
 import { FolioLine } from "@/components/ui/Icons";
 
-export const metadata: Metadata = { title: "Judge walk", description: "A 60-second, 3-minute and 10-minute path through Chog Twain, with what to expect at each step." };
+export const metadata: Metadata = { title: "Judge walk", description: "A 60-second, 3-minute and 10-minute path through Chog Twain, with what to expect at each step.", openGraph: { images: ["/og/judge"] }, twitter: { card: "summary_large_image", images: ["/og/judge"] } };
 
 const paths = [
   { id: "60s", title: "60 seconds, no wallet", steps: [

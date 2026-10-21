@@ -72,7 +72,9 @@ img { max-width: 100%; }
 .footer a { display: block; width: fit-content; padding: 2px 0; }
 .dock { display: none; }
 
-@media (max-width: 960px) { .nav-items, .nav-links { display: none; } .nav-capsule { gap: 6px; } }
+.nav-brand-text { white-space: nowrap; }
+@media (max-width: 1000px) { .nav-brand-text { display: none; } .nav-item { padding: 10px 12px; } }
+@media (max-width: 720px) { .nav-links { display: none; } .nav-capsule { gap: 6px; } }
 @media (max-width: 720px) {
   .dock {
     display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px;

@@ -143,6 +143,7 @@ export function Spread({ scene, orientation = "auto", postmark, stepSignal = 0, 
         {/* the gaze line, drawn in on load: a dashed line revealed by a mask whose stroke draws itself */}
         <mask id={`gm${uid}`} maskUnits="userSpaceOnUse" x="0" y="0" width={W} height={H}>
           <motion.path
+            d={met ? knotD : gazeD}
             fill="none" stroke="#fff" strokeWidth="24" strokeLinecap="round"
             initial={reduce ? false : { pathLength: 0 }}
             animate={{ d: met ? knotD : gazeD, pathLength: 1 }}
@@ -151,6 +152,7 @@ export function Spread({ scene, orientation = "auto", postmark, stepSignal = 0, 
         </mask>
         <g mask={`url(#gm${uid})`}>
           <motion.path
+            d={met ? knotD : gazeD}
             fill="none" stroke="#23164d" strokeOpacity=".28" strokeLinecap="round"
             strokeWidth={scene.gazeLaser ? 8 : 6.5}
             strokeDasharray={scene.gazeDashed ? "1 12" : "1 8"}
@@ -159,6 +161,7 @@ export function Spread({ scene, orientation = "auto", postmark, stepSignal = 0, 
             transition={{ duration: reduce ? 0 : 0.9, ease: [0.22, 1, 0.36, 1] }}
           />
           <motion.path
+            d={met ? knotD : gazeD}
             className="gaze-line"
             data-testid="gaze-line"
             stroke={scene.gazeColor}
