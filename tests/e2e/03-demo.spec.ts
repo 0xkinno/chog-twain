@@ -39,8 +39,10 @@ test.describe("demo (no wallet, nothing on-chain)", () => {
     await page.getByTestId("demo-join").click();
     await page.getByTestId("demo-leave").click();
     await expect(page.getByTestId("demo-status")).toHaveText("Apart");
-    await expect(page.getByTestId("demo-claim")).toContainText("1,400");
-    await page.getByTestId("demo-claim").click();
+    // walking away forfeits the whole pledge to the friend: nothing is left for you to claim
+    await expect(page.getByTestId("demo-claim")).toHaveCount(0);
+    await expect(page.getByTestId("demo-log")).toContainText(/whole pledge goes to the friend/);
+    await expect(page.getByTestId("demo-pledge")).toContainText("moved: 700 from you, 0 from your friend");
   });
 
   test("a Chog that looks the same way is refused with the contract's sentence", async ({ page }) => {
@@ -51,7 +53,7 @@ test.describe("demo (no wallet, nothing on-chain)", () => {
     await expect(page.getByTestId("demo-error")).toContainText(ERROR_COPY.NotFacing);
   });
 
-  const names = ["AlreadyToday", "NotFacing", "ChogBusy", "SelfWalk", "NotWalker", "LanternsFull", "NotInvited", "InviteExpired", "StillOpen", "NothingToClaim", "NotOpen", "NotWalking", "BadDistance", "BadChog", "HomeOnly", "NotHolder", "TransferFailed", "BadProof"] as const;
+  const names = ["AlreadyToday", "NotFacing", "ChogBusy", "SelfWalk", "NotWalker", "LanternsFull", "NotInvited", "InviteExpired", "StillOpen", "NothingToClaim", "NotOpen", "NotWalking", "BadDistance", "HomeOnly", "NotHolder", "TransferFailed", "BadProof"] as const;
   test("every contract error has its sentence in the break-a-rule panel", async ({ page }) => {
     await page.goto("/demo", { waitUntil: "networkidle" });
     for (const n of names) {
@@ -60,7 +62,7 @@ test.describe("demo (no wallet, nothing on-chain)", () => {
       await expect(r).toHaveAttribute("data-error", n);
       await expect(r).toContainText(ERROR_COPY[n]);
     }
-    // all 20 sentences are the copy from the build instruction
+    // all 20 sentences are the copy from the build instruction (BadGaze, GazeUnknown and BadChog are unreachable with a valid proof)
     expect(Object.keys(ERROR_COPY)).toHaveLength(20);
   });
 });

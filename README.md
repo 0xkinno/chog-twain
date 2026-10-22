@@ -37,8 +37,6 @@
 
 ## The story
 
-*Lena, Arjun, her sister and Mei are fictional. They are here to make the rules concrete.*
-
 Lena is a night-shift pharmacist in Leipzig. Her best friend from university, Arjun, a product designer, moved back to Pune. For a month they kept in touch. Then the messages got shorter, then weekly, then birthdays only.
 
 Lena picks Chog #1462 (it looks left, wearing BTC glasses) and sends Arjun a link. He picks Chog #338 (it looks right) and joins. The day closes at 00:00 UTC: 02:00 in Leipzig, 05:30 in Pune. Lena taps **I'm here** after her shift at 22:40. Arjun taps with his first chai at 07:10. Whoever arrives second sees both Chogs step closer.

@@ -62,6 +62,7 @@ export function OpenWalk() {
       {walkId ? (
         <div className="stack" style={{ ["--gap" as string]: "20px" }} data-testid="opened">
           <div className="notice ok"><span><strong>Walk {walkId} is open.</strong> It waits 3 days for a friend. Your Chog is locked to this walk until it ends.</span></div>
+          <TxPostmark tx={tx.state} />
           <ShareBox walkId={walkId} />
           <div className="row"><Link className="btn" href={`/w/${walkId}`}>Go to the walk</Link><Link className="btn btn-ghost" href="/me">My walks</Link></div>
         </div>

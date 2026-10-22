@@ -54,16 +54,16 @@ test("wallet capsule shows address, balances and a power icon that disconnects",
 test("open a walk: gaze filter, pledge with an exact approve first, two-stage postmark, share link", async ({ browser }) => {
   const { ctx, page } = await ctxFor(browser, A.idx);
   await connect(page, "/walk/new");
-  await page.getByRole("button", { name: "Looks left" }).click();
+  await page.getByRole("button", { name: "Looks left", exact: true }).click();
   const gazes = await page.locator(".pick").evaluateAll((els) => els.slice(0, 30).map((e) => e.getAttribute("data-gaze")));
   expect(gazes.length).toBeGreaterThan(5);
   expect(new Set(gazes)).toEqual(new Set(["Left"]));
   await pick(page, A.chog);
   await page.getByRole("radio", { name: "7 days" }).click();
-  await page.getByRole("radio", { name: "150 $CHOG" }).click();
+  await page.getByRole("radio", { name: "25 $CHOG" }).click();
   await page.getByTestId("open-walk").click();
   // the approve comes first, with its own postmark and the "1 of 2" line
-  await expect(page.getByTestId("tx-postmark")).toContainText(/Allow exactly 150/, { timeout: 60_000 });
+  await expect(page.getByTestId("tx-postmark")).toContainText(/Allow exactly 25/, { timeout: 60_000 });
   await expect(page.getByTestId("opened")).toBeVisible({ timeout: 120_000 });
   walkId = await walkIdFrom(page);
   expect(walkId).toBeGreaterThan(0);
@@ -87,7 +87,7 @@ test("join: only Chogs that face the opener's are offered, the pledge is matched
   const { ctx, page } = await ctxFor(browser, B.idx);
   await connect(page, `/w/${walkId}`);
   await expect(page.getByTestId("join-flow")).toBeVisible();
-  await expect(page.getByTestId("join-flow")).toContainText("150");
+  await expect(page.getByTestId("join-flow")).toContainText("25");
   const gazes = await page.locator('[data-testid="join-flow"] .pick').evaluateAll((els) => els.slice(0, 40).map((e) => e.getAttribute("data-gaze")));
   expect(gazes.length).toBeGreaterThan(5);
   for (const g of gazes) expect(["Right", "Front"]).toContain(g); // opener looks left
@@ -163,7 +163,7 @@ test("a missed day drifts them apart, the lantern keeps the next one, anyone can
   const b = await ctxFor(browser, B.idx);
   await connect(b.page, `/w/${walkId}`);
   await b.page.getByTestId("leave").click();
-  await expect(b.page.getByTestId("leave-confirm")).toContainText(/forfeit your whole pledge of 150/);
+  await expect(b.page.getByTestId("leave-confirm")).toContainText(/forfeit your whole pledge of 25/);
   await expect(b.page.getByTestId("leave-confirm")).toContainText(/cannot be undone/);
   await b.page.getByRole("button", { name: "Yes, walk away" }).click();
   await expect(b.page.getByTestId("walk-page")).toHaveAttribute("data-status", "apart", { timeout: 120_000 });

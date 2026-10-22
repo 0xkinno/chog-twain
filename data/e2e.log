@@ -62,7 +62,7 @@ Gas Limit
 Genesis Timestamp
 ==================
 
-1792620998
+1792634865
 
 Genesis Number
 ==================
@@ -71,3 +71,2575 @@ Genesis Number
 
 Listening on 127.0.0.1:8545
 eth_chainId
+
+    Block Number: 1
+    Block Hash: 0x033d588af2bacc9e8dcb87929a26a76d8926a3c46718521f516a958b7b077b9f
+    Block Time: "Thu, 22 Oct 2026 02:07:46 +0000"
+
+anvil_setCode
+
+    Block Number: 2
+    Block Hash: 0xdbbb87a4a7ede02d50f89512f8dd8ff464b81d4358c2c549c07170f53d7d932a
+    Block Time: "Thu, 22 Oct 2026 02:07:47 +0000"
+
+
+    Block Number: 3
+    Block Hash: 0xf42cfca577aca0286e7ba8bb7294471fadb371fb267920f3bb14dab959e8a47c
+    Block Time: "Thu, 22 Oct 2026 02:07:48 +0000"
+
+eth_chainId
+anvil_nodeInfo
+anvil_metadata
+eth_chainId
+anvil_nodeInfo
+anvil_metadata
+anvil_nodeInfo
+anvil_metadata
+eth_getBlockByNumber
+anvil_nodeInfo
+anvil_metadata
+anvil_nodeInfo
+anvil_metadata
+eth_getTransactionCount
+anvil_nodeInfo
+anvil_metadata
+
+    Block Number: 4
+    Block Hash: 0xea13cc549f2557c2a14d50fe0c0c37dc631c23dd0c35b46b1e9918b4342e6d8c
+    Block Time: "Thu, 22 Oct 2026 02:07:49 +0000"
+
+anvil_nodeInfo
+anvil_metadata
+eth_getCode
+anvil_nodeInfo
+anvil_metadata
+anvil_nodeInfo
+anvil_metadata
+eth_getBlockByHash
+anvil_nodeInfo
+anvil_metadata
+eth_gasPrice
+anvil_nodeInfo
+anvil_metadata
+anvil_nodeInfo
+anvil_metadata
+eth_getBlockByHash
+anvil_nodeInfo
+anvil_metadata
+eth_getAccountInfo
+eth_getBalance
+eth_getCode
+eth_getTransactionCount
+eth_getAccountInfo
+eth_getAccountInfo
+eth_getAccountInfo
+eth_getAccountInfo
+eth_getAccountInfo
+eth_getAccountInfo
+eth_getAccountInfo
+eth_getAccountInfo
+
+    Block Number: 5
+    Block Hash: 0xd31a1095e094a63cfcdaf9f2935c72895c072a7dd80ad53f90f2e0aa5f746631
+    Block Time: "Thu, 22 Oct 2026 02:07:50 +0000"
+
+anvil_nodeInfo
+anvil_metadata
+eth_getBlockByHash
+anvil_nodeInfo
+anvil_metadata
+eth_gasPrice
+anvil_nodeInfo
+anvil_metadata
+
+    Block Number: 6
+    Block Hash: 0x3be12cf47cca2f52a6512f0d97d25a4015b61338965fcee7a4722efa49ab75ec
+    Block Time: "Thu, 22 Oct 2026 02:07:51 +0000"
+
+eth_gasPrice
+eth_gasPrice
+
+    Block Number: 7
+    Block Hash: 0x001d7b1b4962408bea172e91e619ae2ffcc08e0c9a591b457ef0ba305ac7be4b
+    Block Time: "Thu, 22 Oct 2026 02:07:52 +0000"
+
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_sendRawTransaction
+
+    Transaction: 0x5c8c25cb9a5e8522ac0715f55d20b3d4e2d138434338d701f07a8b76bf1a7a94
+    Contract created: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+    Gas used: 796304
+
+    Transaction: 0x15fe1d79939602033ad1809bd93a6f3a352b21900a80fb6e18d65cc523636570
+    Contract created: 0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
+    Gas used: 477427
+
+    Transaction: 0xdb9c2fe830a5d59727eb6760f63b920c4e4947de85f3741734922c63ae82a69b
+    Contract created: 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
+    Gas used: 4772512
+
+    Transaction: 0xd8679e262ab3b484a052633f610bff559bc67bcee8b566222b2840a1e5c60bac
+    Gas used: 68109
+
+    Transaction: 0x0e9e7fdd947e4313652ebd512a2bbd8d45f56f426351e89b3ea028abe03e0808
+    Gas used: 51009
+
+    Transaction: 0x1b265633d45dfda5142dbb6f786f74ef9a6852cc2210591818247f2efd8a9d64
+    Gas used: 50997
+
+    Transaction: 0xc7779e877cd6faa7ae70e92b1fb80002f2c131bc6b0ef749b527ed49de8716d6
+    Gas used: 51009
+
+    Transaction: 0x7178786ec856e77cfde99b0d043923c3cd6c3d4655d406c05aef39830e90d3cc
+    Gas used: 51009
+
+    Transaction: 0x5ed23909adf4705f1e42167af1e6bd73711c46ca62ba233757f553ce2e39c2bf
+    Gas used: 51009
+
+    Transaction: 0xdc91a68443665b6d2df008a51570265229add0eb7372fb10629851491fd16c45
+    Gas used: 51009
+
+    Transaction: 0x8838152ce49949c6aa9e1787104abb2c4f69a76b1add1ec9c7ad747d980ac271
+    Gas used: 51009
+
+    Transaction: 0xf3ecceee377a164494463e570416be06c1acaa8f2b3e778411694b71e112ac85
+    Gas used: 51009
+
+    Transaction: 0x6d78f807459b321cc510712a98c9dd0b023f5aeeb4f710652568cfe1a50f2817
+    Gas used: 51009
+
+    Transaction: 0x9b550c6d70ba7b10efdce12e226ce1bfcd3747a26d967851da6bd4ddd02dc236
+    Gas used: 68526
+
+    Transaction: 0xab51ebac6497235ccecae7f0328ef26804d51dfb832e0569131b440112f128f0
+    Gas used: 51426
+
+    Transaction: 0xebe7cc9a3140483fbb02e363a3b61aa59b92efe51b81729f8aab964330124c03
+    Gas used: 51426
+
+    Transaction: 0xb96ae86d083dc07e26ef4e9026dd336a8eaf2174253f221d3d5a68310860bc66
+    Gas used: 51426
+
+    Transaction: 0xc4b0ce8048d5813681cb6ab36c311f8c9461178b79098b63cb380edcfe8a0884
+    Gas used: 51426
+
+    Transaction: 0x10bed4eeb95ce80026fd7f5ba52f6e534c0c492d87005504321b28c2a10b0b5a
+    Gas used: 51426
+
+    Transaction: 0xd59d9218b2ed94e21838c0f05046cad6b9d9f2614bbd6d346bc180a6ac46985f
+    Gas used: 51426
+
+    Transaction: 0x5a0cb748880420ee0c94d7899090c425b8ec16878691e2e3da2893128a4260c8
+    Gas used: 51426
+
+    Transaction: 0xb72a3ed9859e8e51ae0ed8b9bc2fd6ae7e4474551284b49ed4ec052445223667
+    Gas used: 51426
+
+    Transaction: 0x8b018b4c2a0c07d5179c6c21d8c2fd857e29d2c5150cb06d7da54d03a32c0ead
+    Gas used: 51426
+
+    Transaction: 0x2750de01712367cbead9fdd253f89f70cb10705ed504183e2fae5e146c477571
+    Gas used: 51426
+
+    Transaction: 0x4aa1b44d2331844d9c697a83322838076c08551ecaf7cac59ef5d1e83d0aff5c
+    Gas used: 51426
+
+    Transaction: 0x116416380b45e9b0ffb374805dfb01540d3d838f2973bf5cd0e3054beaf3d166
+    Gas used: 51426
+
+    Transaction: 0xd86b11b7b703cc180de7f83b821cf0c903e4c09d4bf4b24029f592e88d591e8b
+    Gas used: 51426
+
+    Transaction: 0xb5dfce692a7f28b40a346209325369d4fc823e7da5496b561f02a724caaed009
+    Gas used: 51426
+
+    Transaction: 0xf863ba6f47fa5f18db7c82b6ab6d46052ec48045df082ce1b6059471c9e701a6
+    Gas used: 51426
+
+    Transaction: 0xe9d5fa67f80650cb34e6d3f9b5c4514eb22a4ab7b42839ebee4fb0bd3ad8ea3e
+    Gas used: 51426
+
+    Transaction: 0x2b0156c4af37f421b5649cd4a55a4baa4672752bd984f3a9b8585b7fad141c0a
+    Gas used: 51426
+
+    Transaction: 0x0a40a86541f5971f08a17bcabfd9fb4f6f90aca1ca08c9f893b8baca3a3d7468
+    Gas used: 51426
+
+    Transaction: 0xa3cfbd666f739b222f7db1f12bb1cbe5e3ab2e3b9fa7fec29d22c42fb1f437b9
+    Gas used: 51426
+
+    Transaction: 0xdb97f7800e2f953db6750de6f6e5a0f2a319bb1946f214a39ace69a6ae382b0d
+    Gas used: 51426
+
+    Transaction: 0xe80dd8ad367b7b91f7a112f94bfdc41dc076cee781905c5ecb2d879e346cc0b7
+    Gas used: 51426
+
+    Transaction: 0x019fed75e5b40ac1564cfb477d10b6bf29f7222b96194c0165ae90674e42af92
+    Gas used: 51426
+
+    Transaction: 0x599b39afaa4a16fcce2b7827587a8a43eec4359671b6957a40b2c07af6f1e824
+    Gas used: 51426
+
+    Block Number: 8
+    Block Hash: 0xe4b67c9fa377eda66050e66a1bc8c58dc8e1b6385487125d3ff4681234bcd9a2
+    Block Time: "Thu, 22 Oct 2026 02:07:53 +0000"
+
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_blockNumber
+local chain ready at block 8; .env.e2e written (epoch 1792627200)
+accounts: 0,1,2,3,4,5,6,7,8,9 (anvil dev accounts, 1,000,000 mock $CHOG each; account 9 holds Chogs 1..24)
+
+    Block Number: 9
+    Block Hash: 0xc84bb63a17fcece79a393042ad476c2b9e8a6d08ad60f6ac232e64bd6a2014ec
+    Block Time: "Thu, 22 Oct 2026 02:07:54 +0000"
+
+
+    Block Number: 10
+    Block Hash: 0x98d66dcc4e4ad910de48e2980f29d5e48bf94dcfe1cba9893bf6e59fb5db7bea
+    Block Time: "Thu, 22 Oct 2026 02:07:55 +0000"
+
+
+    Block Number: 11
+    Block Hash: 0x145f83b265f63f07dc3effc48aeb8b126ef88e48e2b7c1af126ce473fcd933c6
+    Block Time: "Thu, 22 Oct 2026 02:07:56 +0000"
+
+
+    Block Number: 12
+    Block Hash: 0xaf9ca6476914f000a6cc236f65d60a2ac204b8d6862868a0108b2c5cd7b9fd39
+    Block Time: "Thu, 22 Oct 2026 02:07:57 +0000"
+
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x650fc484344fb5d03cf4020f098c6c22b937364a96ebeaf0679902e8d978b59f
+    Gas used: 271287
+
+    Block Number: 13
+    Block Hash: 0x23b23d2e35311b7dfbc0f81d9243b1cc77c36b3ca8d62a168e4d7abbf886322a
+    Block Time: "Thu, 22 Oct 2026 02:07:58 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_call
+eth_call
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x9c4d3eb2314dfdf6da4df2694a7712528a4d1375bb3c28497844205ff6053492
+    Gas used: 178256
+
+    Block Number: 14
+    Block Hash: 0xebeebe0372528ff52cb0f36a39575b170375a141bde1e5e99a0cc82d4355bc0d
+    Block Time: "Thu, 22 Oct 2026 02:07:59 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+evm_increaseTime
+evm_mine
+
+    Block Number: 15
+    Block Hash: 0xbefaaa0b4d5bacd6bc71cfe4f6527209f6adfa7af1feee339a660298461ce8ff
+    Block Time: "Mon, 26 Oct 2026 02:07:59 +0000"
+
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0xb471cc5450ad210a601632160c8326a8836f4425dea48ee67a909c14b56b9f97
+    Gas used: 42631
+
+    Block Number: 16
+    Block Hash: 0xd4d239e4df94de5bb57c1c2eaecbfb2965355c6d2cb62b01f2f8db5ef6ff0fc8
+    Block Time: "Mon, 26 Oct 2026 02:08:00 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_estimateGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x2e67a879f3fbc95fe20614e8fb0ee51fd9b548509a21972fa1d4889296e8e3d2
+    Gas used: 45969
+
+    Block Number: 17
+    Block Hash: 0xc5a39d4c03870741000ccc99c644960e924a4c340eb82962a2d6f9db4ed85cc6
+    Block Time: "Mon, 26 Oct 2026 02:08:01 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x85b7a27c5a1bacca174398c4a0cd08bedd88678dd537e4504c8fc37fa4813e84
+    Gas used: 295456
+
+    Block Number: 18
+    Block Hash: 0x38986078441d674b0cca55c39924be98bc6248bf3f8fc4f971b2b5d75cdca773
+    Block Time: "Mon, 26 Oct 2026 02:08:02 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_call
+eth_call
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_estimateGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x0363bdfc7c905c38fdba5d9eed40ead55a6992a589d16fdcdbaa291d4f3e8e46
+    Gas used: 45969
+
+    Block Number: 19
+    Block Hash: 0x19d45146739a1c4442aea7f8d94ea664975d4b6f8772bb50bec5dff026297d47
+    Block Time: "Mon, 26 Oct 2026 02:08:03 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0xbe91602c61f87577f694504fe40d4277280a940d87fc29dc6e14366175e8714c
+    Gas used: 165463
+
+    Block Number: 20
+    Block Hash: 0x69d591f9f8011558081cbda8811152c8ab422c0fd40e88f83ba4974c964617a9
+    Block Time: "Mon, 26 Oct 2026 02:08:04 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0xe6156f6a01c003271f1d2f86871dc9b64728e830eabbb9b22a7318d5e1146f27
+    Gas used: 86284
+
+eth_blockNumber
+    Block Number: 21
+    Block Hash: 0xa1a710bf9ce07581fb657864c9f3b2d718f759e602f87308ce0415e6a19c1fda
+    Block Time: "Mon, 26 Oct 2026 02:08:05 +0000"
+
+eth_getTransactionReceipt
+evm_increaseTime
+evm_mine
+
+    Block Number: 22
+    Block Hash: 0xb618ecdd913a8c3aa3b1af4f8e6a764a3c3660781458a1bb90ba1a8cc38e740f
+    Block Time: "Tue, 27 Oct 2026 02:08:05 +0000"
+
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0xbfba4a7f6dbd5656fda8acf4744a8e50adf840c2875975e9a097fe6bfade518e
+    Gas used: 38828
+
+    Block Number: 23
+    Block Hash: 0xb5140741bc669a9413bf07017b9e7e084b3349d291a93e896ec1e197ddda4f24
+    Block Time: "Tue, 27 Oct 2026 02:08:06 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0xa41cf3eaf05702d433b2d982b5d2aeb5fadf2df38c6aaa7e0ff946767004e054
+    Gas used: 65687
+
+    Block Number: 24
+    Block Hash: 0x4af21884e18e085e81cfcc4a968030dc8bd7e2bce092b31e85d1f3e85fd50f18
+    Block Time: "Tue, 27 Oct 2026 02:08:07 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+evm_increaseTime
+evm_mine
+
+    Block Number: 25
+    Block Hash: 0xf702c19b6b3ab4641fb26731f7a1ec3661392e8d6cb2fd08d7280930b801824b
+    Block Time: "Wed, 28 Oct 2026 02:08:07 +0000"
+
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x16f7ec47b46b11a522ad133537f4eafa57b87ccf5d093cc5a06b558781aa91d8
+    Gas used: 38828
+
+    Block Number: 26
+    Block Hash: 0xc9b59f552a326a5daaf75461d26c249168d5e7b1d94a8c45dfeae942e10d7deb
+    Block Time: "Wed, 28 Oct 2026 02:08:08 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0xe26d9b70007d5c7e913dc6276104fc04f4bf6c7a4ba1fa34674f3d9b074710ff
+    Gas used: 65687
+
+    Block Number: 27
+    Block Hash: 0x08f08b9bf48f3e7d2c5596079049473193cc16cb4a69006fbaa36e95bea35c80
+    Block Time: "Wed, 28 Oct 2026 02:08:09 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+evm_increaseTime
+evm_mine
+
+    Block Number: 28
+    Block Hash: 0x00570894409672c49a1cb97b38c5d7ce76f30896a294a8af5f784319732b34d8
+    Block Time: "Thu, 29 Oct 2026 02:08:09 +0000"
+
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x1676cf9c7ba0789760f7496dbdb8b781068d895ff095b2fca3877ad14c6d0aaa
+    Gas used: 38828
+
+    Block Number: 29
+    Block Hash: 0x306f5ecabc6032845e20d071b74f055f072a61d965c4559ecbc1951eb275a107
+    Block Time: "Thu, 29 Oct 2026 02:08:10 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x9b0fc73c14ff89feaaaef65340d3af479654c0f1f6bde1447d2490b28f1ec1db
+    Gas used: 65687
+
+    Block Number: 30
+    Block Hash: 0x4bb64a320be771e364a1e03f8908feebdaac9778f842ec2a0c35dd1943112f57
+    Block Time: "Thu, 29 Oct 2026 02:08:11 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+evm_increaseTime
+evm_mine
+
+    Block Number: 31
+    Block Hash: 0xdce9e604c29a5be7aa7cf7251b240b2b7e8e3b9ce6aabdbe672dedafed3ff2a4
+    Block Time: "Fri, 30 Oct 2026 02:08:11 +0000"
+
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x7e2b7769df612df4a8d2af334d5589160ee25f0770271d8a661759d1bfe1fc0e
+    Gas used: 38828
+
+    Block Number: 32
+    Block Hash: 0x06cfc2ed186ae09a1cb4907b10f8ca41a439f044f5bb74a3e4498aab46487a52
+    Block Time: "Fri, 30 Oct 2026 02:08:12 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0xa299915718b0e14a0b580e799eba7aa8428e69dfa8a188500349adec28604136
+    Gas used: 65687
+
+    Block Number: 33
+    Block Hash: 0xbbfdd1a93102fadac2da16f6eaa123bb27cf5f21d158e6a19bfeea2074160a26
+    Block Time: "Fri, 30 Oct 2026 02:08:13 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+evm_increaseTime
+evm_mine
+
+    Block Number: 34
+    Block Hash: 0x79f426837380c428967c821aebdc117cf4160e729643678aa047061a45d120ff
+    Block Time: "Sat, 31 Oct 2026 02:08:13 +0000"
+
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x72b320d5f0918f0f7470afa00399d9bb7fbab291601903eb03e6712af6a35dad
+    Gas used: 38828
+eth_blockNumber
+
+    Block Number: 35
+    Block Hash: 0x40e0d7731ee33143efdd57db057432b866709a3cc3320a32f54c6f18542704cb
+    Block Time: "Sat, 31 Oct 2026 02:08:14 +0000"
+
+eth_getTransactionReceipt
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0xbb5037d74022710381ceba8c0ba251ec9afa23f3f5dadaf207a9990894fd4b06
+    Gas used: 65687
+
+    Block Number: 36
+    Block Hash: 0xbc290a642d85b21ed5c8366310d9a3e24e32b326055f4eb5c4d3a7614113bdea
+    Block Time: "Sat, 31 Oct 2026 02:08:15 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+evm_increaseTime
+evm_mine
+
+    Block Number: 37
+    Block Hash: 0x886861eaa872befb2232d5fc588cb3698778ba614fe4de7bb13d0497129fd5d8
+    Block Time: "Sun, 1 Nov 2026 02:08:15 +0000"
+
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0xf6526213de01e9bd8efadd57bc4c616ccdfb542c5b96aa5b25ad0093d06bc314
+    Gas used: 38828
+
+    Block Number: 38
+    Block Hash: 0xe00937998734d2dd8e2f1184d5e2f7b4341ef17a62512b1a30d98350df2ebf87
+    Block Time: "Sun, 1 Nov 2026 02:08:16 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x717c72fa76dc0e6b6ac9ba1c110a5ff6adad4b89e2600970ac3cc56053dbef30
+    Gas used: 380102
+
+    Block Number: 39
+    Block Hash: 0x8c1b75a4ccf935eb9cc981c7564f3349028210565d33b2056e279ac94d172368
+    Block Time: "Sun, 1 Nov 2026 02:08:17 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_estimateGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0xc762cf1b53d88ab99d431a6258f2fe99322b7de7c73b485442ddff492c5ccc23
+    Gas used: 45969
+
+    Block Number: 40
+    Block Hash: 0x790b8de9602695976b097d4a87999c4cdae92792a5f48e0955459a73763c79cf
+    Block Time: "Sun, 1 Nov 2026 02:08:18 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0xc9a35c32878d92504cdcf60438afe8efc04eee846d7b8d293665703e3786cf26
+    Gas used: 278385
+
+    Block Number: 41
+    Block Hash: 0x6d4b56ead04557a449f45eaba7c696c5d2541d589bf2d15ed095f24e90518e56
+    Block Time: "Sun, 1 Nov 2026 02:08:19 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_call
+eth_call
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_estimateGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x9d6607c1464eb7794add193232b5a1b6aceb10c3c4ebb807075b5c32f636a733
+    Gas used: 45969
+
+    Block Number: 42
+    Block Hash: 0x52f55f2a871a258168b4d51894a77b7887a52da025ca3822980249cc425e43ac
+    Block Time: "Sun, 1 Nov 2026 02:08:20 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0xfb480b75a9a9672b66d5afc25367d8c02948ecfa7e9d6866b4aa107000466202
+    Gas used: 165457
+
+    Block Number: 43
+    Block Hash: 0x1d464ac060278b90542913e1e7b640f845db24118534cdc219833dea829f7a8c
+    Block Time: "Sun, 1 Nov 2026 02:08:21 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x551e3dea825828533332b8c2874437fea4570f36dd3bcb52c92a36b1fc48e603
+    Gas used: 46414
+
+    Block Number: 44
+    Block Hash: 0xdace06861f937ead9b8f208f4901675c56c803c520a13f83809f155ea50fb4a0
+    Block Time: "Sun, 1 Nov 2026 02:08:22 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+evm_increaseTime
+evm_mine
+
+    Block Number: 45
+    Block Hash: 0x857e7d85c34c88358f149cb076bd63887ab78f6e5f09a50520d37f080090aa98
+    Block Time: "Mon, 2 Nov 2026 02:08:22 +0000"
+
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x87ee97063f00aae75b97850b7e853f2de6683a81d8207b771c3a3ca602aa63bd
+    Gas used: 38828
+
+    Block Number: 46
+    Block Hash: 0xf9367f52638f8b9ce8eda764bacbeaf03658a0dcc27d211ea3a1d69021e2cc65
+    Block Time: "Mon, 2 Nov 2026 02:08:23 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+evm_increaseTime
+evm_mine
+
+    Block Number: 47
+    Block Hash: 0x35616ce2782b47e8ddaee61983400a76a2238c873775d685cfaac97bb9ea20a6
+    Block Time: "Tue, 3 Nov 2026 02:08:23 +0000"
+
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x097909040692314532d360ebe174c1e904de2080a62961bac78a9b00199751e5
+    Gas used: 68273
+
+    Block Number: 48
+    Block Hash: 0x72cd233028dc0739fd92b65299f282bb70cb351def434127b1d87c84b96ff1ad
+    Block Time: "Tue, 3 Nov 2026 02:08:24 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x7fd74450d5d977d85e2fa78b2dd9d5425ad3e53110a09141e60fa4e762f53df1
+    Gas used: 254172
+
+    Block Number: 49
+    Block Hash: 0xf4d872df72b4152959838a388e5308753cb1f18ffa216690c690e205471ebc30
+    Block Time: "Tue, 3 Nov 2026 02:08:25 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_call
+eth_call
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x9efd7e67dd6d2f9d49d210df853dde436ebd37e3445eb47323065fd248f0a43b
+    Gas used: 185805
+
+    Block Number: 50
+    Block Hash: 0x545a8b6ab418ce5c1994ee30c50772611ded9fb7bf061c2938b5900528cc30d7
+    Block Time: "Tue, 3 Nov 2026 02:08:26 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_call
+eth_call
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0xc1a61833b740024fa735224b4711c73bb9a00be3f703b037e972f60695ae424a
+    Gas used: 153710
+
+    Block Number: 51
+    Block Hash: 0xe7e4a131f20c0e34e471e14252718da41da228a4bddff263b4586b91d0d699fa
+    Block Time: "Tue, 3 Nov 2026 02:08:27 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x095fbdc63b49abd3825c5344fac1d68403ca8b5b80cd7f5b77ad480cc99fd955
+    Gas used: 63514
+
+    Block Number: 52
+    Block Hash: 0x06a082bd8b5ecf1a0a4a7aa23cad6c5db6b7427f0381b8192360df9f34b6aa9d
+    Block Time: "Tue, 3 Nov 2026 02:08:28 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x820287688a482598ca97081e2f5dd4c981e65f5e200b414be2bf126436918785
+    Gas used: 219986
+
+    Block Number: 53
+    Block Hash: 0xd703a4dfe0155ceb6d653559197e9eb804d29a862b21ffb95ca84fce36c5b7e5
+    Block Time: "Tue, 3 Nov 2026 02:08:29 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_call
+eth_call
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0xbab99d9afa98ddaae2237bac61fd2faeae21407cb4644071ca97b840b3f94641
+    Gas used: 187925
+
+    Block Number: 54
+    Block Hash: 0xe3f9005e7602cb2c3f0fb55501771899e101702873de78cebae3c5f9e1850a18
+    Block Time: "Tue, 3 Nov 2026 02:08:30 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_estimateGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x219c4ed7189533903f4ea5fffc3d3d66dbf3c62ab18f2d6287f88edcc6599514
+    Gas used: 45969
+
+    Block Number: 55
+    Block Hash: 0x89c8f76068c820ef4aac726c0e16fae250b06ea07e6620acefc611a2c25147b5
+    Block Time: "Tue, 3 Nov 2026 02:08:31 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+eth_getTransactionCount
+eth_getBlockByNumber
+eth_maxPriorityFeePerGas
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_blockNumber
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+eth_blockNumber
+
+    Transaction: 0x54deee907e66b553687814ded9cfe689e39ec436c7d91f2e222efb9184d56358
+    Gas used: 67725
+
+    Block Number: 56
+    Block Hash: 0x13fbd126942959237f2008c6e4ee45100d165dc2b10e8cdc28812f9818b70211
+    Block Time: "Tue, 3 Nov 2026 02:08:32 +0000"
+
+eth_blockNumber
+eth_getTransactionReceipt
+seeded {
+  apart: 1,
+  met: 2,
+  drifted: 3,
+  open: 4,
+  walking: 5,
+  lantern: 6,
+  tokens: { openChog: 127, walkingA: 130, walkingB: 64 }
+}
+
+    Block Number: 57
+    Block Hash: 0xec55fc4a4f43475d43561df30a25c68be640ee749a05331bbbf5cc0c0b93f2bd
+    Block Time: "Tue, 3 Nov 2026 02:08:33 +0000"
+
+
+    Block Number: 58
+    Block Hash: 0x292f5b7533e6f483dbb352f5ac47ae45d074e56d692e58a5c9e7770bddc6716c
+    Block Time: "Tue, 3 Nov 2026 02:08:34 +0000"
+
+
+    Block Number: 59
+    Block Hash: 0x0c7da61b1f6d5fb6c21be3c5ca19872fbee43e46c74d984863a78d74536fb4d6
+    Block Time: "Tue, 3 Nov 2026 02:08:35 +0000"
+
+
+    Block Number: 60
+    Block Hash: 0x7f419dddca50e71e5119ad276ee5f3cec907b3c348b4366b202d4f46f94ea6ac
+    Block Time: "Tue, 3 Nov 2026 02:08:36 +0000"
+
+
+    Block Number: 61
+    Block Hash: 0xdcf9c00a3c257805b78cbedcc778bcd3cad84849b9edd825d66e18d2b9655b0a
+    Block Time: "Tue, 3 Nov 2026 02:08:37 +0000"
+
+
+    Block Number: 62
+    Block Hash: 0xc4ab048c833df821e27d03084a546fa69ffe609267c522b417cae01f4b93f1fd
+    Block Time: "Tue, 3 Nov 2026 02:08:38 +0000"
+
+
+    Block Number: 63
+    Block Hash: 0xf837f0b148a105cf87d743585e1e2bddd2cd997f5ee692c174f948131ebbdf9c
+    Block Time: "Tue, 3 Nov 2026 02:08:39 +0000"
+
+
+    Block Number: 64
+    Block Hash: 0xba5c182a5c21e62590f605bcef7ace1fe37a7b166f3bf5cc0a146813b666bf39
+    Block Time: "Tue, 3 Nov 2026 02:08:40 +0000"
+
+
+    Block Number: 65
+    Block Hash: 0x19353ecfb0f7e358a8b9f70080f52474d601e6797643f9c64b9cb9dfb8d2f2db
+    Block Time: "Tue, 3 Nov 2026 02:08:41 +0000"
+
+
+    Block Number: 66
+    Block Hash: 0x149be98467c9d16c4a6cfc821e2132eda2b2b4dd34768bde69851aa5af7d808f
+    Block Time: "Tue, 3 Nov 2026 02:08:42 +0000"
+
+   ▲ Next.js 15.5.27
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+
+    Block Number: 67
+    Block Hash: 0x713ab310700240f9adb80c1e3f9223343e58f91e22ceb6f81c5a80ef85eef549
+    Block Time: "Tue, 3 Nov 2026 02:08:43 +0000"
+
+
+    Block Number: 68
+    Block Hash: 0x6f8357ceba5ba611bccb272e5d9c388fa0b87895630d74a2c53e2cc41279a7d6
+    Block Time: "Tue, 3 Nov 2026 02:08:44 +0000"
+
+
+    Block Number: 69
+    Block Hash: 0x70842f14f55ec7ad36d6adc3949566393ef4b2372d8f4798a7ce24a6f8d897f1
+    Block Time: "Tue, 3 Nov 2026 02:08:45 +0000"
+
+
+    Block Number: 70
+    Block Hash: 0x77b708029e614187584dfbb7ee44d0515d0bdd488afc1357364fe913e1883bcc
+    Block Time: "Tue, 3 Nov 2026 02:08:46 +0000"
+
+
+    Block Number: 71
+    Block Hash: 0xce944b43d7d4d9d741e021027583d0b1d8fe7799304501d80bdbc40faf2a2972
+    Block Time: "Tue, 3 Nov 2026 02:08:47 +0000"
+
+
+    Block Number: 72
+    Block Hash: 0xe018c43dc002562415ba5ee7cbeaf14b865beb1041cf90d7326a3210c1641abc
+    Block Time: "Tue, 3 Nov 2026 02:08:48 +0000"
+
+
+    Block Number: 73
+    Block Hash: 0x8ea6442e8ac91f49e32552a3cb9ef25e60d707e958704725c1db74315e6cac55
+    Block Time: "Tue, 3 Nov 2026 02:08:49 +0000"
+
+
+    Block Number: 74
+    Block Hash: 0x30f39bbad32d3b1ce8837e33b0c981c4f3af8222bd3178ecd0a29fd2ac939191
+    Block Time: "Tue, 3 Nov 2026 02:08:50 +0000"
+
+
+    Block Number: 75
+    Block Hash: 0x7642e6e7ea680516803b465ffd453c5a9ce6c4da93ccfc825f043babdf15cf28
+    Block Time: "Tue, 3 Nov 2026 02:08:51 +0000"
+
+
+    Block Number: 76
+    Block Hash: 0x2ceedaa18a7c10c4627074e95025b768d00874fd8776b01672392dea76648cd7
+    Block Time: "Tue, 3 Nov 2026 02:08:52 +0000"
+
+
+    Block Number: 77
+    Block Hash: 0x84fa019019d77a57ef855ecb4932ec478745f160bf4e8d870975c0b497c2c1fe
+    Block Time: "Tue, 3 Nov 2026 02:08:53 +0000"
+
+
+    Block Number: 78
+    Block Hash: 0x07b2a095900cfa4deeb322f956aa083046404f9ec5af7fdf622fd52f793619ad
+    Block Time: "Tue, 3 Nov 2026 02:08:54 +0000"
+
+
+    Block Number: 79
+    Block Hash: 0x3b0512c948de41f4c85d030b8371f005ff0d4f11f8806f52b6368cb059e7efb8
+    Block Time: "Tue, 3 Nov 2026 02:08:55 +0000"
+
+
+    Block Number: 80
+    Block Hash: 0x6b524d22dafe32c20b089ad9a56fc968ed40febbad672f38cfbeb3053f9cfc83
+    Block Time: "Tue, 3 Nov 2026 02:08:57 +0000"
+
+
+    Block Number: 81
+    Block Hash: 0x7bc998f020071d4bdc1a710bd5d5d2d2e23a371979a928c703e3602d55265140
+    Block Time: "Tue, 3 Nov 2026 02:08:58 +0000"
+
+
+    Block Number: 82
+    Block Hash: 0xb8a3ff6ddda7da8f9869c94d86658ec6abc5cbbbff615ad594bbb0a44eb6d7ec
+    Block Time: "Tue, 3 Nov 2026 02:08:59 +0000"
+
+
+    Block Number: 83
+    Block Hash: 0xdc011f0b59022412fc4d04a96934d63bfb8cbb745608c3f6eb2b53ad622066c3
+    Block Time: "Tue, 3 Nov 2026 02:09:00 +0000"
+
+
+    Block Number: 84
+    Block Hash: 0x4bfd90636924de3dfd12065bb5f6abb3c361012afcda557b40bf7ccd11c65401
+    Block Time: "Tue, 3 Nov 2026 02:09:01 +0000"
+
+
+    Block Number: 85
+    Block Hash: 0xb3bc3330053a95647fdcf94cf06ba6885b30b49b1a5b9b536d1bcb4416004f0c
+    Block Time: "Tue, 3 Nov 2026 02:09:02 +0000"
+
+
+    Block Number: 86
+    Block Hash: 0x6304bc1383f91cbaa371c2e6c4d27fabfe784c9d20b7b774af2c55df825302de
+    Block Time: "Tue, 3 Nov 2026 02:09:03 +0000"
+
+
+    Block Number: 87
+    Block Hash: 0x5c153f51e9c64d1578a7e5dd75368592ef67ea9062e4ab96327ec213440d91bc
+    Block Time: "Tue, 3 Nov 2026 02:09:04 +0000"
+
+
+    Block Number: 88
+    Block Hash: 0x7aaa254393f2ac947f8f593876f530dd7ee6f00009abfd378c658458ed2d9a2e
+    Block Time: "Tue, 3 Nov 2026 02:09:05 +0000"
+
+
+    Block Number: 89
+    Block Hash: 0xa80905fd63c7c786fb01dc38bd1c0390ca8eba583bbf36a78b5a03971b199fbc
+    Block Time: "Tue, 3 Nov 2026 02:09:06 +0000"
+
+ ✓ Compiled successfully in 22.7s
+
+    Block Number: 90
+    Block Hash: 0x6755c4cc329be4343784262563ee127872c490d7364e309615b9247e5da111da
+    Block Time: "Tue, 3 Nov 2026 02:09:07 +0000"
+
+   Linting and checking validity of types ...
+
+    Block Number: 91
+    Block Hash: 0xb1d2b4e09366ac215347a2826cc326e30a7ae4c13a4bf273b211361bd411230c
+    Block Time: "Tue, 3 Nov 2026 02:09:08 +0000"
+
+
+    Block Number: 92
+    Block Hash: 0x75454593238c4b4ccd322a5ff2dc756f98f49f5597dd479728e3a6602e079fba
+    Block Time: "Tue, 3 Nov 2026 02:09:09 +0000"
+
+
+    Block Number: 93
+    Block Hash: 0xeacac6ed5ff81b11de80bec2fe7d6570cfb038b0a64235cec043ba9c7222461c
+    Block Time: "Tue, 3 Nov 2026 02:09:10 +0000"
+
+
+    Block Number: 94
+    Block Hash: 0x162ecfafb061072af0e56a4e625794ef8dff3e719a9a33f5e1889763f1694adf
+    Block Time: "Tue, 3 Nov 2026 02:09:11 +0000"
+
+
+    Block Number: 95
+    Block Hash: 0x1ca49c3e74629987632f4f32e41bf2523ad91d9c8a836966a037c302be0d7f5e
+    Block Time: "Tue, 3 Nov 2026 02:09:12 +0000"
+
+
+    Block Number: 96
+    Block Hash: 0x03af5450382f63304c0a0d7d026b9c7824f31383b22657f6063fc17145a7525b
+    Block Time: "Tue, 3 Nov 2026 02:09:13 +0000"
+
+
+    Block Number: 97
+    Block Hash: 0x73c0079042e7693246ed76f096324fc8d5e41f13bab72c9fea57661919979f3c
+    Block Time: "Tue, 3 Nov 2026 02:09:14 +0000"
+
+
+    Block Number: 98
+    Block Hash: 0x3f1c9879cc0ba11f07c4f32247840429b139d661558bdbd0be883c8d76999b99
+    Block Time: "Tue, 3 Nov 2026 02:09:15 +0000"
+
+
+    Block Number: 99
+    Block Hash: 0x23d02b251408573d20dbaec6a30b3b66ebb1085e9593a19aa39f6d0f0ea9e081
+    Block Time: "Tue, 3 Nov 2026 02:09:16 +0000"
+
+
+    Block Number: 100
+    Block Hash: 0x3925c1a89e461f08d0885bf2320eb18cab1096db425b9d9d955238814a865083
+    Block Time: "Tue, 3 Nov 2026 02:09:17 +0000"
+
+
+    Block Number: 101
+    Block Hash: 0x7226f2171ea4a34ec8e59a808e93c137d666c410cbb2e013ece16d399ef5f812
+    Block Time: "Tue, 3 Nov 2026 02:09:18 +0000"
+
+
+    Block Number: 102
+    Block Hash: 0x1a3339bedc246fd843553e2c73f509f2780e4fc7c71c9fa8951debf0e140baa8
+    Block Time: "Tue, 3 Nov 2026 02:09:19 +0000"
+
+
+    Block Number: 103
+    Block Hash: 0x9ee18592d62d33089daa10a8e4b3a3ad8848874023d6dacc679c06d74d124b3b
+    Block Time: "Tue, 3 Nov 2026 02:09:20 +0000"
+
+
+    Block Number: 104
+    Block Hash: 0x53e206d01389a18537315129b49a31fbb0de3b2a51505a500d5815c1b8c6deef
+    Block Time: "Tue, 3 Nov 2026 02:09:21 +0000"
+
+
+    Block Number: 105
+    Block Hash: 0xa93f4e56dcfb417b48d91840217999f94d7ea465d0eafca24a75b73dbad8efa2
+    Block Time: "Tue, 3 Nov 2026 02:09:22 +0000"
+
+
+    Block Number: 106
+    Block Hash: 0x13b82d82129002595b913585f5ca572e11ce7f8f711add278e74bb1a2804f699
+    Block Time: "Tue, 3 Nov 2026 02:09:23 +0000"
+
+
+    Block Number: 107
+    Block Hash: 0x0848e80caf9d049ef72f9ea07168139e4ff1c4d90a43ded74e2e05981c6a7775
+    Block Time: "Tue, 3 Nov 2026 02:09:24 +0000"
+
+
+    Block Number: 108
+    Block Hash: 0xcd55be0764355d541870d15b658e69fb8c9a692cd474e41e6dc64fd99d169a2c
+    Block Time: "Tue, 3 Nov 2026 02:09:25 +0000"
+
+
+    Block Number: 109
+    Block Hash: 0xc78c624f928dcff103855509efa8680bf858766bbb2b6fbe206cfa350d4f77db
+    Block Time: "Tue, 3 Nov 2026 02:09:26 +0000"
+
+
+    Block Number: 110
+    Block Hash: 0xfd5467f39863a344f43f7497d2706d18af8056bf59b713e743c5251a0d6a6085
+    Block Time: "Tue, 3 Nov 2026 02:09:27 +0000"
+
+
+    Block Number: 111
+    Block Hash: 0xbe48b413a04dc096381adac2d52ad167e99ea0145c34fa19d8dd5a5d53006a86
+    Block Time: "Tue, 3 Nov 2026 02:09:28 +0000"
+
+
+    Block Number: 112
+    Block Hash: 0x181bcd711c7e3bb8e34dc4c2bd53eaaeaa5e93d14acd8a95749cb8f8f6cb2c11
+    Block Time: "Tue, 3 Nov 2026 02:09:29 +0000"
+
+
+    Block Number: 113
+    Block Hash: 0x40bd0de84c32b6adcfea8d6dab3060b62ba43e19fcf534ae567663f49226b784
+    Block Time: "Tue, 3 Nov 2026 02:09:30 +0000"
+
+
+    Block Number: 114
+    Block Hash: 0xc0c6038297cb27c064795d649319ec5b241d7e63217ffa4774055ee0c14081fe
+    Block Time: "Tue, 3 Nov 2026 02:09:31 +0000"
+
+
+    Block Number: 115
+    Block Hash: 0xdac1cab24668232915dfdb7fd9417fe228aad5cc9b865ed2b050d3cb04e9a067
+    Block Time: "Tue, 3 Nov 2026 02:09:32 +0000"
+
+
+    Block Number: 116
+    Block Hash: 0x04f25a65eab459278a9d34b86a9dfa88bce1ec2192fe61008dca236732d38d3e
+    Block Time: "Tue, 3 Nov 2026 02:09:33 +0000"
+
+
+    Block Number: 117
+    Block Hash: 0x7aabad63696804c259846d569b503c2641a080422f4762556bd035c0b2a3e386
+    Block Time: "Tue, 3 Nov 2026 02:09:34 +0000"
+
+
+    Block Number: 118
+    Block Hash: 0xa1a705694bbe3d3649b44e771e5f58c7fc7f8e25f6b803d76ad068f5f64f2ddb
+    Block Time: "Tue, 3 Nov 2026 02:09:35 +0000"
+
+
+    Block Number: 119
+    Block Hash: 0x647232db27bfedb903bc43bde4ec31e281a6f25101c855998bd36ab770485b7e
+    Block Time: "Tue, 3 Nov 2026 02:09:36 +0000"
+
+
+    Block Number: 120
+    Block Hash: 0xa1e976535b2c9cda82fc2ae16ae3b13efae4aef851811f8759a664d4b5989de4
+    Block Time: "Tue, 3 Nov 2026 02:09:37 +0000"
+
+
+    Block Number: 121
+    Block Hash: 0xf0dc93f27b27316c01ac5d0362b90ea9bcb83d9eb6282385b8cd2596c3140a5f
+    Block Time: "Tue, 3 Nov 2026 02:09:38 +0000"
+
+
+    Block Number: 122
+    Block Hash: 0x6f294f108ec3ec61ee12e0d73e0c2c3b682229005204b7554391615e226462ab
+    Block Time: "Tue, 3 Nov 2026 02:09:39 +0000"
+
+
+    Block Number: 123
+    Block Hash: 0x5dd01c9e3332c8e76e9193232d028be74f00727d9b46e8a2034bf5191029f601
+    Block Time: "Tue, 3 Nov 2026 02:09:40 +0000"
+
+
+    Block Number: 124
+    Block Hash: 0x715c36fc4fcc70be3f221171fbea0e13ea8ed3e3844d7b2cf492c642e9fbbf35
+    Block Time: "Tue, 3 Nov 2026 02:09:41 +0000"
+
+
+    Block Number: 125
+    Block Hash: 0x3865f0bf5b712faa150da3d9f5d7309ab6e76325a8972826f78b3a84663ae6e6
+    Block Time: "Tue, 3 Nov 2026 02:09:42 +0000"
+
+
+    Block Number: 126
+    Block Hash: 0xc46e37f23d681932d0e29eaba0c94431d8ba136cfa0bc7242c26efb2ba19de61
+    Block Time: "Tue, 3 Nov 2026 02:09:43 +0000"
+
+
+    Block Number: 127
+    Block Hash: 0xa79ee9bb486ec29ee18c549c749d32515c906075437f6ae7b8306fa871aad913
+    Block Time: "Tue, 3 Nov 2026 02:09:44 +0000"
+
+
+    Block Number: 128
+    Block Hash: 0x3b7a2ad7a5d04c15d3e82b129648dc95a8dc427f9bc8ed09b614808a6fa73b3a
+    Block Time: "Tue, 3 Nov 2026 02:09:45 +0000"
+
+
+    Block Number: 129
+    Block Hash: 0x26e9fe70faac81a7329648b3d0cfde45dd247731a522b229aa5313daa05be8e7
+    Block Time: "Tue, 3 Nov 2026 02:09:46 +0000"
+
+
+    Block Number: 130
+    Block Hash: 0xf44403fc58c045944c32a2755ed37f3432d41638b8e46a82d47e9b35969fd3fb
+    Block Time: "Tue, 3 Nov 2026 02:09:47 +0000"
+
+
+    Block Number: 131
+    Block Hash: 0x7541c1c82f1a7d88664ecb0d044d1e54e63b1eb0cfc7aa78feeebec069edee1e
+    Block Time: "Tue, 3 Nov 2026 02:09:48 +0000"
+
+
+    Block Number: 132
+    Block Hash: 0x845f5fa1a764de1d737d884c1aa30b386b0dfcb03666f30fb206f94ddd30876f
+    Block Time: "Tue, 3 Nov 2026 02:09:49 +0000"
+
+
+    Block Number: 133
+    Block Hash: 0x9635e54ae123b1eba8b319038c3ba1e4383164eaca22307d9036fccf04ef3343
+    Block Time: "Tue, 3 Nov 2026 02:09:50 +0000"
+
+
+    Block Number: 134
+    Block Hash: 0xf75154c53c737efe47f0297c29607e575d99a884d2e14c98e57f02ff2af752e3
+    Block Time: "Tue, 3 Nov 2026 02:09:51 +0000"
+
+
+    Block Number: 135
+    Block Hash: 0x265b444277586de61811d06bcb390421f3b5fb2e92d15022bd98785e9877f08b
+    Block Time: "Tue, 3 Nov 2026 02:09:52 +0000"
+
+
+    Block Number: 136
+    Block Hash: 0x868e091412c76dd3299e53d38141fd637549cd3f43ddbd6c16646b357e2b367d
+    Block Time: "Tue, 3 Nov 2026 02:09:53 +0000"
+
+
+    Block Number: 137
+    Block Hash: 0xbdd932397133e7be719f141e3d735d3282dd77185cfd4380e97e276c13de5434
+    Block Time: "Tue, 3 Nov 2026 02:09:54 +0000"
+
+   Collecting page data ...
+
+    Block Number: 138
+    Block Hash: 0xa9e9d8a97524ad3f596c9a5ea15d34055262c16ccc45ae577cf6cabec4f28865
+    Block Time: "Tue, 3 Nov 2026 02:09:55 +0000"
+
+
+    Block Number: 139
+    Block Hash: 0x12a9e9e219f8185ee5d5d803fdeaf315a24c8b0532fd0dd26b5943e930d99977
+    Block Time: "Tue, 3 Nov 2026 02:09:56 +0000"
+
+
+    Block Number: 140
+    Block Hash: 0xe04df3b7c4562caec5be4c3e6c29cc9163a96229721ca31791e34324fa911a03
+    Block Time: "Tue, 3 Nov 2026 02:09:57 +0000"
+
+
+    Block Number: 141
+    Block Hash: 0x7ba0191692e071c9da66fad0c526dbf1dd9b9aaaac8ab5b4b01f13cb5c4c8b31
+    Block Time: "Tue, 3 Nov 2026 02:09:58 +0000"
+
+
+    Block Number: 142
+    Block Hash: 0xaa40d27729ce0e0ae9d8a28c1e75dea131a5ecabc59bfa14cfa5780f69e4bc0e
+    Block Time: "Tue, 3 Nov 2026 02:09:59 +0000"
+
+
+    Block Number: 143
+    Block Hash: 0x282f7b893da6263964db2898dcfc05919decffb878b7a02d32e75eef2e9e1960
+    Block Time: "Tue, 3 Nov 2026 02:10:00 +0000"
+
+
+    Block Number: 144
+    Block Hash: 0xfda57bf93750c9bdc16d76aff143b32b6ecb852e8fc0fb14a251872297ad648b
+    Block Time: "Tue, 3 Nov 2026 02:10:01 +0000"
+
+
+    Block Number: 145
+    Block Hash: 0x1a453359cb3f508b4d8ad324f719970788b24166beec1e52bad4123ba1c09aa9
+    Block Time: "Tue, 3 Nov 2026 02:10:02 +0000"
+
+   Generating static pages (0/10) ...
+
+    Block Number: 146
+    Block Hash: 0x2504b35b34e11472586e56916043e1e0c7e348ea807ca2a3dc82f7162a5e78f2
+    Block Time: "Tue, 3 Nov 2026 02:10:03 +0000"
+
+
+    Block Number: 147
+    Block Hash: 0x22337f05e5abd58cca1a2d46d2c927b386e8cda929a5b855bb0b46da275f0185
+    Block Time: "Tue, 3 Nov 2026 02:10:04 +0000"
+
+
+    Block Number: 148
+    Block Hash: 0xc2374e52e15cfb6b6ba77c88b7b1b50b12fc4cba36b99a141aea8a5a7335b44d
+    Block Time: "Tue, 3 Nov 2026 02:10:05 +0000"
+
+
+    Block Number: 149
+    Block Hash: 0x4ec2eb21e48758bc8113d3b9277f7266d0666e729d6e682f22ad7ff33ae64b05
+    Block Time: "Tue, 3 Nov 2026 02:10:06 +0000"
+
+   Generating static pages (2/10) 
+   Generating static pages (4/10) 
+   Generating static pages (7/10) 
+
+    Block Number: 150
+    Block Hash: 0xe12f2a22428efdbedffbb11aa4d6926a4952c4a31cabe89e2431c4233534b549
+    Block Time: "Tue, 3 Nov 2026 02:10:07 +0000"
+
+
+    Block Number: 151
+    Block Hash: 0x39b6f118a01080c8b6d57435a64fe6db3f8004bcb9aa106a3bb88ab9a545119d
+    Block Time: "Tue, 3 Nov 2026 02:10:08 +0000"
+
+ ✓ Generating static pages (10/10)
+
+    Block Number: 152
+    Block Hash: 0x73bc7342acab1516921ea7eca677f068be86d99cb1f404f2e6dff4756f9b6f9d
+    Block Time: "Tue, 3 Nov 2026 02:10:09 +0000"
+
+
+    Block Number: 153
+    Block Hash: 0xe975e4ce07f0685ae701655b725be20db9d2e5b08f620c54e9ffa570eef049b8
+    Block Time: "Tue, 3 Nov 2026 02:10:10 +0000"
+
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+    Block Number: 154
+    Block Hash: 0x2d5407e19ec1da41038e7acb040041ea6e18d06e01f7c63eb3ec46437b82f744
+    Block Time: "Tue, 3 Nov 2026 02:10:11 +0000"
+
+
+    Block Number: 155
+    Block Hash: 0x929ac1497600132c2c525dc0937ee8c926de51ce9c1f9d02f25c4565bfde9993
+    Block Time: "Tue, 3 Nov 2026 02:10:12 +0000"
+
+
+    Block Number: 156
+    Block Hash: 0x7fd37b89c0f4224e470ffb5980839516b425e5b81178558776aa23e74dd9da34
+    Block Time: "Tue, 3 Nov 2026 02:10:13 +0000"
+
+
+    Block Number: 157
+    Block Hash: 0xe0c48e87dab80ec359306c1b0525f161fc00db1adc9d0da6ac485433923be8a5
+    Block Time: "Tue, 3 Nov 2026 02:10:14 +0000"
+
+
+    Block Number: 158
+    Block Hash: 0x1f0be34fb6ba4f0274d98fa72f4f6f4bbc8b6ddadbba6794d454aa15478a9db1
+    Block Time: "Tue, 3 Nov 2026 02:10:15 +0000"
+
+
+    Block Number: 159
+    Block Hash: 0x0e768510b89c69505c0d3ac0b8dc0adbf65ddfd37797c6de5edcd14f3987518c
+    Block Time: "Tue, 3 Nov 2026 02:10:16 +0000"
+
+
+    Block Number: 160
+    Block Hash: 0x2a2ef8e653d4b2cda9200e57de730e534976efc1a61459ae7286fc6ee0add56e
+    Block Time: "Tue, 3 Nov 2026 02:10:17 +0000"
+
+
+    Block Number: 161
+    Block Hash: 0xdb5091a009d57319b11e7e28074dd714d49db5474ad6ab601b1457f5c30c7137
+    Block Time: "Tue, 3 Nov 2026 02:10:18 +0000"
+
+
+    Block Number: 162
+    Block Hash: 0x43d4c9f4a175e10121763cbb9f49f6218f8e54e3295d70eb4596b83a40a5ef1c
+    Block Time: "Tue, 3 Nov 2026 02:10:19 +0000"
+
+
+    Block Number: 163
+    Block Hash: 0x8f4ccb11f79daa1f4eb06927370d193c90a961bd9eec193645a2b4ca9bb19053
+    Block Time: "Tue, 3 Nov 2026 02:10:20 +0000"
+
+
+    Block Number: 164
+    Block Hash: 0x33030644a73ce99d472d9ee63a0d8922c0c28ea9abb9f4a508095864a3566a22
+    Block Time: "Tue, 3 Nov 2026 02:10:21 +0000"
+
+
+    Block Number: 165
+    Block Hash: 0x81a894a3b20e1656894e13ed5a7a5ba9a57c4a580ee3acc593bdb894b7aa1371
+    Block Time: "Tue, 3 Nov 2026 02:10:22 +0000"
+
+
+    Block Number: 166
+    Block Hash: 0x570d0ee789d32eb54924cc9df7ee33754895cdfb4a3e9e8907e5ca15865159d2
+    Block Time: "Tue, 3 Nov 2026 02:10:23 +0000"
+
+
+    Block Number: 167
+    Block Hash: 0x5fd353b5ee0ffbc2b6571fa1d9473d8bd71718778444b72834f1aed1eaaeb549
+    Block Time: "Tue, 3 Nov 2026 02:10:24 +0000"
+
+
+    Block Number: 168
+    Block Hash: 0x368a161a3eff97729677960dd7fc7d5040239b40662ff317fb042718c0d53104
+    Block Time: "Tue, 3 Nov 2026 02:10:25 +0000"
+
+
+    Block Number: 169
+    Block Hash: 0x77129cb1cf61f59c6a8824f1e09c0a8ae37478404e263c0159223bd6b757eacd
+    Block Time: "Tue, 3 Nov 2026 02:10:26 +0000"
+
+
+    Block Number: 170
+    Block Hash: 0x72050c2868b0d657d02b3845ed1987736a7a4dd2be75d278c1d8bfbd5c377d04
+    Block Time: "Tue, 3 Nov 2026 02:10:27 +0000"
+
+
+    Block Number: 171
+    Block Hash: 0x3713ab74262c8219f0cedc0d095919b722e4d704ccdbd446f0fec83af4c5f241
+    Block Time: "Tue, 3 Nov 2026 02:10:28 +0000"
+
+
+    Block Number: 172
+    Block Hash: 0xf0feb36c00813ea18a45f9a3a5c41a6bd890e12e638cf205d037b27161a6fc3e
+    Block Time: "Tue, 3 Nov 2026 02:10:29 +0000"
+
+
+    Block Number: 173
+    Block Hash: 0xec3aef0355342f3994660378101a185c32e295da27d0381750f922808361593e
+    Block Time: "Tue, 3 Nov 2026 02:10:30 +0000"
+
+
+    Block Number: 174
+    Block Hash: 0xbed7866d38553d7eac70f91c357a19f753b4aec61884e17340e590e29952c1c1
+    Block Time: "Tue, 3 Nov 2026 02:10:31 +0000"
+
+
+    Block Number: 175
+    Block Hash: 0x0f6a03c52a82d8a2545b145278cec9b39bd6565594263f644ab45faa692908d7
+    Block Time: "Tue, 3 Nov 2026 02:10:32 +0000"
+
+
+    Block Number: 176
+    Block Hash: 0x178fb7accda2606363741cbf66bf4867b5bdd54b8e2f67fe066f4f462d534c4b
+    Block Time: "Tue, 3 Nov 2026 02:10:33 +0000"
+
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                    17.4 kB         301 kB
+├ ○ /_not-found                            997 B         103 kB
+├ ƒ /api/art/[tokenId]                     131 B         103 kB
+├ ƒ /api/card/[walkId]                     131 B         103 kB
+├ ƒ /chog/[tokenId]                       4.6 kB         259 kB
+├ ○ /demo                                10.4 kB         302 kB
+├ ○ /heartbeat                           4.76 kB         242 kB
+├ ○ /judge                                 413 B         106 kB
+├ ○ /me                                  4.14 kB         258 kB
+├ ƒ /og/[name]                             131 B         103 kB
+├ ○ /proof                               4.17 kB         125 kB
+├ ƒ /w/[walkId]                          10.5 kB         319 kB
+└ ○ /walk/new                            5.34 kB         269 kB
++ First Load JS shared by all             102 kB
+  ├ chunks/255-3f216dfa517cdf3a.js       46.2 kB
+  ├ chunks/4bd1b696-409494caf8c83275.js  54.2 kB
+  └ other shared chunks (total)          2.03 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+
+    Block Number: 177
+    Block Hash: 0x89adc211ac41a0b66d92752f7538a1b01c320fa5cf75775f5903e49e3364c3fe
+    Block Time: "Tue, 3 Nov 2026 02:10:34 +0000"
+
+
+    Block Number: 178
+    Block Hash: 0x1c2d7ad44b34cdf301050c9f9579acb429a4fcdb6644fa7349f56e9b6cb07fd6
+    Block Time: "Tue, 3 Nov 2026 02:10:35 +0000"
+
+
+    Block Number: 179
+    Block Hash: 0x07904277034172c814b7662aabe3c2a82f2f5aa90ad79dc33a9cd9e9a61ae22c
+    Block Time: "Tue, 3 Nov 2026 02:10:36 +0000"
+
+
+    Block Number: 180
+    Block Hash: 0x087157f302dbae83346b25236b8c46751a137f91577881bad8ad3f4ea21b641e
+    Block Time: "Tue, 3 Nov 2026 02:10:37 +0000"
+
+
+    Block Number: 181
+    Block Hash: 0x062b4fbf7abd27410d40f4f546009ff4ab9c9e643b589aa3f2093698db92a134
+    Block Time: "Tue, 3 Nov 2026 02:10:38 +0000"
+
+
+    Block Number: 182
+    Block Hash: 0x54591490b5dbb20c8c70398d080aec9cd06044fb17bc5763a121c85e9361713a
+    Block Time: "Tue, 3 Nov 2026 02:10:40 +0000"
+
+
+    Block Number: 183
+    Block Hash: 0x29a7576f6b4b4c91c92354ed73a63367d8d363e4be908aff58efcf0f68be1acd
+    Block Time: "Tue, 3 Nov 2026 02:10:41 +0000"
+
+   ▲ Next.js 15.5.27
+   - Local:        http://localhost:3100
+   - Network:      http://192.168.18.6:3100
+
+ ✓ Starting...
+
+    Block Number: 184
+    Block Hash: 0x5360c84cadee3e04b01865083db3af1fa368139a51507aa264ef5dbe0b86bc27
+    Block Time: "Tue, 3 Nov 2026 02:10:42 +0000"
+
+
+    Block Number: 185
+    Block Hash: 0x29f80a4d4cd2cff1bd584f75938bcc5a2a075b5f0deb26747ef5640c93f9b79c
+    Block Time: "Tue, 3 Nov 2026 02:10:43 +0000"
+
+
+    Block Number: 186
+    Block Hash: 0x479aba910d82e9756821f212baf8f411aed3fabb0e7cb263d7687e359e37b8ee
+    Block Time: "Tue, 3 Nov 2026 02:10:44 +0000"
+
+ ✓ Ready in 3.3s
+
+    Block Number: 187
+    Block Hash: 0x84bcfc7b1597bd7ee0ce729edb8004ba0c5792d21db8d57e992a68521a1e1083
+    Block Time: "Tue, 3 Nov 2026 02:10:45 +0000"
+
+
+    Block Number: 188
+    Block Hash: 0x0e9d69502f482765f95eecb1cf55f726567afe71152166c04a51e06dd26a05d9
+    Block Time: "Tue, 3 Nov 2026 02:10:46 +0000"
+
+
+    Block Number: 189
+    Block Hash: 0xa52e3ed765bf29b0f59e9f8d7db3290e2c1f2b8833c9d049cd52cc22794cf0d7
+    Block Time: "Tue, 3 Nov 2026 02:10:47 +0000"
+
+
+    Block Number: 190
+    Block Hash: 0xb6dd54ae637dfc863e6fa211681e54c5b02534ffb1beb7d515fb764f549b5745
+    Block Time: "Tue, 3 Nov 2026 02:10:48 +0000"
+
+
+    Block Number: 191
+    Block Hash: 0xaba4db35b1d658be97416d39d4e2516832798cc83ccdaa946a8a4d643c287726
+    Block Time: "Tue, 3 Nov 2026 02:10:49 +0000"
+
+
+    Block Number: 192
+    Block Hash: 0x5bc17c30cb1d94261e89ead289265170da334c27d80b65db7f920ef5d01f3f97
+    Block Time: "Tue, 3 Nov 2026 02:10:50 +0000"
+
+
+    Block Number: 193
+    Block Hash: 0xdcb8bd07a3fce74d52c1a2ded911a27841a75a246f223911e60f1ffebb6ddd0f
+    Block Time: "Tue, 3 Nov 2026 02:10:51 +0000"
+
+
+    Block Number: 194
+    Block Hash: 0x0df36132499eec645d5a60b7ffcf9b06a2f453af6f6e3e1ac5a39ffec314eae8
+    Block Time: "Tue, 3 Nov 2026 02:10:52 +0000"
+
+
+    Block Number: 195
+    Block Hash: 0x94925ba23a1a83a61f887359e197910fe1456984e866f740d0a67a9855b72b57
+    Block Time: "Tue, 3 Nov 2026 02:10:53 +0000"
+
+
+    Block Number: 196
+    Block Hash: 0xce69427a0e64e9337d445741d5c38f774a6325968790bcbce8e22b850d9db5ba
+    Block Time: "Tue, 3 Nov 2026 02:10:54 +0000"
+
+
+Running 14 tests using 1 worker
+
+
+    Block Number: 197
+    Block Hash: 0xe924e2f1e6d32e0a0939e1beb2f1846dcf13602257d5b18f5fc06c6afecd442b
+    Block Time: "Tue, 3 Nov 2026 02:10:55 +0000"
+
+
+    Block Number: 198
+    Block Hash: 0x3e70b7293eb370c6df8596651a1cf928e8a0abc4a4d1f9ea46b37af1ef05b011
+    Block Time: "Tue, 3 Nov 2026 02:10:56 +0000"
+
+
+    Block Number: 199
+    Block Hash: 0x00ce6d774feda7a347b89cf8466e65bf99f0901843f115586bd48204dba947d9
+    Block Time: "Tue, 3 Nov 2026 02:10:57 +0000"
+
+
+    Block Number: 200
+    Block Hash: 0xcce31e46b01184c7e7ae29e7d522ee3effa502e5c4a9d3bca71d86ada580b699
+    Block Time: "Tue, 3 Nov 2026 02:10:58 +0000"
+
+
+    Block Number: 201
+    Block Hash: 0xbfcf87a8d6db7185a067a9db8272767dd58f355bb3387e1ea76087ae6c6a65c3
+    Block Time: "Tue, 3 Nov 2026 02:10:59 +0000"
+
+eth_call
+eth_call
+eth_call
+eth_call
+eth_call
+
+    Block Number: 202
+    Block Hash: 0xced8e79e2dfdecfa59ba75832eda7d117536de46ff36d506a152b4431127dd6c
+    Block Time: "Tue, 3 Nov 2026 02:11:00 +0000"
+
+
+    Block Number: 203
+    Block Hash: 0xfc8fac11b545d388c7dfc536df63c81900ad7da6f7f76dee038e97811b4de7ba
+    Block Time: "Tue, 3 Nov 2026 02:11:01 +0000"
+
+eth_getBalance
+eth_call
+
+    Block Number: 204
+    Block Hash: 0x07c8c51e793a971e7b4edc8c0617e961904648665b70a95305d3390fd70fe4e0
+    Block Time: "Tue, 3 Nov 2026 02:11:02 +0000"
+
+  ok  1 [chromium] › tests\e2e\02-flows.spec.ts:43:1 › wallet capsule shows address, balances and a power icon that disconnects (5.1s)
+
+    Block Number: 205
+    Block Hash: 0x5984707d71cc2e7ca6bf50322857be065a4d83f1e44e35c2c2184508f28bfedb
+    Block Time: "Tue, 3 Nov 2026 02:11:03 +0000"
+
+eth_call
+eth_call
+
+    Block Number: 206
+    Block Hash: 0xc5386aed1f1b08e3749f70df81908cedb7f49931c370e42ba2a97d82a2749301
+    Block Time: "Tue, 3 Nov 2026 02:11:04 +0000"
+
+
+    Block Number: 207
+    Block Hash: 0x2057720350f1719561c557c46bbf6e1da62ad7221b22d1e36b2b38f51668a394
+    Block Time: "Tue, 3 Nov 2026 02:11:05 +0000"
+
+eth_getBalance
+eth_call
+eth_call
+eth_call
+eth_call
+
+    Block Number: 208
+    Block Hash: 0x72fe2be020e2019770c55b1577c7faa0c50809be7f4ec15bbed993feb6ec7952
+    Block Time: "Tue, 3 Nov 2026 02:11:06 +0000"
+
+eth_call
+eth_estimateGas
+eth_call
+eth_sendTransaction
+eth_accounts
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+
+    Transaction: 0xf6fb3e416a17e3019a95bf483f7016099f3a6e1402d53bafeaf57d6d9b2fdb8d
+    Gas used: 45969
+
+    Block Number: 209
+    Block Hash: 0xb3dd286ec88199f38c0f84cc63ca69a17e8f93c1beb42e382db198b83469b81a
+    Block Time: "Tue, 3 Nov 2026 02:11:07 +0000"
+
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_getBalance
+eth_call
+eth_estimateGas
+eth_call
+eth_call
+eth_sendTransaction
+eth_accounts
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+
+    Transaction: 0x31d17711290ee005b96da67ee3396462eb6eb564e291cf50a333358bb3656da0
+    Gas used: 227053
+
+    Block Number: 210
+    Block Hash: 0xee6901a48e9ccd457e742839558bd561834627cd63d6e7588a7f3284b30cfa27
+    Block Time: "Tue, 3 Nov 2026 02:11:08 +0000"
+
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_getBalance
+eth_call
+eth_call
+
+    Block Number: 211
+    Block Hash: 0x647e23bd4fa023f41388c52e93c46518ab960cd698298fff821ccad6bf11294f
+    Block Time: "Tue, 3 Nov 2026 02:11:09 +0000"
+
+
+    Block Number: 212
+    Block Hash: 0x04163d3744526fa33fe7b452fef04ebc9322f34d14d6f754a73a01c7c47baf86
+    Block Time: "Tue, 3 Nov 2026 02:11:10 +0000"
+
+
+    Block Number: 213
+    Block Hash: 0xd277bd6e5fad10862a620328d008a97ca07a083e0baeb34bfdf3b18e5cbe047f
+    Block Time: "Tue, 3 Nov 2026 02:11:11 +0000"
+
+
+    Block Number: 214
+    Block Hash: 0xbbfab792af8ab729bfb17fe860bdb557136e9b36453f06dd10611b7be2527747
+    Block Time: "Tue, 3 Nov 2026 02:11:12 +0000"
+
+
+    Block Number: 215
+    Block Hash: 0x905a39cb8c6f33b313694b0549d512ecc14613100aa0c4fe2f65ea4b8b2fecad
+    Block Time: "Tue, 3 Nov 2026 02:11:13 +0000"
+
+
+    Block Number: 216
+    Block Hash: 0xdb4f3a18cbd419f72aac0a66966fe843d7119ec8d4c962b5fd6a13a5b2282e3d
+    Block Time: "Tue, 3 Nov 2026 02:11:14 +0000"
+
+
+    Block Number: 217
+    Block Hash: 0xc3f4e2c5e48180a5881e5f121b4c76764de170f28d9f9d2e27c32fccb6e37f37
+    Block Time: "Tue, 3 Nov 2026 02:11:15 +0000"
+
+
+    Block Number: 218
+    Block Hash: 0x42bc677543210f2b3c9c9226b6fb5c7f6f5443524352614ca056380ccaa5dbce
+    Block Time: "Tue, 3 Nov 2026 02:11:16 +0000"
+
+eth_getBalance
+eth_call
+
+    Block Number: 219
+    Block Hash: 0x9bbb85f55dbbb04fbc6b2118342ed099054031e0eb67ec2a8e23030e975ffead
+    Block Time: "Tue, 3 Nov 2026 02:11:17 +0000"
+
+
+    Block Number: 220
+    Block Hash: 0x995b6ed5b454f1ff350376e30159d79f87f8d28d338ffd7e107fd30f1687b568
+    Block Time: "Tue, 3 Nov 2026 02:11:18 +0000"
+
+
+    Block Number: 221
+    Block Hash: 0xe231cde204f10076ada9222f3bb875e534a1c854e2ff7d3b160aa917f562a1ad
+    Block Time: "Tue, 3 Nov 2026 02:11:19 +0000"
+
+
+    Block Number: 222
+    Block Hash: 0x4ceccafaf0ed3d2044321fb734596d99faaa0478be35ba807070eccb17b75522
+    Block Time: "Tue, 3 Nov 2026 02:11:20 +0000"
+
+
+    Block Number: 223
+    Block Hash: 0xdab45df85af9d865598b51427d52827d60a5ffb2bc5a0b2542ded96cb9b6cef7
+    Block Time: "Tue, 3 Nov 2026 02:11:21 +0000"
+
+
+    Block Number: 224
+    Block Hash: 0xb46338d6a4d81db3b7e3dea364c64e9c758714861d13bff90c7d7301970dc964
+    Block Time: "Tue, 3 Nov 2026 02:11:22 +0000"
+
+
+    Block Number: 225
+    Block Hash: 0xf2f6e1ca31191d44efc9ac96caf5526f79476f80de4f004826d573bfa86fdf9a
+    Block Time: "Tue, 3 Nov 2026 02:11:23 +0000"
+
+
+    Block Number: 226
+    Block Hash: 0x9831a3ac3e30ce1cfe4a45d38bfaf48b7af14b3532838d47bf74cfa34a0e8177
+    Block Time: "Tue, 3 Nov 2026 02:11:24 +0000"
+
+eth_getBalance
+eth_call
+
+    Block Number: 227
+    Block Hash: 0x465a2b1e1c96dce9e1cbe5b9d1f27c8446a06bedf7b02540c4120ba598335c9e
+    Block Time: "Tue, 3 Nov 2026 02:11:25 +0000"
+
+
+    Block Number: 228
+    Block Hash: 0x85dcfcf0438469ac8958d2c00b444591c4cd986c7cccb7e7890e6353c3c9e424
+    Block Time: "Tue, 3 Nov 2026 02:11:26 +0000"
+
+
+    Block Number: 229
+    Block Hash: 0x55afebd25acab39da8f2d9a1f0327afd16e401731ba91e0d6f68ee84e8f62f23
+    Block Time: "Tue, 3 Nov 2026 02:11:27 +0000"
+
+
+    Block Number: 230
+    Block Hash: 0x304778fbb692be1edab12f3d15adced6050997d1388124c08f0cff9fbd3d1a8b
+    Block Time: "Tue, 3 Nov 2026 02:11:28 +0000"
+
+
+    Block Number: 231
+    Block Hash: 0xbc5c171a589cf58bb37bb0ff4d3dd19656aebc6c38498f7bf305d1f4a2643d38
+    Block Time: "Tue, 3 Nov 2026 02:11:29 +0000"
+
+
+    Block Number: 232
+    Block Hash: 0x979f93b5c17d7a07eade75785b94bc0d6f9933e5e9c3a6e21788fada865a56ff
+    Block Time: "Tue, 3 Nov 2026 02:11:30 +0000"
+
+
+    Block Number: 233
+    Block Hash: 0x94e9e6753bad47a3bc255347be075043e1a7ebf10a46f0741918edf693b7bd50
+    Block Time: "Tue, 3 Nov 2026 02:11:31 +0000"
+
+
+    Block Number: 234
+    Block Hash: 0x6877220a6b0de16ab1e9269e0b6dffcf00d487b073a58c2d5bcef4a8f3f01d6e
+    Block Time: "Tue, 3 Nov 2026 02:11:32 +0000"
+
+eth_getBalance
+eth_call
+
+    Block Number: 235
+    Block Hash: 0x0969bae4f061223029d20b819556362b9a61a04f7152e3d1913c6f4d734e22a7
+    Block Time: "Tue, 3 Nov 2026 02:11:33 +0000"
+
+
+    Block Number: 236
+    Block Hash: 0x9fe5c53074f08fba2115c6d36ed31e79e3635d198417900188f0c1e9b40b5d57
+    Block Time: "Tue, 3 Nov 2026 02:11:34 +0000"
+
+
+    Block Number: 237
+    Block Hash: 0x61497ec78d48e2b63bdfe76737d921453d3318fd4a08aad1a349a25e5fc92d5f
+    Block Time: "Tue, 3 Nov 2026 02:11:35 +0000"
+
+
+    Block Number: 238
+    Block Hash: 0x78becf188cee2e82e7104613d675d91aa356b1bf117a89f88b5499adea1f6a4b
+    Block Time: "Tue, 3 Nov 2026 02:11:36 +0000"
+
+
+    Block Number: 239
+    Block Hash: 0x562373ed7b4f2e923bf28239d01dc18c8d9e56997181f8e1a2ee8ba0e95616f9
+    Block Time: "Tue, 3 Nov 2026 02:11:37 +0000"
+
+
+    Block Number: 240
+    Block Hash: 0x9c1d344e573a1ad7fec4998b7bd4bc503087ce9b912b803f86b0ad43160bfc75
+    Block Time: "Tue, 3 Nov 2026 02:11:38 +0000"
+
+
+    Block Number: 241
+    Block Hash: 0xcba5397bacbbff144e16e96f8346d0295cf055d23fb6526acb24922396c26f5b
+    Block Time: "Tue, 3 Nov 2026 02:11:39 +0000"
+
+
+    Block Number: 242
+    Block Hash: 0x7e1003979bbaf25b214e13e47237f772fff9f0141ea02a8edfe31594495657cd
+    Block Time: "Tue, 3 Nov 2026 02:11:40 +0000"
+
+eth_getBalance
+eth_call
+
+    Block Number: 243
+    Block Hash: 0x4411e91d6e38c1451d6f803133ff6c0587363a1468b0e82c0439523cc502201b
+    Block Time: "Tue, 3 Nov 2026 02:11:41 +0000"
+
+  x   2 [chromium] › tests\e2e\02-flows.spec.ts:54:1 › open a walk: gaze filter, pledge with an exact approve first, two-stage postmark, share link (35.7s)
+  -   3 [chromium] › tests\e2e\02-flows.spec.ts:77:1 › the walk page shows the open state with an empty chair
+  -   4 [chromium] › tests\e2e\02-flows.spec.ts:86:1 › join: only Chogs that face the opener's are offered, the pledge is matched
+  -   5 [chromium] › tests\e2e\02-flows.spec.ts:108:1 › I'm here with a note: the second arrival takes the step, the postmark lands, the calendar reminder downloads
+  -   6 [chromium] › tests\e2e\02-flows.spec.ts:130:1 › a fan with no Chog and no walk lights a lantern and cheers, with transaction links
+  -   7 [chromium] › tests\e2e\02-flows.spec.ts:142:1 › a missed day drifts them apart, the lantern keeps the next one, anyone can poke, walking away warns and ends it, the pledge is claimed
+  -   8 [chromium] › tests\e2e\02-flows.spec.ts:183:1 › a full meeting: the last arrival uses the meeting gas path, both postcards decode on-chain, both Friend Books update
+  -   9 [chromium] › tests\e2e\02-flows.spec.ts:228:1 › holder extras: only the holder sees the home-only switch, and a home-only Chog refuses everyone else with a sentence
+  -  10 [chromium] › tests\e2e\02-flows.spec.ts:251:1 › rules broken through the UI show a sentence, not a hex string: a busy Chog
+  -  11 [chromium] › tests\e2e\02-flows.spec.ts:264:1 › My walks lists the connected wallet's walks and today's to-do
+  -  12 [chromium] › tests\e2e\02-flows.spec.ts:271:1 › an unknown walk and a missing wallet are handled honestly
+
+    Block Number: 244
+    Block Hash: 0x9a3688163b9c970fe7bf74b4830d0ed51966b9913bd00a5cd08f2543abcfd123
+    Block Time: "Tue, 3 Nov 2026 02:11:42 +0000"
+
+
+    Block Number: 245
+    Block Hash: 0xca6e413cb68bdc220a18f88f445b8e55e59f02720ea564a93d007f2eea951782
+    Block Time: "Tue, 3 Nov 2026 02:11:43 +0000"
+
+
+    Block Number: 246
+    Block Hash: 0x47f1e607fd619e0cbdbaa5e7fd456b614e8e5aca18b4e7ea5423b722ac827410
+    Block Time: "Tue, 3 Nov 2026 02:11:44 +0000"
+
+eth_call
+eth_call
+eth_call
+
+    Block Number: 247
+    Block Hash: 0xb640aae56ec53b2b130566d45192b432f853c6c6181cf5813ec2d96b42dbfece
+    Block Time: "Tue, 3 Nov 2026 02:11:45 +0000"
+
+eth_blockNumber
+eth_call
+eth_getLogs
+eth_call
+eth_getLogs
+eth_call
+eth_call
+eth_call
+eth_getLogs
+eth_call
+eth_getLogs
+
+    Block Number: 248
+    Block Hash: 0x5f2b7e68766a0f416a0fa753a1f28ab23ac5726fd28d919d5728046c6bf21328
+    Block Time: "Tue, 3 Nov 2026 02:11:46 +0000"
+
+
+    Block Number: 249
+    Block Hash: 0xe728b04903affb321fbd59710a18135f96d7b2e11c3f863a62eee1e5554ff718
+    Block Time: "Tue, 3 Nov 2026 02:11:47 +0000"
+
+
+    Block Number: 250
+    Block Hash: 0x48aa61b6bf257f0b385d67600e6b1efa9078bee745cb1c812de20c34cca893f3
+    Block Time: "Tue, 3 Nov 2026 02:11:48 +0000"
+
+
+    Block Number: 251
+    Block Hash: 0x9960bd378c3ce544b7338ec14661ff5e437a3c789d3efbff4eedb8eb226bc348
+    Block Time: "Tue, 3 Nov 2026 02:11:49 +0000"
+
+eth_call
+eth_call
+
+    Block Number: 252
+    Block Hash: 0x24e9bf372d1b11d838bdfb95394d60dfc2e1f23bf1a18c8f015cc5e5bf37ae2f
+    Block Time: "Tue, 3 Nov 2026 02:11:50 +0000"
+
+
+    Block Number: 253
+    Block Hash: 0x6bcf1bde808a6983c60409c2a0be32cf1c0bad34693850b2ba7150173691efce
+    Block Time: "Tue, 3 Nov 2026 02:11:51 +0000"
+
+
+    Block Number: 254
+    Block Hash: 0x9f3e860fe07ef52a41485ebfaeebd5e9797c4bf8c81814468ac721376814a886
+    Block Time: "Tue, 3 Nov 2026 02:11:52 +0000"
+
+
+    Block Number: 255
+    Block Hash: 0xbcf4a3af84c0ca29e520ad593162a432caf7a37860e0288e39b72650ce3d361f
+    Block Time: "Tue, 3 Nov 2026 02:11:53 +0000"
+
+
+    Block Number: 256
+    Block Hash: 0x63a93d6ab58ae82af95df2484a9f5b560dcaecff39172f76e6bd6deabb2d9824
+    Block Time: "Tue, 3 Nov 2026 02:11:54 +0000"
+
+eth_call
+eth_call
+
+    Block Number: 257
+    Block Hash: 0x1ea7fb81e2adc6a80c68c8a06154631b4fab18da64ae31bc546cee0caca3c87c
+    Block Time: "Tue, 3 Nov 2026 02:11:55 +0000"
+
+
+    Block Number: 258
+    Block Hash: 0x9db2a87b58fb31eb732168457c17494a02e9b8b346ebed2c9394a0adfc90da6d
+    Block Time: "Tue, 3 Nov 2026 02:11:56 +0000"
+
+
+    Block Number: 259
+    Block Hash: 0xc8534296d46ea11e52c2ee546e78f18829681837873fffc3bc01101c8806c22c
+    Block Time: "Tue, 3 Nov 2026 02:11:57 +0000"
+
+
+    Block Number: 260
+    Block Hash: 0xadad2d4c6e593996b1e59285d51adbaf3074e84bab0c8e907dbb8363346f7c1a
+    Block Time: "Tue, 3 Nov 2026 02:11:58 +0000"
+
+  ok 13 [chromium] › tests\e2e\05-shots.spec.ts:12:1 › the meeting (local chain) (14.7s)
+
+    Block Number: 261
+    Block Hash: 0xaa3ab5739045d45ce06f8627fdeaf4ecf9a3af9e2392f2068ed9a33d543ad379
+    Block Time: "Tue, 3 Nov 2026 02:11:59 +0000"
+
+eth_call
+eth_call
+eth_call
+
+    Block Number: 262
+    Block Hash: 0x176fe1e227bb5c26e9612ad6addd78164a660ece31eb4779ee21ae7995eff4f4
+    Block Time: "Tue, 3 Nov 2026 02:12:00 +0000"
+
+
+    Block Number: 263
+    Block Hash: 0x09c83095e028d03a634a648612f19004d68d4d697f69d9a1f92eaa60e08df24c
+    Block Time: "Tue, 3 Nov 2026 02:12:01 +0000"
+
+  ok 14 [chromium] › tests\e2e\05-shots.spec.ts:21:1 › a Chog's Friend Book (local chain) (3.7s)
+
+    Block Number: 264
+    Block Hash: 0xde8834332913bf344d67175b585bade720ddff51ff55db8e0792deaae48d6529
+    Block Time: "Tue, 3 Nov 2026 02:12:02 +0000"
+
+
+
+  1) [chromium] › tests\e2e\02-flows.spec.ts:54:1 › open a walk: gaze filter, pledge with an exact approve first, two-stage postmark, share link 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('tx-final')
+    Expected substring: "Postmarked"
+    Timeout: 30000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" getByTestId('tx-final') with timeout 30000ms
+      - waiting for getByTestId('tx-final')
+
+
+      68 |   walkId = await walkIdFrom(page);
+      69 |   expect(walkId).toBeGreaterThan(0);
+    > 70 |   await expect(page.getByTestId("tx-final")).toContainText("Postmarked");
+         |                                              ^
+      71 |   await expect(page.getByTestId("tx-final")).toContainText(/Final in \d+\.\d s/);
+      72 |   await expect(page.getByTestId("share-box")).toBeVisible();
+      73 |   await expect(page.getByAltText(/QR code/)).toBeVisible();
+        at C:\Users\hp\Downloads\CHOG_TWAIN\tests\e2e\02-flows.spec.ts:70:46
+
+    Error Context: test-results\02-flows-open-a-walk-gaze--0bbf4-o-stage-postmark-share-link-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\02-flows-open-a-walk-gaze--0bbf4-o-stage-postmark-share-link-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\02-flows-open-a-walk-gaze--0bbf4-o-stage-postmark-share-link-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests\e2e\02-flows.spec.ts:54:1 › open a walk: gaze filter, pledge with an exact approve first, two-stage postmark, share link 
+  10 did not run
+  3 passed (1.2m)

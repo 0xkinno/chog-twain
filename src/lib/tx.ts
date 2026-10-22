@@ -1,5 +1,5 @@
 import type { Abi, Address, PublicClient, WalletClient, Hash, TransactionReceipt } from "viem";
-import { ACTIVE_CHAIN } from "./chains";
+import { ACTIVE_CHAIN, IS_LOCAL } from "./chains";
 import limits from "./gas-limits.json";
 import { explain } from "./errors";
 
@@ -64,23 +64,24 @@ export async function runTx(t: TxArgs): Promise<{ hash: Hash; block: bigint; rec
     }
     t.onStage({ stage: "proposed", hash, block: receipt.blockNumber, ms: Math.round(tProposed - t0) });
 
-    // finalized: poll the finalized tag every 400 ms until it passes the receipt block
-    for (let i = 0; i < 300; i++) {
-      try {
-        const fin = await pc.getBlock({ blockTag: "finalized" });
-        if (fin.number >= receipt.blockNumber) {
-          const tFinal = performance.now();
-          t.onStage({
-            stage: "finalized", hash, block: receipt.blockNumber, msFromSend: Math.round(tFinal - t0), msFromProposed: Math.round(tFinal - tProposed),
-            feeWei: receipt.gasUsed * receipt.effectiveGasPrice, gasUsed: receipt.gasUsed,
-          });
-          return { hash, block: receipt.blockNumber, receipt };
-        }
-      } catch { /* a node without the finalized tag: the proposed stage already told the truth */ }
-      await sleep(400);
-    }
-    return { hash, block: receipt.blockNumber, receipt };
-  } catch (e) {
+    // finalized: poll the finalized tag every 400 ms until it passes the receipt block. The caller gets the result at
+    // "proposed" (the receipt exists and the state is readable); the stamp for finality arrives when the block is final.
+    const block = receipt.blockNumber;
+    void (async () => {
+      const tag = IS_LOCAL ? "latest" : "finalized"; // a local dev chain has no finality stages
+      for (let i = 0; i < 300; i++) {
+        try {
+          const fin = await pc.getBlock({ blockTag: tag });
+          if (fin.number >= block) {
+            const tFinal = performance.now();
+            t.onStage({ stage: "finalized", hash, block, msFromSend: Math.round(tFinal - t0), msFromProposed: Math.round(tFinal - tProposed), feeWei: receipt.gasUsed * receipt.effectiveGasPrice, gasUsed: receipt.gasUsed });
+            return;
+          }
+        } catch { /* a node without the finalized tag: the proposed stage already told the truth */ }
+        await sleep(400);
+      }
+    })();
+    return { hash, block, receipt };  } catch (e) {
     const x = explain(e);
     t.onStage({ stage: "error", text: x.text, name: x.name, userRejected: x.userRejected });
     return null;

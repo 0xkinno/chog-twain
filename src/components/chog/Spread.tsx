@@ -143,10 +143,11 @@ export function Spread({ scene, orientation = "auto", postmark, stepSignal = 0, 
         {/* the gaze line, drawn in on load: a dashed line revealed by a mask whose stroke draws itself */}
         <mask id={`gm${uid}`} maskUnits="userSpaceOnUse" x="0" y="0" width={W} height={H}>
           <motion.path
+            key={met ? "knot-mask" : "line-mask"}
             d={met ? knotD : gazeD}
             fill="none" stroke="#fff" strokeWidth="24" strokeLinecap="round"
             initial={reduce ? false : { pathLength: 0 }}
-            animate={{ d: met ? knotD : gazeD, pathLength: 1 }}
+            animate={{ pathLength: 1 }}
             transition={{ duration: reduce ? 0 : 1.1, ease: [0.22, 1, 0.36, 1] }}
           />
         </mask>
@@ -157,7 +158,7 @@ export function Spread({ scene, orientation = "auto", postmark, stepSignal = 0, 
             strokeWidth={scene.gazeLaser ? 8 : 6.5}
             strokeDasharray={scene.gazeDashed ? "1 12" : "1 8"}
             initial={false}
-            animate={{ d: met ? knotD : gazeD }}
+            animate={{ opacity: 1 }}
             transition={{ duration: reduce ? 0 : 0.9, ease: [0.22, 1, 0.36, 1] }}
           />
           <motion.path
@@ -168,7 +169,7 @@ export function Spread({ scene, orientation = "auto", postmark, stepSignal = 0, 
             strokeWidth={scene.gazeLaser ? 5.5 : 4.5}
             strokeDasharray={scene.gazeDashed ? "1 12" : "1 8"}
             initial={false}
-            animate={{ d: met ? knotD : gazeD, opacity: scene.state === "waiting" ? 0.35 : 1 }}
+            animate={{ opacity: scene.state === "waiting" ? 0.35 : 1 }}
             transition={{ duration: reduce ? 0 : 0.9, ease: [0.22, 1, 0.36, 1] }}
             style={{ filter: scene.state === "today-both" || met ? `drop-shadow(0 0 8px ${scene.gazeColor})` : undefined }}
           />
@@ -181,6 +182,7 @@ export function Spread({ scene, orientation = "auto", postmark, stepSignal = 0, 
           </g>
         )}
 
+        {!left && <EmptyChair c={centre(uLeft)} S={S} hint={inviteHint} />}
         <Disc side={left} u={uLeft} centre={centre} S={S} uid={`${uid}a`} glow={`url(#ga${uid})`} apart={apart} hand="left" stepSignal={stepSignal} reduce={!!reduce} land={land} />
         {right ? (
           <Disc side={right} u={uRight} centre={centre} S={S} uid={`${uid}b`} glow={`url(#gb${uid})`} apart={apart} hand="right" stepSignal={stepSignal} reduce={!!reduce} land={land} />

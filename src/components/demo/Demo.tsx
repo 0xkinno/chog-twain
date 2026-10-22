@@ -49,23 +49,22 @@ const say = (e: Event): string => {
 const BREAKS: { name: keyof typeof ERROR_COPY; label: string; run: () => void }[] = (() => {
   const A = (w: World, a: Action) => apply(w, a).world;
   const open = (w: World, chog = 1, extra: Partial<Extract<Action, { type: "open" }>> = {}) => A(w, { type: "open", who: YOU, chog, distance: 7, ...extra });
-  const walking = () => A(open(fresh()), { type: "join", who: FRIEND, walkId: 1, chog: 2 });
+  const walking = () => A(open(fresh()), { type: "join", who: FRIEND, walkId: 1, chog: 846 });
   const t = (name: keyof typeof ERROR_COPY, label: string, f: () => unknown) => ({ name, label, run: () => { f(); } });
   return [
     t("AlreadyToday", "Show up twice on the same day", () => apply(A(walking(), { type: "showUp", who: YOU, walkId: 1 }), { type: "showUp", who: YOU, walkId: 1 })),
-    t("NotFacing", "Join with a Chog that looks the same way", () => apply(open(fresh()), { type: "join", who: FRIEND, walkId: 1, chog: 3 })),
+    t("NotFacing", "Join with a Chog that looks the same way", () => apply(open(fresh()), { type: "join", who: FRIEND, walkId: 1, chog: 2 })),
     t("ChogBusy", "Pick a Chog that is already walking", () => apply(walking(), { type: "open", who: FAN, chog: 1, distance: 7 })),
-    t("SelfWalk", "Join your own walk", () => apply(open(fresh()), { type: "join", who: YOU, walkId: 1, chog: 2 })),
+    t("SelfWalk", "Join your own walk", () => apply(open(fresh()), { type: "join", who: YOU, walkId: 1, chog: 846 })),
     t("NotWalker", "A stranger tries to show up", () => apply(walking(), { type: "showUp", who: FAN, walkId: 1 })),
     t("LanternsFull", "Light a fourth lantern", () => { let w = walking(); for (let i = 0; i < 3; i++) w = A(w, { type: "light", who: FAN, walkId: 1 }); return apply(w, { type: "light", who: FAN, walkId: 1 }); }),
-    t("NotInvited", "Join a walk opened for someone else", () => apply(open(fresh(), 1, { invitee: FRIEND }), { type: "join", who: FAN, walkId: 1, chog: 2 })),
+    t("NotInvited", "Join a walk opened for someone else", () => apply(open(fresh(), 1, { invitee: FRIEND }), { type: "join", who: FAN, walkId: 1, chog: 846 })),
     t("InviteExpired", "Join an invite older than 3 days", () => apply(A(open(fresh()), { type: "advance", days: 4 }), { type: "join", who: FRIEND, walkId: 1, chog: 2 })),
     t("StillOpen", "Cancel someone else's open walk", () => apply(open(fresh()), { type: "cancel", who: FAN, walkId: 1 })),
     t("NothingToClaim", "Claim with nothing settled", () => apply(fresh(), { type: "claim", who: YOU })),
     t("NotOpen", "Join a walk that already started", () => apply(walking(), { type: "join", who: FAN, walkId: 1, chog: 4 })),
     t("NotWalking", "Show up on a walk that ended", () => apply(A(walking(), { type: "leave", who: YOU, walkId: 1 }), { type: "showUp", who: YOU, walkId: 1 })),
     t("BadDistance", "Open a walk of 5 days", () => apply(fresh(), { type: "open", who: YOU, chog: 1, distance: 5 })),
-    t("BadChog", "Pick token number 2,000", () => apply(fresh(), { type: "open", who: YOU, chog: 2000, distance: 7 })),
     t("HomeOnly", "Pick a Chog its holder keeps home", () => { const w = newWorld({ gazes: GAZES, holders: { 1: FAN } }); return apply(A(w, { type: "setHome", who: FAN, tokenId: 1, keep: true }), { type: "open", who: YOU, chog: 1, distance: 7 }); }),
     t("NotHolder", "Set home only without holding the Chog", () => apply(newWorld({ gazes: GAZES, holders: { 1: FAN } }), { type: "setHome", who: YOU, tokenId: 1, keep: true })),
     t("TransferFailed", "Pledge more $CHOG than the wallet holds", () => apply(newWorld({ gazes: GAZES, balances: { [YOU]: 1n } }), { type: "open", who: YOU, chog: 1, distance: 7, pledge: 100n * E18 })),
@@ -127,11 +126,12 @@ export function Demo() {
   const friendShows = () => act({ type: "showUp", who: FRIEND, walkId: 1 });
   const youShow = () => act({ type: "showUp", who: YOU, walkId: 1, note: "gm" });
   const friendMisses = () => {
-    // a day your friend misses: you show up, the day turns, and the next action closes it
+    // a day your friend misses: the day turns, you show up, the next day turns, and the poke closes the day only you made
     let wd = world; const evs: Event[] = [];
     try {
-      if (!(wd.walks[1].curDay === wd.day && wd.walks[1].aIn)) { const r = apply(wd, { type: "showUp", who: YOU, walkId: 1 }); wd = r.world; evs.push(...r.events); }
       let r = apply(wd, { type: "advance", days: 1 }); wd = r.world;
+      r = apply(wd, { type: "showUp", who: YOU, walkId: 1 }); wd = r.world; evs.push(...r.events);
+      r = apply(wd, { type: "advance", days: 1 }); wd = r.world;
       r = apply(wd, { type: "poke", walkId: 1 }); wd = r.world; evs.push(...r.events);
       setWorld(wd); setEvents((e) => [...e, ...evs]); setLog((l) => [...evs.map(say).filter(Boolean).reverse(), "Your friend does not come.", ...l]); setErr(null);
     } catch (e) { if (e instanceof EngineError) setErr({ name: e.name_, text: ERROR_COPY[e.name_] }); else throw e; }
@@ -189,7 +189,7 @@ export function Demo() {
                 <p>Your friend's Chog must face yours. {chogLabel(friendChog)} {gazeWord(gz(friendChog))}.</p>
                 <div className="row">
                   <button className="btn" data-testid="demo-join" onClick={friendJoins}>Friend joins</button>
-                  <button className="btn btn-ghost" onClick={() => act({ type: "join", who: FRIEND, walkId: 1, chog: yours === 1 ? 3 : 1 })}>Friend tries a Chog that looks the same way</button>
+                  <button className="btn btn-ghost" onClick={() => { const same = ALL.find((c) => c.gaze === gz(yours ?? 1) && c.id !== yours && c.gaze !== 3); if (same) act({ type: "join", who: FRIEND, walkId: 1, chog: same.id }); }}>Friend tries a Chog that looks the same way</button>
                 </div>
               </div>
             )}
@@ -271,7 +271,7 @@ function BreakPanel() {
         ))}
       </div>
       {shown && <div className="notice bad" role="status" data-testid="break-result" data-error={shown.name}><span><strong>{shown.name}</strong> {"·"} {shown.text}</span></div>}
-      <p className="mono muted">BadGaze and GazeUnknown guard the proof call itself and only fire against a forged proof on-chain.</p>
+      <p className="mono muted">BadGaze, GazeUnknown and BadChog guard the proof call itself: a token that is not in the collection fails its proof first, so they only fire against a forged call on-chain.</p>
     </div>
   );
 }
