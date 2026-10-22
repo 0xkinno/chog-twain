@@ -256,7 +256,7 @@ The first real walks, with their transaction links, are in [EVIDENCE.md](EVIDENC
 
 - **Pledges are a commitment contract between two people.** Equal amounts, escrowed, settled on meeting or ending, claimable by pull. A missed day moves `pledge / distance` from the absent person to the one who came. The contract's balance always equals active pledges plus claimable balances; an invariant test and 300 randomised engine runs check it.
 - **Lanterns burn $CHOG** to `0x...dEaD`, so they reduce supply. The price is fixed forever at **50 $CHOG** (about US$0.075 at deploy). Anyone can light one for any walk, with no Chog and no walk of their own.
-- Live totals (pledged, burned, moved by missed days) are on the [Heartbeat](https://chog-twain.vercel.app/heartbeat), read from storage. Now: <!-- FACTS:pledged -->50 $CHOG<!-- /FACTS:pledged --> pledged, <!-- FACTS:lanterns -->1<!-- /FACTS:lanterns --> lantern(s) lit.
+- Live totals (pledged, burned, moved by missed days) are on the [Heartbeat](https://chog-twain.vercel.app/heartbeat), read from storage. Now: <!-- FACTS:pledged -->70 $CHOG<!-- /FACTS:pledged --> pledged, <!-- FACTS:lanterns -->1<!-- /FACTS:lanterns --> lantern(s) lit.
 
 ## Measured
 
@@ -268,14 +268,14 @@ Every number below is generated from `docs/FACTS.json` or read live. Nothing is 
 | Rules engine tests | <!-- FACTS:vitest-tests -->33 passing, 0 failing<!-- /FACTS:vitest-tests --> |
 | Browser tests | <!-- FACTS:playwright-tests -->146 passing, 0 failing, 4 skipped<!-- /FACTS:playwright-tests --> |
 | Lighthouse, mobile, live `/` | accessibility 100, best practices 100, SEO 100, performance 67 (LCP 5.0 s, TBT 524 ms under Lighthouse's slow-phone throttling; the wallet stack hydrating on first load is the known cost, see [PROGRESS.md](PROGRESS.md)) |
-| Walks opened on mainnet | <!-- FACTS:walks -->2<!-- /FACTS:walks --> |
-| Steps taken | <!-- FACTS:steps -->1<!-- /FACTS:steps --> |
+| Walks opened on mainnet | <!-- FACTS:walks -->3<!-- /FACTS:walks --> |
+| Steps taken | <!-- FACTS:steps -->2<!-- /FACTS:steps --> |
 | Meetings | <!-- FACTS:meetings -->0<!-- /FACTS:meetings --> |
 | Reverted guard transactions on mainnet | <!-- FACTS:break-count -->6<!-- /FACTS:break-count --> |
 | Gas limits sent | open <!-- FACTS:gas-open -->370,000<!-- /FACTS:gas-open -->, join <!-- FACTS:gas-join -->223,000<!-- /FACTS:gas-join -->, show-up <!-- FACTS:gas-showup -->108,000<!-- /FACTS:gas-showup -->, meeting show-up <!-- FACTS:gas-showup-meet -->421,000<!-- /FACTS:gas-showup-meet --> |
-| FACTS generated | <!-- FACTS:facts-time -->2026-10-22T03:21:24.443Z<!-- /FACTS:facts-time --> |
+| FACTS generated | <!-- FACTS:facts-time -->2026-10-22T12:29:59.594Z<!-- /FACTS:facts-time --> |
 
-The happy-path and reverted transactions are listed with links in [EVIDENCE.md](EVIDENCE.md). We publish real usage as it is, including zeroes, and never seed fake walks. The first real walks were opened by the builder's own test wallets and are labelled as such.
+The happy-path and reverted transactions are listed with links in [EVIDENCE.md](EVIDENCE.md). We publish real usage as it is, including zeroes, and never seed fake walks. The first real walks were opened by the builder's own test wallets and are labelled as such. Walk 3 was opened and joined by two outside testers, who both came back on day 2: see [FEEDBACK.md](FEEDBACK.md), with their wallets on the explorer.
 
 ## Judging criteria map
 

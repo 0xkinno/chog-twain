@@ -10,9 +10,9 @@ Updated 2026-10-22. Handoff for the next agent: `docs/handoff/02-state-and-next-
 | 3 Rules engine and plumbing | done |
 | 4 Complete flow on mainnet | done; verified live through the UI on mainnet |
 | 5 Design pass | done |
-| 6 Demo, Heartbeat, Proof, Judge | done; break campaign 6 of 7 (InviteExpired from 25 Oct); real users not invited yet |
+| 6 Demo, Heartbeat, Proof, Judge | done; break campaign 6 of 7 (InviteExpired from 25 Oct); 2 of 5 real testers walked (walk 3), see FEEDBACK.md |
 | 7 Quality gates | 146 Playwright tests green (layout matrix, real-chain flows, demo); red team round 1 and self-judge done; Lighthouse mobile performance 67 (target 85 not met), accessibility, best practices and SEO 100 |
-| 8 README, video, submission | README, docs, scripts done; video and submission are Kinnoski's |
+| 8 README, video, submission | README, docs, scripts done; raw demo recording in `docs/demo_video/` with the brief, cloud agent cuts the film; submission is Kinnoski's |
 
 ## Live
 

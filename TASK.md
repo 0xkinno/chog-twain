@@ -83,7 +83,7 @@ Last updated 2026-10-22. Handoff notes for the next agent: `docs/handoff/` (star
 - [x] `/proof`
 - [x] `scripts/verify.mjs`: PASS on mainnet (gaze root, metadata sample, 33 events replayed, postcards)
 - [x] `/judge` and `JUDGE.md`
-- [ ] Invite five real people from the Chog Discord and X to walk; record in `FEEDBACK.md` (not started)
+- [ ] Invite five real people from the Chog Discord and X to walk; record in `FEEDBACK.md`. **2 of 5 done** (walk 3 on mainnet: two outside wallets, both returned on day 2); three invites to go
 
 ## Phase 7. Quality gates
 
@@ -100,7 +100,7 @@ Last updated 2026-10-22. Handoff notes for the next agent: `docs/handoff/` (star
 - [x] README per the template (wordmark, shields, tagline, banner, links, 2x2 screenshots, story, problem, discovery, steps, meeting, explore, essential table, mermaid, ASCII, invariants, Monad, $CHOG, measured, criteria map, honest notes, disclosures, run locally, map, next, license)
 - [x] `EVIDENCE.md`, `PROOF.md`, `PROGRESS.md`, `MILESTONE.md`
 - [x] `VIDEO_SCRIPT.md`
-- [ ] Kinnoski records the video (2:45 to 2:55) and uploads it
+- [ ] Final demo film: raw recording done by Kinnoski (`docs/demo_video/`); cut, voice-over and export by the cloud agent per `docs/demo_video/BRIEF.md`; Kinnoski uploads it
 - [x] `SUBMISSION_CHOGATHON.md` mirrors the form fields 01 to 06
 - [x] `THREAD.md`
 - [ ] **ASK** Kinnoski submits at least 2 hours before the deadline (target 14:00 WAT, 23 Oct)

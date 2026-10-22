@@ -25,3 +25,5 @@ docs/screenshots/matrix/
 
 data/*.log
 data/*.err
+
+docs/playwright_outputs_for_demo/videos/Chog_twain_video.mp4

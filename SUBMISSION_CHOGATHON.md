@@ -21,4 +21,4 @@ Take the Chog out and nothing works: no gaze means nobody can face anybody and t
 Repo: https://github.com/0xkinno/chog-twain. Stack: Solidity 0.8.28 and Foundry, Next.js 15, React 19, Tailwind 4, viem and wagmi, motion, Playwright, Vitest. No pre-existing code; written during Chogtober 2026; AI coding assistants used.
 
 ## 06 Usage and what is next
-Usage numbers are generated in the README (FACTS) and listed with transaction links in EVIDENCE.md; the first walks are the builder's own test wallets and are labelled as such. FEEDBACK.md lists real conversations with dates. Next: a read API for Friend Books, push reminders, group walks of four, seasonal walks.
+Usage numbers are generated in the README (FACTS) and listed with transaction links in EVIDENCE.md. Walks 1 and 2 are the builder's own test wallets and are labelled as such. Walk 3 was opened and joined by two outside testers (wallets on the explorer in FEEDBACK.md); both came back on day 2 and both asked for a shorter introduction and for inviting more than one friend, which is on the roadmap (group walks). Next: a read API for Friend Books, push reminders, group walks of four, seasonal walks.

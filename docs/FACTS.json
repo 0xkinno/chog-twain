@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T03:21:24.443Z",
+  "generatedAt": "2026-10-22T12:29:59.594Z",
   "gaze": {
     "root": "0x7cb42ed24f612763f141f9b02c56a637e2cd3f7fcdcb23dea68dc50e7b1d63e4",
     "tokens": 1969,
@@ -268,13 +268,13 @@
   },
   "deployed": true,
   "chain": {
-    "block": "115503700",
-    "walkCount": 2,
+    "block": "115612164",
+    "walkCount": 3,
     "meetings": 0,
-    "totalSteps": 1,
-    "totalShowUps": 2,
+    "totalSteps": 2,
+    "totalShowUps": 4,
     "lanternsLit": 1,
-    "pledgesHeld": "50000000000000000000",
+    "pledgesHeld": "70000000000000000000",
     "lanternPrice": "50000000000000000000",
     "today": 2,
     "stepsOnDay": [
@@ -284,7 +284,7 @@
       },
       {
         "day": 2,
-        "steps": 0
+        "steps": 1
       }
     ]
   }
