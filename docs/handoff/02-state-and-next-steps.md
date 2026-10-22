@@ -20,7 +20,7 @@ Secrets are NOT in git. `.env.local` (gitignored) holds `DEPLOYER_KEY`, `TEST_WA
 
 ## Demo video (cut it from this)
 
-`docs/demo_video/BRIEF.md` is the brief: the source recording is `docs/demo_video/chog_twain_demo_raw.mp4` (silent, 4:08, about 25 MB; the 166 MB original is on Kinnoski's machine and not in git), a labelled contact sheet and per-10-second frames show what is where, and the brief has the cut list to 2:50 and a 2:40 voice-over script. Task: cut, add the voice-over and captions, export 1080p H.264, commit the final as `docs/demo_video/chog_twain_demo_2m50.mp4` (stay under 90 MB) and give Kinnoski the file to upload to YouTube unlisted.
+`docs/demo_video/BRIEF.md` is the brief: the source recording is `docs/demo_video/chog_twain_demo_raw.mp4` (silent, 4:08, about 25 MB; the 166 MB original is on Kinnoski's machine and not in git), a labelled contact sheet and per-10-second frames show what is where, and the brief has the cut list to 2:50 and a 2:40 voice-over script. The picture is already cut (`docs/demo_video/chog_twain_demo_cut_2m50_silent.mp4`). Task: add the voice-over and captions, export 1080p H.264, commit the final as `docs/demo_video/chog_twain_demo_2m50.mp4` (stay under 90 MB) and give Kinnoski the file to upload to YouTube unlisted.
 
 ## Demo footage (automated recordings)
 

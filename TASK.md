@@ -100,7 +100,7 @@ Last updated 2026-10-22. Handoff notes for the next agent: `docs/handoff/` (star
 - [x] README per the template (wordmark, shields, tagline, banner, links, 2x2 screenshots, story, problem, discovery, steps, meeting, explore, essential table, mermaid, ASCII, invariants, Monad, $CHOG, measured, criteria map, honest notes, disclosures, run locally, map, next, license)
 - [x] `EVIDENCE.md`, `PROOF.md`, `PROGRESS.md`, `MILESTONE.md`
 - [x] `VIDEO_SCRIPT.md`
-- [ ] Final demo film: raw recording done by Kinnoski (`docs/demo_video/`); cut, voice-over and export by the cloud agent per `docs/demo_video/BRIEF.md`; Kinnoski uploads it
+- [ ] Final demo film: raw recording done by Kinnoski (`docs/demo_video/`); picture cut done (`chog_twain_demo_cut_2m50_silent.mp4`); voice-over, captions and export by the cloud agent per `docs/demo_video/BRIEF.md`; Kinnoski uploads it
 - [x] `SUBMISSION_CHOGATHON.md` mirrors the form fields 01 to 06
 - [x] `THREAD.md`
 - [ ] **ASK** Kinnoski submits at least 2 hours before the deadline (target 14:00 WAT, 23 Oct)

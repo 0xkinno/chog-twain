@@ -2,6 +2,10 @@
 
 **Goal:** a clean demo film of **2:50** with a calm voice-over of about **2:40**, cut from the builder's own screen recording.
 
+## Already done: the picture cut
+
+`docs/demo_video/chog_twain_demo_cut_2m50_silent.mp4` (2:51, 1440x810, about 19 MB, silent) is the raw recording cut exactly to the table below (including the speed-ups). **Start here.** Remaining work: record or synthesise the voice-over (V1 to V11), lay it on the scenes, burn captions, add short cross-fades, export 1080p H.264, and commit the result as `docs/demo_video/chog_twain_demo_2m50.mp4`. Re-cut from the raw file only if a scene needs changing.
+
 ## The source recording
 
 - `docs/demo_video/chog_twain_demo_raw.mp4`: 4:08, 1440x810, 30 fps, **silent** (no audio track). Re-encoded from the builder's 166 MB original (`docs/playwright_outputs_for_demo/videos/Chog_twain_video.mp4`, not in git because GitHub caps files at 100 MB) at the same resolution, about 25 MB. The original stays on the builder's machine; ask him for it only if you need the pristine pixels.

@@ -15,4 +15,6 @@ contracts/out/
 contracts/cache/
 contracts/broadcast/
 .claude/
-.githooks/
+.githooks/docs/demo_video/
+docs/playwright_outputs_for_demo/
+docs/screenshots/Premium_magazine_style_cover_layout.jpeg
