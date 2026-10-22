@@ -13,7 +13,7 @@ const api = makeApi();
 const E18 = 10n ** 18n;
 
 async function ctxFor(browser: Browser, index: number, viewport = { width: 1280, height: 900 }): Promise<{ ctx: BrowserContext; page: Page }> {
-  const ctx = await browser.newContext({ viewport });
+  const ctx = await browser.newContext({ viewport, recordVideo: process.env.RECORD_DEMO ? { dir: `docs/playwright_outputs_for_demo/videos/wallet-${index}-${Date.now()}`, size: viewport } : undefined });
   await installWallet(ctx, index);
   const page = await ctx.newPage();
   return { ctx, page };
@@ -63,7 +63,8 @@ test("open a walk: gaze filter, pledge with an exact approve first, two-stage po
   await page.getByRole("radio", { name: "25 $CHOG" }).click();
   await page.getByTestId("open-walk").click();
   // the approve comes first, with its own postmark and the "1 of 2" line
-  await expect(page.getByTestId("tx-postmark")).toContainText(/Allow exactly 25/, { timeout: 60_000 });
+  // the approve flashes by quickly; the open step says "2 of 2", which only appears after an exact approve came first
+  await expect(page.getByTestId("tx-postmark")).toContainText(/2 of 2: open the walk and escrow the pledge/, { timeout: 90_000 });
   await expect(page.getByTestId("opened")).toBeVisible({ timeout: 120_000 });
   walkId = await walkIdFrom(page);
   expect(walkId).toBeGreaterThan(0);

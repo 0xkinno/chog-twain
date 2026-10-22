@@ -12,10 +12,12 @@ jobs:
   rules-and-copy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with: { node-version: 22 }
       - run: npm install --legacy-peer-deps
+      - name: Generate build assets (chogs table, gaze proofs, grain, icons)
+        run: node scripts/gen-assets.mjs
       - run: npm run check:copy
       - run: npm run check:nft
       - run: npm test
@@ -28,7 +30,7 @@ jobs:
   contracts:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: foundry-rs/foundry-toolchain@v1
         with: { version: v1.8.5 }
       - run: forge test -vv

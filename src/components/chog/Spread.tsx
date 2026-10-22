@@ -193,12 +193,12 @@ export function Spread({ scene, orientation = "auto", postmark, stepSignal = 0, 
         {met && postmark && (
           <motion.g
             data-testid="postmark"
-            style={{ color: "#c0366c", transformOrigin: `${W / 2}px ${land ? H * 0.2 : H * 0.5}px` }}
+            style={{ color: "#c0366c", transformOrigin: `${W / 2}px ${land ? H * 0.15 : H * 0.5}px` }}
             initial={reduce ? false : { scale: 2.6, rotate: -22, opacity: 0 }}
             animate={{ scale: 1, rotate: -12, opacity: 0.92 }}
             transition={{ type: "spring", stiffness: 260, damping: 16 }}
           >
-            <g transform={`translate(${W / 2 - 80} ${land ? H * 0.2 - 80 : H * 0.5 - 80})`}><Postmark text={postmark} size={160} /></g>
+            <g transform={`translate(${W / 2 - 70} ${land ? H * 0.15 - 70 : H * 0.5 - 70})`}><Postmark text={postmark} size={140} /></g>
           </motion.g>
         )}
         {stepSignal > 0 && !reduce && <Burst key={stepSignal} at={{ x: W / 2, y: land ? H * 0.46 : H * 0.5 }} />}

@@ -22,3 +22,6 @@ tests/e2e/.seed.json
 docs/screenshots/matrix/
 .vercel
 .env*
+
+data/*.log
+data/*.err

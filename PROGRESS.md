@@ -11,7 +11,7 @@ Updated 2026-10-22. Handoff for the next agent: `docs/handoff/02-state-and-next-
 | 4 Complete flow on mainnet | done; verified live through the UI on mainnet |
 | 5 Design pass | done |
 | 6 Demo, Heartbeat, Proof, Judge | done; break campaign 6 of 7 (InviteExpired from 25 Oct); real users not invited yet |
-| 7 Quality gates | layout matrix and demo green; real-chain flows being finished; Lighthouse, red team, self-judge open |
+| 7 Quality gates | 146 Playwright tests green (layout matrix, real-chain flows, demo); red team round 1 and self-judge done; Lighthouse mobile performance 67 (target 85 not met), accessibility, best practices and SEO 100 |
 | 8 README, video, submission | README, docs, scripts done; video and submission are Kinnoski's |
 
 ## Live
@@ -29,11 +29,20 @@ Updated 2026-10-22. Handoff for the next agent: `docs/handoff/02-state-and-next-
 - [ ] At least one real meeting with postcards (earliest 28 Oct, UTC); a real lantern was burned (yes)
 - [ ] Break-campaign links: 6 of 7 (InviteExpired pending); every invariant has a passing test (yes)
 - [ ] FACTS generated, README rendered, CI green (CI not yet seen green on GitHub), copy check green (yes), attribution check green (to confirm)
-- [ ] Playwright matrix green on all viewports (yes), axe clean (yes), zero console errors (yes); real-chain flows re-run pending
+- [x] Playwright matrix green on all viewports, axe clean, zero console errors, real-chain flows green (146 passed, 0 failed)
 - [x] No other entry named in committed files; `reference/` ignored
 - [ ] Video under 3 minutes (Kinnoski)
 - [ ] Submitted 2+ hours early; tag; deployment frozen (Kinnoski)
 
-## Self-judge (not yet scored)
+## Self-judge (22 Oct 2026, after red-team round 1)
 
-To do after the red-team rounds: score 1 to 5 per criterion with evidence. Expected weakest: Fun. Answer with the spread, the step animation, the meeting moment, notes and lanterns.
+Scored 1 to 5 by the build agent, with evidence. A comparison against other entries is kept out of the repository by rule.
+
+| Criterion | Score | Evidence |
+|---|---|---|
+| Novelty (30%) | 4.5 | The gaze as the rule of a shared world (650 / 1,309 / 10, 660 walks at most), proven on-chain by Merkle proof; Friend Books on the tokens; a meeting that cannot be bought or rushed, with a fuzz finding |
+| Fun (20%) | 3.5 | Spread, hop, paper burst, postmark thump, notes, lanterns, scroll story. Weakest: no sound, one real walk so far |
+| Retention (20%) | 4 | Friend who waits, UTC countdown, calendar file, strangers' lanterns, pledges, next walk. Not yet proven with real users |
+| Clarity (15%) | 4.5 | One sentence per rule, 2-minute Demo, 60-second judge path, Break a rule panel |
+| Execution (15%) | 4.5 | Verified immutable contracts, 15 invariants, fuzz, TS twin with shared scenarios, 146 browser tests, mainnet reverted transactions, verifier PASS. Gaps: testnet D8, InviteExpired on chain |
+| $CHOG bonus | 4 | Pledges escrowed and settled, lanterns burned (50 $CHOG burned on mainnet), live on Heartbeat. Small amounts by necessity |

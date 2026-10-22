@@ -4,7 +4,7 @@ import { artUrl } from "@/lib/art";
 import { chogLabel, getChog } from "@/lib/chogs";
 
 /** Real Chog art through /api/art. If every gateway is down, a designed "art is resting" tile, never a broken image. */
-export function ChogImg({ id, size, eager = false, className = "" }: { id: number; size?: number; eager?: boolean; className?: string }) {
+export function ChogImg({ id, size, eager = false, className = "", thumb }: { id: number; size?: number; eager?: boolean; className?: string; thumb?: 128 | 256 }) {
   const [bad, setBad] = useState(false);
   const c = getChog(id);
   return (
@@ -16,7 +16,7 @@ export function ChogImg({ id, size, eager = false, className = "" }: { id: numbe
         </span>
       ) : (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={artUrl(id)} alt={c ? `Chog ${c.art}, token ${id}` : `Token ${id}`} loading={eager ? "eager" : "lazy"} decoding="async" width={512} height={512} onError={() => setBad(true)} />
+        <img src={artUrl(id, thumb)} alt={c ? `Chog ${c.art}, token ${id}` : `Token ${id}`} loading={eager ? "eager" : "lazy"} decoding="async" width={thumb ?? 512} height={thumb ?? 512} onError={() => setBad(true)} />
       )}
     </span>
   );

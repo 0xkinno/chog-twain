@@ -1,0 +1,12 @@
+{
+ "url": "https://chog-twain.vercel.app/",
+ "formFactor": "mobile emulation (Lighthouse default throttling), best of 2 runs",
+ "at": "2026-10-22T03:20:50.230Z",
+ "performance": 67,
+ "accessibility": 100,
+ "bestPractices": 100,
+ "seo": 100,
+ "lcpMs": 5003,
+ "tbtMs": 524,
+ "cls": 0.007
+}

@@ -70,7 +70,7 @@ function PickTile({ c, selected, busy, yours, onPick }: { c: ChogRow; selected: 
   return (
     <button className="pick" aria-pressed={selected} disabled={busy} onClick={onPick} data-token={c.id} data-gaze={gazeName(c.gaze)} aria-label={`${chogLabel(c.id)}, looks ${gazeName(c.gaze).toLowerCase()}${busy ? ", walking now" : ""}`}>
       {yours && <span className="tag ok pick-badge mono">Yours</span>}
-      <ChogImg id={c.id} />
+      <ChogImg id={c.id} thumb={256} />
       <span className="meta"><span className="mono">#{c.art}</span><span className={`tag ${tone} mono`}>{gazeName(c.gaze)}</span></span>
       {busy && <span className="mono muted" style={{ paddingInline: 2 }}>walking now</span>}
     </button>

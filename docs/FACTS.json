@@ -1,0 +1,291 @@
+{
+  "generatedAt": "2026-10-22T03:21:24.443Z",
+  "gaze": {
+    "root": "0x7cb42ed24f612763f141f9b02c56a637e2cd3f7fcdcb23dea68dc50e7b1d63e4",
+    "tokens": 1969,
+    "left": 650,
+    "right": 1309,
+    "front": 10,
+    "maxSimultaneousWalks": 660,
+    "rightAlwaysWaiting": 649,
+    "source": "data/collection.json",
+    "builtAt": "2026-10-21T18:23:12.358Z"
+  },
+  "collection": {
+    "tokens": 1969,
+    "tokenURIBlock": "115395963",
+    "retrievedAt": "2026-10-21T18:22:55.893Z"
+  },
+  "tests": {
+    "forge": {
+      "passed": 42,
+      "failed": 0,
+      "suites": 4
+    },
+    "vitest": {
+      "passed": 33,
+      "failed": 0,
+      "files": 7
+    },
+    "playwright": {
+      "passed": 146,
+      "failed": 0,
+      "skipped": 4,
+      "at": "2026-10-22T02:43:15.195Z",
+      "note": "layout matrix (9 viewports x 14 routes), flows on a seeded local chain, demo, landing; mainnet smoke run separately"
+    },
+    "fuzzRuns": 512
+  },
+  "gasLimits": {
+    "open": 370000,
+    "join": 223000,
+    "showUp": 108000,
+    "cheer": 60000,
+    "light": 85000,
+    "setHome": 65000,
+    "leave": 109000,
+    "cancel": 83000,
+    "claim": 44000,
+    "poke": 44000,
+    "showUpMeet": 421000,
+    "approve": 58000,
+    "measured": "local anvil (EVM gas does not depend on the chain), 20 calls per function, two wallets, 2026-10-21T21:54:22.972Z"
+  },
+  "measurements": {
+    "gas": {
+      "chain": "local anvil",
+      "at": "2026-10-21T21:54:22.975Z",
+      "table": [
+        {
+          "fn": "approve",
+          "calls": 20,
+          "minGas": 28857,
+          "maxGas": 45957,
+          "limit": 58000
+        },
+        {
+          "fn": "cancel",
+          "calls": 20,
+          "minGas": 52165,
+          "maxGas": 65845,
+          "limit": 83000
+        },
+        {
+          "fn": "cheer",
+          "calls": 20,
+          "minGas": 47472,
+          "maxGas": 47472,
+          "limit": 60000
+        },
+        {
+          "fn": "claim",
+          "calls": 20,
+          "minGas": 34972,
+          "maxGas": 34972,
+          "limit": 44000
+        },
+        {
+          "fn": "join",
+          "calls": 20,
+          "minGas": 144080,
+          "maxGas": 178349,
+          "limit": 223000
+        },
+        {
+          "fn": "leave",
+          "calls": 20,
+          "minGas": 35917,
+          "maxGas": 86708,
+          "limit": 109000
+        },
+        {
+          "fn": "light",
+          "calls": 20,
+          "minGas": 50625,
+          "maxGas": 67725,
+          "limit": 85000
+        },
+        {
+          "fn": "open",
+          "calls": 20,
+          "minGas": 219969,
+          "maxGas": 295408,
+          "limit": 370000
+        },
+        {
+          "fn": "poke",
+          "calls": 20,
+          "minGas": 35110,
+          "maxGas": 35110,
+          "limit": 44000
+        },
+        {
+          "fn": "setHome",
+          "calls": 20,
+          "minGas": 31632,
+          "maxGas": 51544,
+          "limit": 65000
+        },
+        {
+          "fn": "showUp",
+          "calls": 20,
+          "minGas": 69004,
+          "maxGas": 86104,
+          "limit": 108000
+        },
+        {
+          "fn": "showUpMeet",
+          "calls": 20,
+          "minGas": 285180,
+          "maxGas": 336480,
+          "limit": 421000
+        }
+      ]
+    },
+    "latency": {
+      "chain": "Monad mainnet",
+      "samples": 20,
+      "proposedMedianMs": 1171,
+      "finalMedianMs": 2013,
+      "proposedMs": [
+        1687,
+        1150,
+        1664,
+        1038,
+        1170,
+        1142,
+        1101,
+        1029,
+        1092,
+        1224,
+        1171,
+        1121,
+        1649,
+        1481,
+        1772,
+        1837,
+        1144,
+        1536,
+        1180,
+        1116
+      ],
+      "finalMs": [
+        1931,
+        2240,
+        1897,
+        1919,
+        2100,
+        2013,
+        1943,
+        1874,
+        1945,
+        2107,
+        2030,
+        1933,
+        1870,
+        2347,
+        2018,
+        2048,
+        2004,
+        2666,
+        2040,
+        1970
+      ],
+      "fn": "cheer"
+    },
+    "d7": {
+      "chain": "Monad mainnet",
+      "gasPriceWei": "102000000000",
+      "estimate": 42739,
+      "generousLimit": {
+        "gasLimit": 85478,
+        "gasUsed": 85478,
+        "feeMon": 0.008718756
+      },
+      "tightLimit": {
+        "gasLimit": 60000,
+        "gasUsed": 60000,
+        "feeMon": 0.00612
+      },
+      "note": "Monad charges gas_limit x price, so the fee follows the limit, not gasUsed."
+    }
+  },
+  "breakCampaign": [
+    {
+      "error": "NotWalker",
+      "hash": "0x18db38c5c2ac943473e54a38cfa7efea0881af0709cf207edcbba36e9f0a4b63",
+      "status": "reverted",
+      "block": 115438884,
+      "note": "a fan (C) shows up on a walk that is not theirs",
+      "simulated": "NotWalker"
+    },
+    {
+      "error": "AlreadyToday",
+      "hash": "0x6e634e54bbf98dcdc4a4391b3ecf79e940c5d7cd02328ebf28736ead8e8f369f",
+      "status": "reverted",
+      "block": 115438894,
+      "note": "A shows up a second time on the same UTC day",
+      "simulated": "AlreadyToday"
+    },
+    {
+      "error": "SelfWalk",
+      "hash": "0x6f495175b2d6bc67f62646a977f826be9c20d08f5c6d89a5ea8f03802a1408ce",
+      "status": "reverted",
+      "block": 115438902,
+      "note": "A tries to join the walk A opened",
+      "simulated": "SelfWalk"
+    },
+    {
+      "error": "NotFacing",
+      "hash": "0x9a79a893c4bb1368267b17975b3388f497d7344db1543f5f099b103bfdd1e97c",
+      "status": "reverted",
+      "block": 115438911,
+      "note": "B joins walk 2 (token 2 looks left) with another left-looking Chog",
+      "simulated": "NotFacing"
+    },
+    {
+      "error": "BadProof",
+      "hash": "0x24b233585583022d3d52c3f6c645e6a5937d19247d9d8ef22022dd66a19efcbd",
+      "status": "reverted",
+      "block": 115438920,
+      "note": "A opens with token 32 claiming it looks right (it looks left), with the real proof",
+      "simulated": "BadProof"
+    },
+    {
+      "error": "ChogBusy",
+      "hash": "0xcca65711900312b30f9a9121c7763a86440c0066c3f33b5cddb047c76bdce6e1",
+      "status": "reverted",
+      "block": 115438928,
+      "note": "C tries to open a walk with token 1, which is walking in walk 1",
+      "simulated": "ChogBusy"
+    }
+  ],
+  "contracts": {
+    "network": "Monad mainnet (143)",
+    "twain": "0x00e17D2072855159C8fb0519c3Afd3a914474DF8",
+    "postcard": "0x3D83641BFE0446D5fEc07aa16Bd0d35d9422BFB3",
+    "deployBlock": "115427898"
+  },
+  "deployed": true,
+  "chain": {
+    "block": "115503700",
+    "walkCount": 2,
+    "meetings": 0,
+    "totalSteps": 1,
+    "totalShowUps": 2,
+    "lanternsLit": 1,
+    "pledgesHeld": "50000000000000000000",
+    "lanternPrice": "50000000000000000000",
+    "today": 2,
+    "stepsOnDay": [
+      {
+        "day": 1,
+        "steps": 1
+      },
+      {
+        "day": 2,
+        "steps": 0
+      }
+    ]
+  }
+}

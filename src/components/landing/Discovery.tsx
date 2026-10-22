@@ -44,7 +44,7 @@ export function Discovery() {
       >
         <motion.div style={{ rotateX: reduce ? 0 : rotX, rotateY: reduce ? 0 : rotY, transformStyle: "preserve-3d" }} className="mosaic" aria-label="48 real Chogs sorted by gaze: left, then right, then looking at you" data-testid="mosaic">
           {tiles.map((c) => (
-            <div key={c.id} className={`mosaic-tile ${c.gaze === 1 ? "l" : c.gaze === 2 ? "r" : "f"}`} title={`Token ${c.id}`}><ChogImg id={c.id} /></div>
+            <div key={c.id} className={`mosaic-tile ${c.gaze === 1 ? "l" : c.gaze === 2 ? "r" : "f"}`} title={`Token ${c.id}`}><ChogImg id={c.id} thumb={128} /></div>
           ))}
         </motion.div>
       </div>

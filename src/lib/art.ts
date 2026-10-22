@@ -1,2 +1,2 @@
-/** Real Chog art through our proxy route (gateway fallback, immutable cache). */
-export const artUrl = (tokenId: number) => `/api/art/${tokenId}`;
+/** Real Chog art through our proxy route (gateway fallback, immutable cache). `w` serves a small thumbnail (128 or 256 px). */
+export const artUrl = (tokenId: number, w?: 128 | 256) => `/api/art/${tokenId}${w ? `?w=${w}` : ""}`;

@@ -24,6 +24,18 @@
 | **Category** | Social |
 | **Measured** | [FACTS](#measured): walks, steps, meetings, lanterns, $CHOG pledged and burned, tests, latency |
 
+## Deployed contracts
+
+Monad mainnet (chain 143), deployed 21 Oct 2026, both verified on Sourcify. Immutable: no owner, no admin, no pause, no upgrade.
+
+| Contract | Address | Explorer | Sourcify |
+|---|---|---|---|
+| **ChogTwain** (the rulebook) | `0x00e17D2072855159C8fb0519c3Afd3a914474DF8` | [MonadVision](https://monadvision.com/address/0x00e17D2072855159C8fb0519c3Afd3a914474DF8) | [verified](https://repo.sourcify.dev/contracts/full_match/143/0x00e17D2072855159C8fb0519c3Afd3a914474DF8/) |
+| **TwainPostcard** (soulbound, ERC-5192) | `0x3D83641BFE0446D5fEc07aa16Bd0d35d9422BFB3` | [MonadVision](https://monadvision.com/address/0x3D83641BFE0446D5fEc07aa16Bd0d35d9422BFB3) | [verified](https://repo.sourcify.dev/contracts/full_match/143/0x3D83641BFE0446D5fEc07aa16Bd0d35d9422BFB3/) |
+| Chog Genesis (read only, never written) | `0xc96d31F8626c6D03Fae5dCD3d61e3FB9F4a73763` | [MonadVision](https://monadvision.com/address/0xc96d31F8626c6D03Fae5dCD3d61e3FB9F4a73763) | not ours |
+| $CHOG (pledges and lanterns) | `0x350035555E10d9AfAF1566AaebfCeD5BA6C27777` | [MonadVision](https://monadvision.com/address/0x350035555E10d9AfAF1566AaebfCeD5BA6C27777) | not ours |
+
+Fixed at deploy and readable on the contract: gaze root `0x7cb42ed24f612763f141f9b02c56a637e2cd3f7fcdcb23dea68dc50e7b1d63e4`, lantern price **50 $CHOG**, deploy block 115,427,898. The gaze root is the same value that `node scripts/verify.mjs` rebuilds from the collection on your machine.
 <table>
   <tr>
     <td width="50%"><img src="docs/screenshots/walk-mainnet.png" alt="Walk 1 on Monad mainnet: two Chogs on a magazine spread, a lantern at the fold"><br><sub><b>A walk, mid-way.</b> Walk 1 on Monad mainnet: the right-facer stands on the left page, the left-facer on the right, a lantern hangs at the fold.</sub></td>
@@ -66,7 +78,7 @@ Every Chog already looks at someone. Its face points left, right, or straight ou
 |---|---|---|---|---|
 | <!-- FACTS:gaze-left -->650<!-- /FACTS:gaze-left --> | <!-- FACTS:gaze-right -->1,309<!-- /FACTS:gaze-right --> | <!-- FACTS:gaze-front -->10<!-- /FACTS:gaze-front --> | <!-- FACTS:max-walks -->660<!-- /FACTS:max-walks --> | <!-- FACTS:right-waiting -->649<!-- /FACTS:right-waiting --> |
 
-If two Chogs must face each other to meet, at most 660 walks can run at once and 649 right-facing Chogs are always waiting for a partner. The trait nobody used becomes the rule of the whole world. It lives in IPFS metadata, not on-chain, so the contract is shown a **Merkle proof** against a root fixed at deploy (<!-- FACTS:gaze-root -->root<!-- /FACTS:gaze-root -->) that anyone can rebuild.
+If two Chogs must face each other to meet, at most 660 walks can run at once and 649 right-facing Chogs are always waiting for a partner. The trait nobody used becomes the rule of the whole world. It lives in IPFS metadata, not on-chain, so the contract is shown a **Merkle proof** against a root fixed at deploy (<!-- FACTS:gaze-root -->`0x7cb42ed24f612763f141f9b02c56a637e2cd3f7fcdcb23dea68dc50e7b1d63e4`<!-- /FACTS:gaze-root -->) that anyone can rebuild.
 
 ## What Chog Twain does
 
@@ -151,14 +163,63 @@ sequenceDiagram
   L->>C: I'm here (day 1) -> Stepped, gap 6
   Note over C: day 4 Arjun misses
   L->>C: I'm here (day 5) closes day 4 -> drift, a slice moves to Lena
-  A->>C: I'm here ... later day -> gap 0 -> Met
+  A->>C: I'm here on the last day, gap 0, Met
   C-->>L: Postcard (soulbound)
   C-->>A: Postcard (soulbound)
-  Note over C: Friend Book of 1462 and 338 += walk; pledges claimable
+  Note over C: Friend Book of 1462 and 338 gains the walk, pledges become claimable
 ```
 
 There is **no database, no server of record and no admin**. Only two stateless routes exist: an art proxy and a card renderer. Every page renders from contract views (`walk`, `preview`, `walksOf`, `openWalks`, `friendBook`, `activeWalkOf`, `stepsOnDay`, counters) batched through Multicall3; events are for audit and the verifier.
 
+## Anatomy of a day
+
+Days are resolved lazily, in constant time per action: the first action of a new UTC day closes the days before it. There is no keeper, no cron and no server. This table is the whole rulebook for a walking pair:
+
+| What happened on the day | Result | Pledge | Counts as kept |
+|---|---|---|---|
+| Both showed up | **Step**: gap minus one, in the transaction of the second arrival | none moves | yes |
+| One showed up, a lantern is stored | The lantern is used up; no drift | none moves | yes |
+| One showed up, no lantern | **Drift**: gap plus one (never beyond the distance) | `pledge / distance` moves from the absent person to the other | no |
+| Nobody showed up | Drift | nothing moves: the two slices would cancel | no |
+| Three unkept days in a row | The walk ends: **Apart**, both Chogs are free | settled as above | no |
+| Someone walks away | The walk ends now | the leaver forfeits the whole pledge to the friend | no |
+
+`preview(walkId)` returns the walk exactly as the next transaction will leave it, so the page shows pending drift before anyone pays for it to be written.
+
+## Design decisions that make it hold up
+
+- **Scarcity comes from the art, not from a counter.** A Chog walks with one pair at a time, world-wide, and only facing Chogs can meet. That turns the gaze into a market-less scarce resource without the contract ever touching the NFT.
+- **Nobody custodies anything they do not own.** The contract never asks for an NFT approval and never holds a token. Pledges and lanterns are the only funds, they are pulled with an exact `approve`, and payouts are by pull (`claim`), so there is no push to a hostile address.
+- **The ledger is small on purpose.** Everything a daily show-up touches lives in one packed struct, the latest note per walker is stored so a browser can read it, and counters feed the Heartbeat. Pages render from storage views batched through Multicall3; no page scans logs, because Monad public RPCs cap logs at 100 blocks per call.
+- **One rulebook, two implementations.** The contract and `packages/rules` (TypeScript) are checked against the same 18 hand-written scenarios, and `preview()` is checked against both. The Demo, the verifier and the live page therefore cannot disagree about what a rule means.
+- **Everything is labelled for what it is.** The Demo says Demo. Fictional people say fictional. Screenshots of a finished meeting say they come from a local chain, because a real meeting needs real days.
+
+## Threat model
+
+| Threat | What stops it |
+|---|---|
+| Rushing a meeting (two wallets, many calls in one day) | At most one step per walk per day (`stepped`, `AlreadyToday`); a meeting needs at least `distance` steps (I1, I2) |
+| Forging a Chog's gaze to pick any partner | Merkle proof against the immutable `GAZE_ROOT`; a forged side reverts `BadProof` (reverted on mainnet) |
+| Claiming a stranger's Chog is busy or free | `activeWalkOf` is the single lock; invariant I6 over random sequences |
+| Draining pledges | Conservation invariant I9: contract balance equals active pledges plus claimable balances, checked by fuzz, invariant runs and 300 randomised engine runs |
+| A hostile or unwilling friend | Anyone can `poke` a stale walk; three unkept days end it; a lantern from a stranger can keep a day |
+| Reentrancy and push payments | Pull-only `claim`; pledge state is settled before any transfer |
+| Admin or upgrade risk | None exists: no owner, no proxy, no pause; verified source |
+| One person, two wallets | Not prevented, by design: it only records their own walk, and pledges only move their own $CHOG |
+
+## Verification trail
+
+Run these and compare with what this page says. Each command proves one thing.
+
+```bash
+(cd contracts && forge test)          # 15 invariants, fuzz, soulbound, tokenURI decoding, proof parity
+npm test                              # TypeScript twin and the 18 shared scenarios
+node scripts/verify.mjs               # gaze root vs the contract, metadata sha256, every walk replayed, postcards decoded
+node scripts/check-no-nft-writes.mjs  # the only call on Chog Genesis is ownerOf
+node scripts/e2e.mjs                  # real transactions through the real UI on a local chain, 9 viewports, axe
+```
+
+The first real walks, with their transaction links, are in [EVIDENCE.md](EVIDENCE.md): an open, a join with a 25 $CHOG pledge each, a day-one step with a note, a lantern and a cheer from a wallet that owns no Chog, and six deliberately reverted guard transactions. Demo footage recorded from the real flows (1280x800 video, with the specs and a scene-by-scene guide) is in [docs/playwright_outputs_for_demo](docs/playwright_outputs_for_demo).
 ## The promise, in code
 
 > **A meeting cannot be bought or rushed: it takes at least N real days on which both people showed up.**
@@ -185,7 +246,7 @@ There is **no database, no server of record and no admin**. Only two stateless r
 
 ## Monad, specifically
 
-- **300 ms blocks and finality stages in the UX.** Every write shows two stamps: *Landed in block N (proposed)*, then *Postmarked. Final in X.X s.* On mainnet we measured a median of <!-- FACTS:latency-proposed -->not measured yet<!-- /FACTS:latency-proposed --> to proposed and <!-- FACTS:latency-final -->not measured yet<!-- /FACTS:latency-final --> to final.
+- **300 ms blocks and finality stages in the UX.** Every write shows two stamps: *Landed in block N (proposed)*, then *Postmarked. Final in X.X s.* On mainnet we measured a median of <!-- FACTS:latency-proposed -->1171 ms median (20 samples, Monad mainnet)<!-- /FACTS:latency-proposed --> to proposed and <!-- FACTS:latency-final -->2013 ms median (20 samples, Monad mainnet)<!-- /FACTS:latency-final --> to final.
 - **Gas is charged by limit, not by use.** We measured it on mainnet: a receipt's gas used equals the gas limit we sent, so a tight limit is real money. The same `cheer` cost 30% less with our measured limit than with a generous wallet-style one ([EVIDENCE.md](EVIDENCE.md)). The app sends the larger of the measured limit and 1.25 times the live estimate, so it never runs out of gas.
 - **Logs are limited to 100 blocks per call and a Monad day is 288,000 blocks**, so no page scans logs. State lives in packed storage views read through Multicall3 in batches of 200. The latest note per walker is stored for the same reason.
 - **Packed storage (MIP-8).** The fields a daily show-up touches share one struct. An ablation contract with every field in its own mapping is in `contracts/src/ablation`; its Monad-testnet comparison is not run yet and is marked UNKNOWN in [DISCOVERY.md](DISCOVERY.md).
@@ -195,7 +256,7 @@ There is **no database, no server of record and no admin**. Only two stateless r
 
 - **Pledges are a commitment contract between two people.** Equal amounts, escrowed, settled on meeting or ending, claimable by pull. A missed day moves `pledge / distance` from the absent person to the one who came. The contract's balance always equals active pledges plus claimable balances; an invariant test and 300 randomised engine runs check it.
 - **Lanterns burn $CHOG** to `0x...dEaD`, so they reduce supply. The price is fixed forever at **50 $CHOG** (about US$0.075 at deploy). Anyone can light one for any walk, with no Chog and no walk of their own.
-- Live totals (pledged, burned, moved by missed days) are on the [Heartbeat](https://chog-twain.vercel.app/heartbeat), read from storage. Now: <!-- FACTS:pledged -->0 $CHOG<!-- /FACTS:pledged --> pledged, <!-- FACTS:lanterns -->0<!-- /FACTS:lanterns --> lantern(s) lit.
+- Live totals (pledged, burned, moved by missed days) are on the [Heartbeat](https://chog-twain.vercel.app/heartbeat), read from storage. Now: <!-- FACTS:pledged -->50 $CHOG<!-- /FACTS:pledged --> pledged, <!-- FACTS:lanterns -->1<!-- /FACTS:lanterns --> lantern(s) lit.
 
 ## Measured
 
@@ -203,15 +264,16 @@ Every number below is generated from `docs/FACTS.json` or read live. Nothing is 
 
 | | |
 |---|---|
-| Foundry tests | <!-- FACTS:forge-tests -->0 passing, 0 failing<!-- /FACTS:forge-tests --> (includes a <!-- FACTS:fuzz-runs -->512<!-- /FACTS:fuzz-runs -->-run fuzz and an invariant suite of six actors) |
-| Rules engine tests | <!-- FACTS:vitest-tests -->not run<!-- /FACTS:vitest-tests --> |
-| Browser tests | <!-- FACTS:playwright-tests -->not run<!-- /FACTS:playwright-tests --> |
-| Walks opened on mainnet | <!-- FACTS:walks -->0<!-- /FACTS:walks --> |
-| Steps taken | <!-- FACTS:steps -->0<!-- /FACTS:steps --> |
+| Foundry tests | <!-- FACTS:forge-tests -->42 passing, 0 failing<!-- /FACTS:forge-tests --> (includes a <!-- FACTS:fuzz-runs -->512<!-- /FACTS:fuzz-runs -->-run fuzz and an invariant suite of six actors) |
+| Rules engine tests | <!-- FACTS:vitest-tests -->33 passing, 0 failing<!-- /FACTS:vitest-tests --> |
+| Browser tests | <!-- FACTS:playwright-tests -->146 passing, 0 failing, 4 skipped<!-- /FACTS:playwright-tests --> |
+| Lighthouse, mobile, live `/` | accessibility 100, best practices 100, SEO 100, performance 67 (LCP 5.0 s, TBT 524 ms under Lighthouse's slow-phone throttling; the wallet stack hydrating on first load is the known cost, see [PROGRESS.md](PROGRESS.md)) |
+| Walks opened on mainnet | <!-- FACTS:walks -->2<!-- /FACTS:walks --> |
+| Steps taken | <!-- FACTS:steps -->1<!-- /FACTS:steps --> |
 | Meetings | <!-- FACTS:meetings -->0<!-- /FACTS:meetings --> |
-| Reverted guard transactions on mainnet | <!-- FACTS:break-count -->0<!-- /FACTS:break-count --> |
-| Gas limits sent | open <!-- FACTS:gas-open -->0<!-- /FACTS:gas-open -->, join <!-- FACTS:gas-join -->0<!-- /FACTS:gas-join -->, show-up <!-- FACTS:gas-showup -->0<!-- /FACTS:gas-showup -->, meeting show-up <!-- FACTS:gas-showup-meet -->0<!-- /FACTS:gas-showup-meet --> |
-| FACTS generated | <!-- FACTS:facts-time -->never<!-- /FACTS:facts-time --> |
+| Reverted guard transactions on mainnet | <!-- FACTS:break-count -->6<!-- /FACTS:break-count --> |
+| Gas limits sent | open <!-- FACTS:gas-open -->370,000<!-- /FACTS:gas-open -->, join <!-- FACTS:gas-join -->223,000<!-- /FACTS:gas-join -->, show-up <!-- FACTS:gas-showup -->108,000<!-- /FACTS:gas-showup -->, meeting show-up <!-- FACTS:gas-showup-meet -->421,000<!-- /FACTS:gas-showup-meet --> |
+| FACTS generated | <!-- FACTS:facts-time -->2026-10-22T03:21:24.443Z<!-- /FACTS:facts-time --> |
 
 The happy-path and reverted transactions are listed with links in [EVIDENCE.md](EVIDENCE.md). We publish real usage as it is, including zeroes, and never seed fake walks. The first real walks were opened by the builder's own test wallets and are labelled as such.
 

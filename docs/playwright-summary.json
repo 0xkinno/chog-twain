@@ -1,0 +1,7 @@
+{
+ "passed": 146,
+ "failed": 0,
+ "skipped": 4,
+ "at": "2026-10-22T02:43:15.195Z",
+ "note": "layout matrix (9 viewports x 14 routes), flows on a seeded local chain, demo, landing; mainnet smoke run separately"
+}

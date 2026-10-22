@@ -40,7 +40,7 @@ export function ProofPage({ facts }: { facts: Facts | null }) {
   useEffect(() => { const t = setInterval(() => setRpc({ ...rpcReport }), 1500); return () => clearInterval(t); }, []);
   const sourcify = (a?: string) => (a ? `https://repo.sourcify.dev/contracts/full_match/${ACTIVE_CHAIN.id}/${a}/` : "");
   const row = (name: string, a?: string) => (
-    <tr key={name}><td>{name}</td><td className="mono">{a ?? "not in this build"}</td><td>{a && !IS_LOCAL ? <><a href={explorerAddr(a)} rel="noopener" target="_blank">MonadVision</a> {"\u00b7"} <a href={sourcify(a)} rel="noopener" target="_blank">Sourcify</a></> : a ? "local chain" : ""}</td></tr>
+    <tr key={name}><td>{name}</td><td className="mono addr">{a ?? "not in this build"}</td><td>{a && !IS_LOCAL ? <><a href={explorerAddr(a)} rel="noopener" target="_blank">MonadVision</a> {"\u00b7"} <a href={sourcify(a)} rel="noopener" target="_blank">Sourcify</a></> : a ? "local chain" : ""}</td></tr>
   );
   return (
     <div className="page wrap stack" style={{ ["--gap" as string]: "28px" }}>
@@ -56,7 +56,7 @@ export function ProofPage({ facts }: { facts: Facts | null }) {
         <div className="table-scroll" tabIndex={0} role="region" aria-label="Scrollable table"><table className="table"><thead><tr><th>Contract</th><th>Address</th><th>Links</th></tr></thead><tbody>
           {row("ChogTwain (immutable, no admin)", TWAIN)}{row("TwainPostcard (soulbound)", POSTCARD)}{row("Chog Genesis (read only)", CHOG_GENESIS)}{row("$CHOG", CHOG_TOKEN)}
         </tbody></table></div>
-        <p className="mono muted">Network: {ACTIVE_CHAIN.name} ({ACTIVE_CHAIN.id}) {"\u00b7"} Gaze root: {facts?.gaze?.root ?? "not generated"}</p>
+        <p className="mono muted">Network: {ACTIVE_CHAIN.name} ({ACTIVE_CHAIN.id}) {"\u00b7"} Gaze root: <span className="addr">{facts?.gaze?.root ?? "not generated"}</span></p>
       </GlowCard>
 
       <GlowCard className="flat stack" data-testid="proof-invariants">

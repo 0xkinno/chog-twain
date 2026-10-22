@@ -23,7 +23,13 @@ export function Cover() {
   }, []);
   return (
     <section className="cover" aria-labelledby="hero">
-      <div className="cover-bg" aria-hidden />
+      <div className="cover-bg" aria-hidden>
+        <picture>
+          <source media="(max-width: 720px)" srcSet="/cover/valley-760.webp" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/cover/valley.webp" alt="" width={1600} height={1018} fetchPriority="high" decoding="async" />
+        </picture>
+      </div>
       <div className="wrap" style={{ paddingTop: 110, paddingBottom: 40 }}>
       <FolioLine extra="THE TRAVEL ISSUE" />
       <div className="stack" style={{ ["--gap" as string]: "18px", marginTop: 18 }}>

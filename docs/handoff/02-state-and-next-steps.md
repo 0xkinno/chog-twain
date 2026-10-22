@@ -18,12 +18,15 @@ Secrets are NOT in git. `.env.local` (gitignored) holds `DEPLOYER_KEY`, `TEST_WA
 - `forge test` 42 pass; `npm test` 33 pass; `node scripts/verify.mjs` PASS on mainnet; `node scripts/check-copy.mjs` clean.
 - Playwright: `node scripts/e2e.mjs` runs everything on a LOCAL anvil chain (never mainnet). Layout matrix 9 viewports x 14 routes green; demo specs green. `04-mainnet.spec.ts` (set `MAINNET=1 E2E_BASE_URL=https://chog-twain.vercel.app`) passed against the live site, including a real cheer through the UI.
 
+## Demo footage
+
+`docs/playwright_outputs_for_demo/` holds 1280x800 recordings of every real flow (local chain) plus the specs that made them and a README that maps each clip to a scene of `VIDEO_SCRIPT.md`. Re-record with `node scripts/e2e.mjs -c playwright.demo.config.ts`. Mainnet footage: `MAINNET=1 E2E_BASE_URL=https://chog-twain.vercel.app npx playwright test tests/e2e/04-mainnet.spec.ts --video=on`.
+
 ## Open items, in order
-1. **Real-chain flow spec** `tests/e2e/02-flows.spec.ts`: last fix was rendering `TxPostmark` in the "opened" state of `OpenWalk.tsx` and making `runTx` return at "proposed" (finality is stamped asynchronously; a local chain uses the `latest` tag). Re-run `node scripts/e2e.mjs tests/e2e/02-flows.spec.ts tests/e2e/05-shots.spec.ts`; fix what fails (tests were written ahead of running, expect small selector fixes). Later tests in the file are serial and skip after a failure.
-2. After a green run: `node scripts/summarize-playwright.mjs`, `node scripts/facts.mjs`, `node scripts/render-readme.mjs`, `node scripts/render-evidence.mjs`, commit. README FACTS blocks currently show placeholders until facts.mjs is run.
-3. Screenshots for the README: `docs/screenshots/{banner,walk-mainnet,proof}.png` come from `MAINNET=1 E2E_BASE_URL=... npx playwright test tests/e2e/04-mainnet.spec.ts`; `meeting.png` and `friend-book.png` come from `05-shots.spec.ts` (local chain). Copy `banner.png` to `docs/banner.png`.
-4. Redeploy to Vercel after the last UI fixes (spread chair fix, tx.ts change, demo fixes are not yet live).
-5. Break campaign: `node scripts/break-campaign.mjs --invite-expired` on or after 25 Oct (walk 2 older than 3 days).
+1. **Done in this session:** the full Playwright suite is green (146 passed, 0 failed, 4 mainnet-only specs skipped locally and run separately against the live site: 4 passed). FACTS, README and EVIDENCE are rendered (`node scripts/facts.mjs && node scripts/render-readme.mjs && node scripts/render-evidence.mjs`). README screenshots were retaken from the live site.
+2. **Lighthouse mobile on `/`** (docs/lighthouse-mobile.json): performance below the 85 target (61 before the thumbnail and code-split work; re-measure), accessibility 100, best practices 100, SEO 100. Remaining cost is the wallet stack (wagmi and viem) hydrating on first load: lazy-load `Providers` or split `WalletCapsule`.
+3. CI was failing on a clean checkout because `src/data/chogs.json` is generated: fixed by running `node scripts/gen-assets.mjs` first. Check the next Actions run is green.
+4. Break campaign: `node scripts/break-campaign.mjs --invite-expired` on or after 25 Oct (walk 2 older than 3 days).
 6. Kinnoski: confirm the dashboard deadline (WAT), invite five people (`FEEDBACK.md`), record the video (`VIDEO_SCRIPT.md`), fill the Discord handle and video link in `SUBMISSION_CHOGATHON.md`, submit 2+ hours early, tag `chogathon-submission`.
 7. Nice to have: Lighthouse mobile run on `/`, red-team rounds into `REDTEAM_LOG.md`, Monad testnet deploy for D8, WalletConnect (needs a project id), branch protection on GitHub.
 

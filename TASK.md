@@ -88,11 +88,12 @@ Last updated 2026-10-22. Handoff notes for the next agent: `docs/handoff/` (star
 ## Phase 7. Quality gates
 
 - [x] `scripts/check-copy.mjs` passes
-- [x] Playwright layout matrix: 9 viewports x 14 routes green (126 tests, last full run 131 passed with 5 later fixed); screenshots in `docs/screenshots/matrix` (ignored)
-- [ ] Playwright flows: demo loop, error copy and the facing-only picker pass; the real-chain flows in `02-flows.spec.ts` were being re-run (see `PROGRESS.md`)
-- [ ] axe is part of the matrix (green); Lighthouse mobile 85+ on `/` **not measured yet**
-- [ ] Red-team rounds (5 roles) after the deploy: not started
-- [ ] Self-judge scores in `PROGRESS.md`: not done
+- [x] Playwright layout matrix: 9 viewports x 14 routes, all green in the final full run; screenshots in `docs/screenshots/matrix` (ignored)
+- [x] Playwright flows: demo loop, error copy, facing-only picker, and the real-chain flows (open, join, I'm here, step, lantern, cheer, drift, poke, leave, claim, full meeting with postcards and Friend Books, home only). Whole suite 146 passed, 0 failed; 4 mainnet specs passed separately against the live site. Footage in `docs/playwright_outputs_for_demo/`
+- [x] axe zero serious or critical on every route and viewport; zero console errors
+- [ ] Lighthouse mobile performance 85+ on `/`: **measured 67** (accessibility 100, best practices 100, SEO 100; `docs/lighthouse-mobile.json`). Not met. Cost: wallet stack hydration. Next step in `docs/handoff/02-state-and-next-steps.md`
+- [x] Red-team round 1 (5 roles, run by the build agent itself, stated as such) in `REDTEAM_LOG.md`; an independent fresh-session round is still advisable
+- [x] Self-judge scores with evidence in `PROGRESS.md`
 
 ## Phase 8. README, video, submission
 
