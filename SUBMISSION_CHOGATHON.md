@@ -14,7 +14,7 @@ Take the Chog out and nothing works: no gaze means nobody can face anybody and t
 ## 04 Working demo, video, testing
 - Live: https://chog-twain.vercel.app
 - Demo (no wallet): https://chog-twain.vercel.app/demo
-- Video (2:50, YouTube unlisted): https://youtu.be/B1Mk1YjT0Sw
+- Video: (Kinnoski adds the YouTube or Drive link)
 - Testing: a visitor with no wallet runs the Demo in two minutes; any wallet with a little MON can open or join a real walk on Monad mainnet at /walk/new; a Chog holder gets a keeper's seal and a home-only switch on the Chog's page. Judge paths: https://chog-twain.vercel.app/judge
 
 ## 05 Repo, stack, pre-existing work

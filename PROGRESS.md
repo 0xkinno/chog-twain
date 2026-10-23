@@ -12,7 +12,7 @@ Updated 2026-10-22. Handoff for the next agent: `docs/handoff/02-state-and-next-
 | 5 Design pass | done |
 | 6 Demo, Heartbeat, Proof, Judge | done; break campaign 6 of 7 (InviteExpired from 25 Oct); 2 of 5 real testers walked (walk 3), see FEEDBACK.md |
 | 7 Quality gates | 146 Playwright tests green (layout matrix, real-chain flows, demo); red team round 1 and self-judge done; Lighthouse mobile performance 67 (target 85 not met), accessibility, best practices and SEO 100 |
-| 8 README, video, submission | README, docs, scripts done; final 2:50 film uploaded (see Video link in README); film sources kept locally in `reference/` (gitignored); submission is Kinnoski's |
+| 8 README, video, submission | README, docs, scripts done; raw demo recording in `docs/demo_video/` with the brief, cloud agent cuts the film; submission is Kinnoski's |
 
 ## Live
 
@@ -31,7 +31,7 @@ Updated 2026-10-22. Handoff for the next agent: `docs/handoff/02-state-and-next-
 - [ ] FACTS generated, README rendered, CI green (CI not yet seen green on GitHub), copy check green (yes), attribution check green (to confirm)
 - [x] Playwright matrix green on all viewports, axe clean, zero console errors, real-chain flows green (146 passed, 0 failed)
 - [x] No other entry named in committed files; `reference/` ignored
-- [x] Video under 3 minutes (Kinnoski): https://youtu.be/B1Mk1YjT0Sw
+- [ ] Video under 3 minutes (Kinnoski)
 - [ ] Submitted 2+ hours early; tag; deployment frozen (Kinnoski)
 
 ## Self-judge (22 Oct 2026, after red-team round 1)
