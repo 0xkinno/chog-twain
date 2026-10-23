@@ -1,9 +1,9 @@
-// Builds docs/demo_video/frames/contact-sheet.jpg from the t###s.jpg frames (one frame per 10 s, labelled), so an agent
+// Builds reference/demo_video/frames/contact-sheet.jpg from the t###s.jpg frames (one frame per 10 s, labelled), so an agent
 // can see the whole video at a glance. Usage: node scripts/contact-sheet.mjs
 import sharp from "sharp";
 import { readdirSync } from "node:fs";
 
-const dir = "docs/demo_video/frames/";
+const dir = "reference/demo_video/frames/";
 const fl = readdirSync(dir).filter((f) => /^t\d+s\.jpg$/.test(f)).sort();
 const W = 320, H = 180, C = 5;
 const comps = [];

@@ -19,7 +19,7 @@
 | **Live app** | https://chog-twain.vercel.app (the Demo needs no wallet; any wallet with a little MON runs the real thing; no Chog needed) |
 | **A real walk, right now** | [walk 1 on Monad mainnet](https://chog-twain.vercel.app/w/1): token 1 and token 846, one step walked, a lantern lit |
 | **60-second judge walk** | [/judge](https://chog-twain.vercel.app/judge) |
-| **Video** | 2:50, link added at submission |
+| **Video** | [2:50 demo on YouTube](https://youtu.be/B1Mk1YjT0Sw) |
 | **Contracts** | [`ChogTwain`](https://monadvision.com/address/0x00e17D2072855159C8fb0519c3Afd3a914474DF8) and [`TwainPostcard`](https://monadvision.com/address/0x3D83641BFE0446D5fEc07aa16Bd0d35d9422BFB3) on Monad mainnet, both verified on Sourcify |
 | **Category** | Social |
 | **Measured** | [FACTS](#measured): walks, steps, meetings, lanterns, $CHOG pledged and burned, tests, latency |
@@ -219,7 +219,7 @@ node scripts/check-no-nft-writes.mjs  # the only call on Chog Genesis is ownerOf
 node scripts/e2e.mjs                  # real transactions through the real UI on a local chain, 9 viewports, axe
 ```
 
-The first real walks, with their transaction links, are in [EVIDENCE.md](EVIDENCE.md): an open, a join with a 25 $CHOG pledge each, a day-one step with a note, a lantern and a cheer from a wallet that owns no Chog, and six deliberately reverted guard transactions. Demo footage recorded from the real flows (1280x800 video, with the specs and a scene-by-scene guide) is in [docs/playwright_outputs_for_demo](docs/playwright_outputs_for_demo).
+The first real walks, with their transaction links, are in [EVIDENCE.md](EVIDENCE.md): an open, a join with a 25 $CHOG pledge each, a day-one step with a note, a lantern and a cheer from a wallet that owns no Chog, and six deliberately reverted guard transactions.
 ## The promise, in code
 
 > **A meeting cannot be bought or rushed: it takes at least N real days on which both people showed up.**
